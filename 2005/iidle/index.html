@@ -1,0 +1,533 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/iidle/index.html","20070830043236","https://web.archive.org/","web","/_static/",
+	      "1188448356");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+
+<title>IIDLE: Immunological Inspired Distributed Learning Environment</title>
+</head>
+
+<body>
+
+<h1>IIDLE<br><u>I</u>mmunological <u>I</u>nspired <u>D</u>istributed <u>L</u>earning <u>E</u>nvironment</h1>
+<p>
+
+<p>
+<a href="https://web.archive.org/web/20070830043236/http://www.ict.swin.edu.au/personal/jbrownlee">Home</a>
+</p>
+
+<h2>Introduction</h2>
+
+<p>The field of Artificial Immune Systems (AIS) is interested in using
+immunology as an inspiration for computation paradigms. Predominantly the work
+in this field has been focused on devising and analysing algorithms inspired by
+specific immunological theories. The
+Immunological Inspired Distributed Learning Environment (IIDLE) is an artificial
+immune system that exploits the inherent parallelism, decentralised control, and
+spatially distributed nature of the learning behaviours of the mammalian
+acquired immune system. It is a platform or framework for distributed learning
+tasks that (among many other features) can have immunological and other
+algorithms embedded within it.</p>
+
+<p>This page provides a brief description of the conceptual model that underpins
+IIDLE, as well as a number of case study application scenarios with
+demonstration software and downloadable source code. The hope is that both the
+ideas and practical implementation of IIDLE be made accessible and generate
+interest, comment, and perhaps facilitate the extension of this area of
+research. Peer-reviewed publications and technical reports on the IIDLE platform
+<a href="https://web.archive.org/web/20070830043236/http://www.ict.swin.edu.au/personal/jbrownlee">are available</a>. If you are interested in
+discussing the IIDLE platform or potential collaboration or experiment ideas
+<a href="https://web.archive.org/web/20070830043236/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">please contact me</a>.</p>
+
+<p>
+
+<h2>Conceptual Model of IIDLE</h2>
+
+    <p>IIDLE is based in a holistic abstraction of the acquired immune system as
+    a spatially distributed, circulating and heterogeneous population of
+    specialised discrete units that provide a homogeneous defence against
+    external pathogenic material. It is these discrete, atomic, immutable and
+    disposable units or information packets that represent the knowledge
+    captured by the system, and are the substrate for the maintenance and
+    learning processes. </p>
+
+    <p align="center"><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/p5.jpg" width="379" height="210"><br>
+    <i>Conceptualisation of the clonal expansion theory as a triggered
+    population based learning system</i></p>
+    <p>Using this population based abstraction of the acquired immune system,
+    the intent in developing the IIDLE platform was to devise an AIS that was
+    distributed and decentralised from the ground up. The following were the
+    principle design goals for developing the platform in the context of the
+    immunological model:</p>
+    <ol>
+      <li><b>Context Specific Learning</b> -
+      <span style="font-size: 12.0pt; font-family: Times New Roman">from an
+      initial generic starting point, the system is capable of tuning its
+      performance to the specific environment or domain to which it is applied.</span></li>
+      <li><b>Self-Regulated Resource Maintenance</b> -
+      <span style="font-size: 12.0pt; font-family: Times New Roman">internal
+      processes exist within the system to govern the allocation and
+      de-allocation of resources in response to the context specific
+      requirements of the system (such as in response to external input and
+      bounding space complexity).</span></li>
+      <li><b>Decentralised Control</b> -
+      <span style="font-size: 12.0pt; font-family: Times New Roman">the internal
+      maintenance processes of the system are localised and self-governing, not
+      requiring a master controlling process.</span></li>
+      <li><b>Triggered Adaptation</b> -
+      <span style="font-size: 12.0pt; font-family: Times New Roman">the system
+      modification required when learning occurs in response to an externally
+      introduced trigger defined by the context or environment in which the
+      system is situated.</span></li>
+      <li><b>Robustness and Fault Tolerance</b> -
+      <span style="font-size: 12.0pt; font-family: Times New Roman">there is an
+      inbuilt lack of dependence and reliance on specific discrete components of
+      the system. This is permitted by architectural and functional redundancy,
+      which facilitates the continued system operation in response dynamic
+      component failure or removal.</span></li>
+    </ol>
+    <p align="center">
+    <span style="font-size: 12.0pt; font-family: Times New Roman">
+    <img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/p1.jpg" width="320" height="183"><br>
+    <i>A Conceptualisation of the distributed immunological architecture showing
+    locality connectivity, external stimulation, and internal activation</i></span></p>
+
+    <h3>Architecture</h3>
+    <ol>
+      <li><span style="font-family: Times New Roman"><i><b>Localities</b></i> -
+      The continuous nature of the vascular and lymphatic systems that provide
+      the migration pathways for lymphocyte cells is discretised&nbsp; into distinct
+      localities (not unlike island populations) that are connected together in
+      some network topology facilitating the inherent mobility of units. A
+      locality abstract provides both an interface and scope at which to apply
+      local (decentralised) processes, as well as a transient storage location
+      for discrete units.</span></li>
+      <li><span style="font-family: Times New Roman"><b><i>Tail</i> </b>- A
+      locality supports a population structure called a tail that stores a
+      number of discrete units for a given time. The structure is called a tail
+      given the manner in which it is depicted diagrammatically. The locality
+      and tail are differentiated for conceptual modularity where the physical
+      storage data structure for units can be changed and reconfigured
+      independently of the locality and its associated governing and maintenance
+      processes.</span></li>
+      <li><span style="font-family: Times New Roman"><i><b>Units</b></i> - A
+      tail contains a number (zero or more) units at any given time during the
+      simulation. Each unit is a discrete information packet meaningful in the
+      context of the specific problem domain to which IIDLE is being applied
+      (such as a permutation, real number variables, etc... and an associated
+      quality scoring).</span></li>
+    </ol>
+    <p align="center">
+    <span style="font-size: 12.0pt; font-family: Times New Roman">
+    <img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/p2.jpg" width="289" height="196"><br>
+    <i>Overview of the IIDLE architecture showing localities, tails, and units</i></span></p>
+
+    <h3>Processes</h3>
+    <p>The system is simulated in discrete time intervals and processes
+    represent the algorithmic component that operates upon the discrete unit
+    substrate in the context of a specific problem application. Processes are
+    confined to a locality and can be implemented as either independent threads
+    of execution or executed in aggregate sequentially by a single thread at a desired scoping of localities. </p>
+    <ol>
+      <li><b><i>Movement Process</i> </b>- Movement is the process of removing
+      units from the tail of one locality and adding them to the tail of a
+      neighbouring locality. This unit migration facilitates the mobility of the
+      knowledge learned by the system thus facilitating the redundancy of units
+      and general robustness of the architecture.</li>
+      <li><i><b>Decay Process</b></i> - The decay process is designed to manage
+      the size of the unit population, specifically in response to the creation
+      of new units by the proliferation strategy of the expansion process. Each
+      unit has a finite energy which is initialised upon unit creation, and it
+      is the task of the decay process to decrement unit energy and discard
+      those units that deplete all assigned energy. There are two approaches to
+      this decay process that have been implemented - conformer homeostasis
+      (blind uniform decay) and regulator homeostasis (seek scoped global energy
+      equilibrium).</li>
+      <li><i><b>Expansion Process</b></i> - Core to the design principles of the
+      expansion process is the conceptualisation of external stimulation (input)
+      that triggers the internal adaptation (learning) processes of the system.
+      The stimulation of a locality may be implemented as the provision of
+      computation time (such as execution of an objective function), provision
+      of memory resources (such as extension and exploration of a state space),
+      or access to a limited resource (such as database records in a mainframe).
+      The expansion process is loosely based upon the clonal expansion
+      principle, although it is modularised into three discrete steps which must
+      be selected in the context of a specific application domain; a <i>
+      stimulation</i> strategy, a <i>selection</i> strategy (for selecting
+      useful units), and a <i>proliferation</i> strategy.</li>
+    </ol>
+    <p align="center">
+    <span style="font-size: 12.0pt; font-family: Times New Roman">
+    <img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/p3.jpg" width="334" height="169"><br>
+    <i>An illustration of the weak coupling between data structures and
+    processes as well as the variable scoping of processes on data structures</i></span></p>
+
+
+    <h2>Philosophy (Vision) for IIDLE</h2>
+    <p>The vision or philosophy for IIDLE is that of an ever-present or
+    always-on system distributed across the internet on a decentralised P2P
+    substrate. The knowledge of the system is captured by the discrete units (as
+    discussed in the system architecture), although in this vision the units
+    only exist in machines that are apart of the system. Hosts check-in and
+    check-out of the system in an ad-hoc manner increasing and decreasing the
+    knowledge capacity as well as the processing power of the system. Units flow
+    through the network in an autonomous manner, and the hosts of the system
+    selectively filter the units they are interested in, and selective
+    contribute units to the flow.</p>
+    <p align="center">
+    <span style="font-size: 12.0pt; font-family: Times New Roman">
+    <img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/p4.jpg" width="284" height="170"><br>
+    <i>Depiction of the vision of IIDLE as a network platform showing ad-hoc
+    connection of clients, and the differing contributions of clients (producing
+    units, consuming units, and both)</i></span></p>
+    <p>In practical terms the ever-present nature of the system provides an
+    alternative to the configure-run-analyse cycle of conventional search and
+    optimisation tasks. The scale of the implementation provides the capability
+    to address conventional optimisation as well as collaborative optimisation at a
+    level rarely discussed, let alone attempted (thousands or tens of thousands
+    of clients). It is this ability to capture
+    and harness human intervention to machine-learning tasks on a large scale I
+    think that provides the most interesting application of this technology.</p>
+    <p>The following points summarise this vision of the IIDLE as an internet
+    machine-learning
+    platform:</p>
+    <ul>
+      <li>&quot;<i>always-on</i>&quot; or &quot;<i>ever-present</i>&quot; internet-based
+      optimisation</li>
+      <li>hosts tap into this ever-present information stream, filtering and
+      contributing as they will</li>
+      <li>both autonomous and human-interactive interfaces are provided into the
+      information stream</li>
+      <li>the human-interactive interfaces facilitate problem-specific
+      collaboration at various levels of expertise such as &quot;<i>technique expert</i>&quot;,
+      &quot;<i>domain expert</i>&quot;, &quot;<i>interested novice</i>&quot;, etc.</li>
+      <li>on smaller scales (local area network) the system provides a viable
+      alternative to the conventional approach to applied optimisation (the
+      configure-run-analyse cycle)</li>
+    </ul>
+
+    <h2>Basic Optimization</h2>
+    <p>IIDLE is capable of addressing canonical optimisation problems such as
+    the Travelling Salesman Problem (TSP), Function Optimisation (funcopt) and
+    Protein Folding (HP Model). For this scenario IIDLE is run on a single
+    machine with a number of localities. Stimulation of units equates to
+    evaluation against an objective function, and proliferation is one of three
+    simple optimisation approaches; Genetic Algorithm, Ant Colony Optimisation (ACO),
+    and Random Search. </p>
+    <p align="center"><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle1.JPG" width="240" height="180"><br>
+    <i>A graphical display in the IIDLE architecture showing units in
+    various different states</i></p>
+    <p>This first IIDLE scenario (basic optimisation) demonstrates an important
+    IIDLE principle, that of an always-on and human interactive search process.
+    The problem domains are relatively easy to solve as they were selected to
+    demonstrate these important and foundational principles of the IIDLE
+    platform. A stop condition has not been set for the simulations permitting
+    the user complete and real-time control over the progression of the simulation.
+    Real-time feedback is provided in the form of line graphs and
+    problem-specific graphics to permit the user to gauge impact of various
+    configurations on the simulation.</p>
+    <div align="left">
+      <table border="0" cellpadding="5" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" cellspacing="0">
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle2.JPG" width="200" height="150"></td>
+          <td width="90%" align="left" valign="top"><b>Function Optimisation -
+          Schwefel's Function in 2D<br>
+          </b>The interface provides an indication
+          of mean, best, and worst solution quality over time, as well as an
+          indication of the current systems samples in the context of a
+          two-dimensional plot of the objective function. Jitter (noise) can be
+          added to the objective function in real time, and the function can be
+          adjusted to change dynamically over time. <br>
+          <a href="applets/config.function.optimisation.properties.html">Try the
+          applet</a></td>
+        </tr>
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle5.JPG" width="200" height="150"></td>
+          <td width="90%" align="left" valign="top"><b>Travelling Salesman
+          Problem (TSP) - Berlin 52 (52 cities)<br>
+          </b>Provides an indication of
+          the best tour (minimal length) found to date as well as system
+          performance over time. Also provides a sensitivity plot of all
+          permutations currently in the system, which provides an indication of
+          system convergence toward a common solution.<br>
+          <a href="applets/config.tsp.properties.html">Try the applet</a></td>
+        </tr>
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle3.JPG" width="200" height="150"></td>
+          <td width="90%" align="left" valign="top"><b>Protein Folding (HP
+          Model) - Permutation Length 64<br>
+          </b>Provides an indication of the
+          optimal folding permutation found to date as well as the performance
+          of the system over time. <br>
+          <a href="applets/config.proteinfolding.properties.html">Try the applet</a></td>
+        </tr>
+      </table>
+    </div>
+    <p>
+
+	<h2>Multiple Objective Optimization</h2>
+    <p>For the application of IIDLE to optimisation problem domains, the
+    objective function is implemented as stimulation to the system at the scope
+    of localities. Using multiple different objective functions is implemented
+    as multiple different stimulation strategies which can be configured to
+    trigger adaptation in the system in a uniform (all stimulation strategies
+    operate across all localities) or in a partitioned (scoped) manner (localities are
+    divided between the stimulation strategies). The latter partitioned approach
+    results in interesting implicit niching effects, and thus is used as a
+    default configuration in the following TSP and function optimisation
+    examples.</p>
+    <div align="left">
+      <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber5">
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle7.JPG" width="200" height="150"></td>
+          <td width="90%" valign="top"><b>Travelling Salesman Problem (TSP) - 3
+          Objectives<br>
+          </b>The Berlin-52 TSP problem is tackled using three
+          different approaches (objective functions) of evaluating a tour;
+          Euclidean tour length (minimising), total tour intersections
+          (minimising), and total nearest-neighbour connections (maximising).
+          The localities of the system are partitioned into three to accommodate
+          the three differing objective functions. <br>
+          <a href="applets/config.tsp.multipleobjective.properties.html">Try the
+          applet</a></td>
+        </tr>
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle6.JPG" width="200" height="150"></td>
+          <td width="90%" valign="top"><b>Function Optimisation - Separable
+          Function (Schwefel's)<br>
+          </b>The Schwefel's function is linearly
+          separable between each dimension. In this example, a 2D implementation
+          of the function is tackled by IIDLE although with two partitions each
+          operating upon a different dimension. The experiment is made more
+          interesting by a transition on the evaluation function that causes the
+          axis to flip over time. <br>
+          <a href="applets/config.function.optimisation.split.properties.html">
+          Try the applet</a></td>
+        </tr>
+      </table>
+    </div>
+    <h2>Hybrid Optimization</h2>
+    <p>As discussed in the application of IIDLE to multiple objective problems,
+    the localities of IIDLE can be partitioned for the scoping of a stimulation
+    strategies. This scoping can also be applied to differing proliferation
+    strategies - referred to as hybrid search. This section provides an example
+    of IIDLE with  a number of different search strategies on a
+    function optimisation and TSP domain. </p>
+    <div align="left">
+      <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle9.JPG" width="200" height="150"></td>
+          <td width="90%" valign="top"><b>Function Optimisation - Hybrid Search<br>
+          </b>Here IIDLE is applied once again to the Schwefel's function in two
+          dimensions. The localities of the system are partitioned into three
+          groups one for each of the following proliferation strategies; ACO, GA,
+          Random Search. The strategies can be changed for each partition in
+          real time. <br>
+          <a href="applets/config.function.optimisation.hybrid.properties.html">
+          Try the applet</a></td>
+        </tr>
+        <tr>
+          <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle8.JPG" width="200" height="150"></td>
+          <td width="90%" valign="top"><b>Travelling Salesman Problem (TSP) -
+          Hybrid Search<br>
+          </b>IIDLE is applied to the Berlin-52 TSP domain. The
+          localities of the system are partitioned into three groups one for
+          each of the following proliferation strategies; ACO, GA, Random
+          Search. The strategies can be changed for each partition in real time. <br>
+          <a href="applets/config.tsp.hybrid.properties.html">Try the applet</a></td>
+        </tr>
+      </table>
+    </div>
+    <h2>Interactive and Networked Collaborative Optimization</h2>
+    <p>As indication, external stimulation is not restricted to access to an
+    objective function, here an example is provided of using human feedback as
+    the stimulation strategy for searching for an optimal TSP tour. Also
+    provided in an example of IIDLE implemented using an open-source
+    peer-to-peer (P2P) network substrate. This permits IIDLE clients to be
+    connected to each other in a self-optimising peer-to-peer network across any
+    physical computer network (eg a computer lab or the internet). When
+    configured with autonomous IIDLE clients the implementation represents a
+    distributed search, when configured for use by interactive-humans the
+    implementation represents a networked collaborative search. </p>
+    <table border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3">
+      <tr>
+        <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle4.JPG" width="200" height="150"></td>
+        <td width="90%" align="left" valign="top"><b>Human-Feedback Travelling
+        Salesman Problem (TSP)<br>
+        </b>An interactive human-feedback panel is
+        provided that displays a number of TSP tours at a time. The user is then
+        capable of rating the quality or messiness of displayed tours by
+        left-clicking (good quality) or right-clicking (bad quality). The
+        user-supplied quality scorings are then used in the selection and
+        proliferation strategy to produce new tours. <br>
+        <a href="applets/config.tsp.userfeedback.properties.html">Try the applet</a></td>
+      </tr>
+      <tr>
+        <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle10.JPG" width="200" height="150"></td>
+        <td width="90%" align="left" valign="top"><b>Networked Collaborative
+        Search - TSP<br>
+        </b>The previous basic TSP optimisation example with
+        network support. Specific network controls as well as network-based
+        visualisation is provided to indicate portal localities (localities on
+        which inbound and outbound movement network processes operate) and
+        visiting units (units from the network). <i><br>
+        applet soon...</i></td>
+      </tr>
+      <tr>
+        <td><img border="0" src="/web/20070830043236im_/http://ict.swin.edu.au/personal/jbrownlee/iidle/iidle11.JPG" width="200" height="150"></td>
+        <td width="90%" align="left" valign="top"><b>Networked Collaborative
+        Search - Protein Folding<br>
+        </b>The previous basic protein folding
+        optimisation example with network support. Specific network controls as
+        well as network-based visualisation is provided to indicate portal
+        localities (localities on which inbound and outbound movement network
+        processes operate) and visiting units (units from the network). <i><br>
+        applet soon...</i></td>
+      </tr>
+    </table>
+
+    <h2>Future</h2>
+    <p>There are many domains and experiments I want to try with IIDLE, the
+    following lists some of the more interesting ideas for future work and
+    preliminary work that has already been completed:</p>
+    <ul>
+      <li><b>Classification</b> - A version of Learning Vector Quantization (LVQ)
+      has been embedded into IIDLE and successfully addressed toy classification
+      problems. The full potential of IIDLE as a dynamic classification system
+      has not been realised. My hope is to investigate IIDLE's capabilities as a
+      <i>novelty detection</i> or <i>anomaly detection</i> system.</li>
+      <li><b>Implicit Problem Decomposition (Views)</b> - This was an idea to
+      further exploit the collaborative search capabilities of IIDLE by having
+      each client operate upon a different subset (<i>view</i>) of the problem.
+      In effect this results in an implicit and scalable divide-and-concur
+      approach to optimisation. Preliminary results have been achieved with
+      function optimisation with views implemented as sub-hypercube of the
+      parameter space.</li>
+      <li><b>Large-Scale Collaborative Optimisation</b> - I am very interested
+      to investigate the systems capabilities on a suitable optimisation problem
+      on a <i>medium-scale</i> (one or two computer labs of clients) and on a <i>
+      large-scale</i> (the internet). The problems I see are firstly the
+      selection of a suitable domain, and then ensuring the software (novice
+      users) and API (users writing their own clients) provide enough flexibility to address
+      the domain.</li>
+      <li><b>Collaborative Filtering Application</b> - There may be some
+      potential for IIDLE to be used as a collaborative filtering system. Again
+      the first issue is the selection of a suitable problem domain.</li>
+    </ul>
+<p>
+
+<h2>Download</h2>
+
+<h3><font size="3"><span style="font-weight: 400">The software was written in
+<a href="https://web.archive.org/web/20070830043236/http://www.java.com/">Java</a> 1.5 (5.0), and was written to be
+highly-modular and extensible. Thus it is relatively trivial to include
+additional processes, strategies and problem definitions. The software also uses
+a number of open-source libraries (provided in the offline download); <a href="https://web.archive.org/web/20070830043236/http://www.jfree.org/jfreechart/index.php">
+JFreeChart</a>, <a href="https://web.archive.org/web/20070830043236/http://www.opensourcephysics.org/">OpensourcePhysics</a>,
+<a href="https://web.archive.org/web/20070830043236/http://jung.sourceforge.net/index.html">Jung</a>,
+<a href="https://web.archive.org/web/20070830043236/http://jakarta.apache.org/commons/index.html">Jakarta Commons</a>
+(collections, lang, logging, math, primitives),
+<a href="https://web.archive.org/web/20070830043236/http://hoschek.home.cern.ch/hoschek/colt/">colt</a>,
+<a href="https://web.archive.org/web/20070830043236/http://freepastry.org/">pastry</a>. The software download contains
+configuration and batch files ready to run all of the IIDLE scenarios described
+on this page.</span></font></h3>
+
+    <ul>
+      <li><font size="3"><span style="font-weight: 700">Version 1.0</span>,<span style="font-weight: 400">
+      March 21st 2006, <a href="release-1.0.zip">download</a> </span> </font><span style="font-weight: 400"><font size="1">
+      [7,714KB]</font><font size="3">
+      (initial public version)</font></span></li>
+      <li><b>Version 1.1</b>, <i>Soon</i></li>
+      <ul><li>Minor bug fixes</li><li>Fixed occasional problem with graphs</li></ul>
+    </ul>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<p>Ask me questions, <a href="https://web.archive.org/web/20070830043236/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">contact me</a>.</p>
+
+<p><b>Q</b>. Why is it so slow when adjusting the total number of localities in the
+system?<br>
+<b>A</b>. There is a threading concern - the simple fix is to pause the system when
+changing the total localities, then un-pause after the configuration change.</p>
+
+<h2>To-Do</h2>
+
+<p>The following are features I would like to add to this software over time, as
+well as user-requested features that I'd like to include (time permitting):</p>
+
+      <ul>
+        <li><b>UserFeedback</b>: allow pause, stop, start functionality to work
+        on the user feedback panel</li>
+        <li><b>UserFeedback</b>: provide a user-stimulation control panel to
+        adjust speed of cycle</li>
+        <li><b>UserFeedback</b>: the speed of the simulation with human feedback
+        is very slow</li>
+        <li><b>Usability</b>: configure each scenario for optimal performance</li>
+        <li><b>Usability</b>: improve the usability of the system control panel
+        (sliders and such)</li>
+        <li><b>Stimulation</b>: provide the ability to dynamically re-define
+        stimulation partitions</li>
+        <li><b>Stimulation</b>: allow the user to select different stimulation
+        strategies (TSP - all three)</li>
+        <li><b>Algorithms</b>: support multiplication and addition modes when
+        there is a heuristic component in ACO</li>
+        <li><b>Algorithms</b>: support PSO in the GUI</li>
+        <li><b>Movement</b>: support different movement types (unidirectional,
+        greedy, random)</li>
+        <li><b>Network</b>: write boot list on exit</li>
+        <li><b>Network</b>: support proxies</li>
+        <li><b>Network</b>: provide a panel to show network connectivity
+        (neighbours)</li>
+        <li><b>Network</b>: check for port already in use, and use new port
+        (multiple clients on one box)</li>
+        <li><b>Network</b>: provide capability for the user to adjust the number
+        of portals per neighbour</li>
+        <li><b>Network</b>: support network configuration from within an applet</li>
+    </ul>
+
+      </td>
+      </tr>
+
+  </div>
+
+		<p>
+		<br/><br/><br/>
+		<a href="https://web.archive.org/web/20070830043236/http://www.ict.swin.edu.au/personal/jbrownlee">Home</a>
+		</p>
+		<script src="https://web.archive.org/web/20070830043236js_/http://www.google-analytics.com/urchin.js" type="text/javascript">
+		</script>
+		<script type="text/javascript">
+		_uacct = "UA-1305392-1";
+		urchinTracker();
+		</script>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 04:32:36 Aug 30, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:58:11 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 521.031
+  exclusion.robots: 0.26
+  exclusion.robots.policy: 0.25
+  cdx.remote: 0.066
+  esindex: 0.009
+  LoadShardBlock: 153.274 (3)
+  PetaboxLoader3.resolve: 274.495 (3)
+  PetaboxLoader3.datanode: 115.715 (4)
+  load_resource: 257.494
+-->
