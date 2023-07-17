@@ -50,7 +50,11 @@ Software:
 
 ## 2006
 
-todo
+* Daniel Angus and Jason Brownlee. [Discrete History Ant Systems](2006/DHAS-2006.pdf) [Unpublished Manuscript]. Victoria, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2006.
+* Jason Brownlee. [A Coarse Taxonomy of Artificial Immune Systems](2006/TR01-2006.pdf) [Technical Report]. Victoria, Australia: Complex Intelligent Systems Laboratory (CIS), Centre for Information Technology Research (CITR), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2006 May; Technical Report ID: TR2006-01.
+* Jason Brownlee. [IIDLE: An Immunological Inspired Distributed Learning Environment for Multiple Objective and Hybrid Optimisation](2006/JB-CEC2006.pdf). Proceedings of the IEEE Congress in Evolutionary Computation (CEC'06); Sheraton Vancouver Wall Centre Hotel, Vancouver, BC, Canada. USA: IEEE Press; 2006: 507-513.
+	* [CEC Presentation Slides](2006/JB-CEC2006-Slides.pdf)
+* Jason Brownlee, [Pensive Pondering](2006/Pensive-Pondering-Posts.pdf), Blog Posts Archive
 
 ## 2007
 
@@ -67,7 +71,7 @@ The state of Clonal Selection Algorithms is investigated in the context of immun
 The general capabilities of Clonal Selection Algorithms as a Computational Intelligence paradigm are defined in the context of a detailed assessment of the suitability of the approaches to the important problem primitives of Function Optimisation and Function Approximation. The findings highlight the general capabilities of the approaches as mutation-based parallel hill climbers for global optimisation and prototype quantisation approaches to function approximation. Finally, an Integrated Hierarchical Clonal Selection Framework demonstrates the subsumed relationship between the cellular, tissue, and host classes of algorithm, the dependent relationship with the complexity of the abstract antigenic environment addressed by the system, and a general scaffold for a broader class of distributed artificial immune systems.
 
 * Jason Brownlee, [Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing](2008/jason.brownlee-phd-thesis-final.pdf), [PhD Dissertation], 2008.
-	* [Dissertation Source](2008/dissertation-src/): Latex source code for the dissertation, and Java source code for all experiments.
+	* [Dissertation Source](2008/dissertation-src/): Latex source code for the dissertation and Java source code for all experiments.
 	* [Official Page](https://researchbank.swinburne.edu.au/items/eecfbab1-a51f-4cd9-a4da-0a38017ad0e6/1/), Swinburne Research Bank
 
 
@@ -79,4 +83,4 @@ The research was collected from a number of webpages archived via internet archi
 * [http://www.it.swin.edu.au/personal/jbrownlee/](https://web.archive.org/web/20081201035451/http://www.it.swin.edu.au/personal/jbrownlee/) (archived)
 * [http://wekaclassalgos.sourceforge.net/](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/) (archived)
 * [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
-
+* [http://pensive-pondering.blogspot.com/](https://web.archive.org/web/20060423080351/http://pensive-pondering.blogspot.com/) (archived)
