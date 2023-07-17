@@ -1,0 +1,176 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/maxpath/maxpath.htm","20060821064223","https://web.archive.org/","web","/_static/",
+	      "1156142543");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Jason Brownlee - Personal Webpage</title>
+<style>
+<!--
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+-->
+</style>
+</head>
+
+<body>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="AutoNumber1">
+    <tr>
+      <td width="100%">
+          
+          <h2>
+	<font color="#000080">
+		<b><font size="6">Jason Brownlee</font></b>
+		<br/>
+		<i><font size="4">Personal Webpage</font></i>
+    	<font size="1">[<a href="/web/20060821064223/http://ict.swin.edu.au/personal/jbrownlee/index.htm">home</a>]</font>
+    </font>
+</h2>
+    <p>
+&nbsp;</p>
+    <hr color="#000000" size="1">
+ 
+<h3><font size="5" color="#000080">Max Path Competition</font></h3>
+<p> 
+
+<font size="4" color="#000080"><b>Competition</b></font></p>
+ 
+<p> 
+
+The Max Path challenge was proposed around Christmas time 2004 as a holiday 
+diversion in my research centre. Basically the problem was inspired by the
+<a href="https://web.archive.org/web/20060821064223/http://numberpuzzles.org/index1.htm">high path</a> problem on
+<a href="https://web.archive.org/web/20060821064223/http://numberpuzzles.org/index.htm">number puzzles</a>. The max path 
+problem is basically to find a path in an provided n-dimensional matrix that 
+gets the highest score where each cell in the matrix has a value between 1 and 
+16. The official centre Max Path competition page is located
+<a href="https://web.archive.org/web/20060821064223/http://www.it.swin.edu.au/centres/ciscp/challenge/">here</a>. The 
+competition poses three problems that differ in complexity from easy 
+two-dimensional lattice, to a difficult five-dimensional lattice. Provided on 
+the site is a leader board where solutions can be posted for bragging rights.</p>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Algorithm</b></font></p>
+ 
+<p> 
+
+The problem can be addressed with any heuristic or stochastic global search 
+technique. I chose to address the problem with a simple branch and bound 
+algorithm. The algorithm is simple and its heuristics are controlled entirely 
+from a properties file. </p>
+ 
+<p> 
+
+The algorithm starts by loading in the selected problem definition (small, 
+medium or hard) and scanning the matrix for start nodes. These nodes become the 
+base of of each branch and bound search for a maximum scoring path. Selection of 
+start nodes is controlled by the <i>min.search.square.value.cutoff</i> 
+parameter. This is typically kept at the maximum of 16. The algorithm constructs 
+a search graph selectively only adding those nodes that are expected to payoff. 
+A cost is used to the current node which is simply the sum of the values to that 
+point. A heuristic is used that estimates the payoff of exploring the path; <i>
+easy.problem.estimation.value</i>, <i>medium.problem.estimation.value</i>, <i>
+hard.problem.estimation.value</i>. Given that a path for a given problem has a 
+fixed length, the heuristic simply multiplies the remaining number of nodes by 
+the estimate value. </p>
+ 
+<p> 
+
+The algorithm also takes in a starting point best path value; <i>
+easy.problem.initial.start.score</i>, <i>medium.problem.initial.start.score</i>,
+<i>hard.problem.initial.start.score</i>. This is the score of the best path 
+found thus far, and initially can be estimated or found by doing a rough first 
+pass. Basically there is a trade-off between accuracy and speed. The higher the 
+best path found thus far, the more pruning of paths that can be performed. This 
+can be over estimated for a speedup. The lower the heuristic estimate the faster 
+the algorithm will run. Values around 14-15 will run fast and provide reasonably 
+accurate results. An estimate of 16 is guaranteed of finding the very best path, 
+though is intractable for large problems. </p>
+ 
+<p> 
+
+Neighbours are typically added in descending order so that the most likely 
+(beneficial) paths are evaluated first; <i>search.potential.order.desc=true.</i> 
+A neighbour cut-off is also provided that allows neighbours that do not look 
+interesting to be ignored providing further speedups; <i>
+min.neighbour.sqaure.value.cutoff=0</i>. </p>
+ 
+<p> 
+
+That is basically it for the algorithm. There are two additional useful tools 
+when running the algorithm. The first is an initial first pass; <i>
+search.firstpass=true</i>. This approach runs the configured algorithm in fast 
+mode, adding only a small set of neighbours of each node, essentially evaluating 
+only the most superciliously beneficial paths. This is useful for getting a good 
+rough initial best path score for the heuristic. The second useful tool is an 
+incremental or iterative search mode; <i>search.increment.mode=false</i>. This 
+mode simply runs the algorithm for a set number of iterations <i>
+search.increment.iterations</i>, incrementing the heuristic cell value estimate 
+each iteration by a fixed amount <i>search.increment.value</i>. This is useful 
+for long runs where the best score is increasing for each run, thus reducing the 
+search space evaluated each run.</p>
+ 
+<p> 
+
+The implementation is basic and useful implementation of the branch and bound 
+algorithm. Further it is side open for additional heuristic speedups.</p>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Download</b></font></p>
+ 
+<p> 
+
+The algorithm can be downloaded in a ready to use form with a bat file from
+<a href="maxpath1.0.zip">here</a>. The zip contains the three competition files, 
+as well as the source code so that it can be extended. </p>
+ 
+<p> 
+
+&nbsp;</p>
+ 
+      </td>
+      </tr>
+    </table>
+  </center>
+  </div>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 06:42:23 Aug 21, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:58:29 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 165.788
+  exclusion.robots: 0.207
+  exclusion.robots.policy: 0.195
+  cdx.remote: 0.07
+  esindex: 0.01
+  LoadShardBlock: 139.203 (3)
+  PetaboxLoader3.datanode: 176.457 (4)
+  load_resource: 108.427
+  PetaboxLoader3.resolve: 62.75
+-->

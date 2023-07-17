@@ -12,7 +12,16 @@ Research work for a minor thesis on niching genetic algorithms for function opti
 * Jason Brownlee. [Parallel Niching Genetic Algorithms: A Crowding Perspective](2004/thesis-2004.pdf) [Masters Minor Thesis]. Melbourne, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2004 Nov.
 	* [Thesis Presentation Slides](2004/thesis-2004-slides.pdf)
 
+**Software:**
+
+(Not related to the masters thesis, but written in the same lab)
+
+* [Max Path Competition Solver](2004/maxpath/) Branch and bound solution to the max path puzzle.
+	* [Archived Webpage](https://web.archive.org/web/20060906015450/http://www.it.swin.edu.au/personal/jbrownlee/maxpath/maxpath.htm)
+	* [Archive of Official Homepage](https://web.archive.org/web/20060904135952/http://www.it.swin.edu.au/centres/ciscp/challenge/)
+
 Software and technical reports may have been lost.
+
 
 ## 2005
 
@@ -26,9 +35,15 @@ Research work from summer scholarship (2004-2005) and the start of PhD program (
 
 **Software:**
 
-* [WEKA Classification Algorithms](2005/classification/): Immunological Classification Algorithms (Weka Plugin)
+* [WEKA Classification Algorithms](2005/classification/): Weka Plugin, implements a suite of neural network an artificial immune system algorithms such as Learning Vector Quantization, Self-Organizing Map, Feed-Forward Artificial Neural Network, Artificial Immune Recognition System, Clonal Selection Algorithm, Immunos-81, etc.
 	* [jbweka-1.6.zip](2005/classification/jbweka-1.6.zip)
+	* wekaclassalgos1.7.zip
+	* wekaclassalgos1.7.zip
+	* wekaclassalgos1.8.zip
 	* [Archived Homepage](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/)
+	* [Modern Port (2023)](https://github.com/fracpete/wekaclassalgos)
+
+Some versions of the Weka software may have been lost.
 
 ### PhD Program
 
@@ -60,11 +75,15 @@ Research work from summer scholarship (2004-2005) and the start of PhD program (
 **Software:**
 
 * [Combinatorial Optimization](2006/comopt/): Java code to solve the Travelling Salesman Problem (TSP) with algorithms like Simple Genetic Algorithm, Greedy Search, Ant System, Rank-Based Ant System, Max-Min Ant System, Ant Colony System, etc.
+	* [Archived Webpage](https://web.archive.org/web/20060904140035/http://www.it.swin.edu.au/personal/jbrownlee/comopt/index.htm)
 * [Function Optimization](2006/funcopt/): Java code to solve function optimization with algorithms like Simple Genetic Algorithm, Real-Valued Genetic Algorithm, Crowding Genetic Algorithm, Fitness Sharing Genetic Algorithm, Evolution Strategies, Differential Evolution, Particle Swarm Optimization, Simulated Annealing, etc.
+	* [Archived Webpage](https://web.archive.org/web/20060919112142/http://www.it.swin.edu.au/personal/jbrownlee/funcopt/index.htm)
 * [Coverage Models in 2D](2006/coverage/): Self-organizing maps for covering 2d shapes with different network structures.
+	* [Archived Webpage](https://web.archive.org/web/20080722114046/http://www.it.swin.edu.au/personal/jbrownlee/other/coverage/index.html)
 * [Human Interactive Optimization](2006/humanint): Optimize problems using human guided search.
+	* [Archived Homepage](https://web.archive.org/web/20080722115338/http://www.it.swin.edu.au/personal/jbrownlee/other/humanint/index.html)
 * [Huygens Search & Optimization Competition](2006/huygens): Code to solve complex fractal function optimization problems.
-
+	* [Archived Webpage](https://web.archive.org/web/20060904135639/http://www.it.swin.edu.au/personal/jbrownlee/huygens/index.htm)
 
 ## 2007
 
