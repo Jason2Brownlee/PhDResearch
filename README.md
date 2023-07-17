@@ -137,6 +137,13 @@ Some versions of the Weka software may have been lost.
 * Jason Brownlee. [OAT: The Optimization Algorithm Toolkit](2007/TR47-2007.pdf) [Technical Report]. Victoria, Australia: Complex Intelligent Systems Laboratory (CIS), Centre for Information Technology Research (CITR), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2007 Dec; Technical Report: 20071220A.
 * Jason Brownlee. [OAT: A Quick Start Guide](2007/TR48-2007.pdf) [Technical Report]. Victoria, Australia: Complex Intelligent Systems Laboratory (CIS), Centre for Information Technology Research (CITR), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2007 Dec; Guide: 20071220A.
 
+**Software:**
+
+* [Optimization Algorithm Toolkit](2007/oat/) Workbench for optimization providing a large suite of stochastic optimization algorithms and problems.
+	* [optalgtoolkit1.4.zip](2007/oat/optalgtoolkit1.4.zip)
+	* [Archived Homepage](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/)
+	* [Modern Mirror](https://github.com/deepstupid/optalgtoolkit)
+
 ## 2008
 
 PhD Dissertation.
