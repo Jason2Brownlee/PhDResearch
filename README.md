@@ -12,7 +12,7 @@ Research work for a minor thesis on niching genetic algorithms for function opti
 * Jason Brownlee. [Parallel Niching Genetic Algorithms: A Crowding Perspective](2004/thesis-2004.pdf) [Masters Minor Thesis]. Melbourne, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2004 Nov.
 	* [Thesis Presentation Slides](2004/thesis-2004-slides.pdf)
 
-
+Software and technical reports may have been lost.
 
 ## 2005
 
@@ -26,8 +26,8 @@ Research work from summer scholarship (2004-2005) and the start of PhD program (
 
 Software:
 
-* [Immunological Classification Algorithms (Weka Plugin)](2005/classification/)
-	* [jbweka-1.6.zip](2005/classificationjbweka-1.6.zip)
+* [WEKA Classification Algorithms](2005/classification/): Immunological Classification Algorithms (Weka Plugin)
+	* [jbweka-1.6.zip](2005/classification/jbweka-1.6.zip)
 	* [Archived Homepage](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/)
 
 ### PhD Program
@@ -58,5 +58,5 @@ The research was collected from a number of webpages archived via internet archi
 
 * [http://www.it.swin.edu.au/personal/jbrownlee/](https://web.archive.org/web/20081201035451/http://www.it.swin.edu.au/personal/jbrownlee/) (archived)
 * [http://wekaclassalgos.sourceforge.net/](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/) (archived)
-* http://jason.brownlee05.googlepages.com/ (not archived)
+* [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
 
