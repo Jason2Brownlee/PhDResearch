@@ -1,0 +1,81 @@
+%
+% Definitions file for command and environment
+% Jason Brownlee
+%
+
+%
+% PACKAGES
+%
+
+% used for inserting images (.eps)
+\usepackage{graphicx} 
+
+% used for displaying pseudocode
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+% even better looking algorithms
+% http://andrewjpage.com/index.php?/archives/55-Algorithms-in-Latex.html
+\usepackage[algochapter, ruled, linesnumbered]{algorithm2e}
+
+% setting the text spacing in a user friendly way
+% information: http://mit.edu/answers/latex/formatting/latex_spacing.html
+\usepackage{setspace} 
+
+% For table formats
+% Defines a tabularx environment that is similar to tabular  but it modifies the column widths, rather than the inter-column space, to achieve the desired table width.
+\usepackage{tabularx}
+
+% doing landscape things
+% http://www.hep.man.ac.uk/u/jenny/jcwdocs/latex/latex.html
+\usepackage{lscape}
+
+% for doing sub figures (graphics guide)
+\usepackage{subfig}
+
+% so i can define the margins explicitly
+% http://www.biochem.ucl.ac.uk/~james/latex/thesis_master_file.html
+\usepackage{geometry}
+
+% capture URLS
+\usepackage{url}
+
+% comments
+\usepackage{verbatim} 
+
+% nice looking lines in tables
+\usepackage{booktabs}
+
+% improved positioning of float
+\usepackage{float}
+
+%
+% NEW COMMMANDS
+%
+
+% new macro for starting a new page and changing the style to empty
+% \newpage == ends the current page. 
+% \thispagestyle == works in the same manner as the \pagestyle, except that it changes the style for the current page only. 
+% empty == Produces empty heads and feet - no page numbers
+\newcommand{\blanknonumber}{\newpage\thispagestyle{empty}}
+
+% Short cut for naive and Naive:
+% To use - just use the commands \naive and \Naive to get naive displayed correctly
+% to get the space after the command use \naive\ and \Naive\
+% \def\naive{na\"{\i}ve} 
+% \def\Naive{Na\"{\i}ve} 
+\newcommand{\naive}{na\"{\i}ve}
+\newcommand{\Naive}{Na\"{\i}ve}
+
+% naivete
+% \newcommand{\naivete}{naivet\'{\e}}
+
+% for defining definitions, example:
+% FROM: http://www.kronto.org/thesis/tips/unnumbered-theorem.html
+%\begin{definition}\label{def:data-parallelism}
+%  Data-parallel programming is a form of parallel programming in which
+%  the programmer specifies the distribution of data over the processors.
+%  It is left to the compiler to choose and implement the distribution of
+%  the actual computations over the processors.
+%\end{definition}
+% \newtheorem*{definition}{Definition}
+% \newtheorem*{principle}{Principle}

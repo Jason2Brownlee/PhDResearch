@@ -1,0 +1,6 @@
+#Sun Jan 20 00:09:49 ACT 2008
+name=RTCSAStudy1
+stopcondition=class\=com.oat.stopcondition.FoundOptimaOrMaxEpochs\:MaxEpochs\=1000
+description=RTCSA Study 1.
+runstatistics=com.oat.domains.cells.mediatedpattrec.probes.AEEuclidean\:com.oat.domains.cells.mediatedpattrec.probes.AEHamming\:com.oat.probes.BestScoreProbe\:com.oat.probes.BestSolutionProbe\:com.oat.domains.cells.mediatedpattrec.probes.OptimaDiversity\:com.oat.domains.cells.mediatedpattrec.probes.SolutionDiversity\:com.oat.domains.tissues.probes.AverageTissueDiversity\:com.oat.probes.EpochCounterProbe\:com.oat.probes.EpochLocateOptimalScore\:com.oat.domains.tissues.probes.AverageTissueError\:com.oat.probes.EvaluationCounterProbe\:com.oat.domains.tissues.probes.HostDiversity\:com.oat.domains.tissues.probes.HostError\:com.oat.probes.LastEpochSolutionScoreSummary\:com.oat.domains.cells.mediatedpattrec.probes.RMSEEuclidean\:com.oat.domains.cells.mediatedpattrec.probes.RMSEHamming\:com.oat.probes.RunTimeMillisProbe\:com.oat.probes.SolutionScoreSummary
+domain=com.oat.domains.tissues.recirulation.RecirculationDomain

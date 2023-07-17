@@ -1,0 +1,4 @@
+"Problem","System","Average B-Cell Diversity (ABCD)","Average B-Cell Diversity (ABCD)","Average T-Cell Diversity (ATCD)","Average T-Cell Diversity (ATCD)","Average B-Cell Error (ABCE)","Average B-Cell Error (ABCE)","Average T-Cell Error (ATCE)","Average T-Cell Error (ATCE)","Cell Set Average Eucldiean Error (CSAEE)","Cell Set Average Eucldiean Error (CSAEE)"
+"AEP-10","MCCSAEuclidean","89.399","0.822","89.234","0.718","0.003","0.002","0.009","0.006","0.009","0.006"
+"AEP-10","MCCSAHamming","89.399","0.822","87.999","0.94","0.003","0.002","0.098","0.029","0.617","0.123"
+"Significant","-","False","-","True","-","False","-","True","-","True","-"

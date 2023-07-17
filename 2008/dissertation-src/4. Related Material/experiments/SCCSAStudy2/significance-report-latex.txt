@@ -1,0 +1,12 @@
+\begin{tabular}{llllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}} & \multicolumn{2}{c}{\textbf{Average Cell Neighbourhood Diversity (ACND)}} & \multicolumn{2}{c}{\textbf{Average SubCell Neighbourhood Diversity (ASCND)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & SCCSA-Component & 30.93 & 0.174 & 0 & 0 & 66.786 & 1.11 & 22.281 & 0.487 \\
+AEP-10 & SCCSA-TopDown & 31.517 & 0.096 & 0 & 0 & 71.173 & 1 & 23.763 & 0.707 \\
+AEP-10 & SCCSA-BottomUp & 31.366 & 0.156 & 0 & 0 & 68.173 & 1.08 & 22.731 & 0.645 \\
+\multicolumn{2}{l}{\emph{Significant}} & True &  & True &  & True &  & True & \\
+\hline
+\end{tabular}

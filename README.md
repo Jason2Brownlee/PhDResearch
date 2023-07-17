@@ -48,7 +48,26 @@ Software:
 	* [release-1.0.zip](2005/iidle/release-1.0.zip)
 	* [Archived Homepage](https://web.archive.org/web/20080722120411/http://www.it.swin.edu.au/personal/jbrownlee/iidle/index.html)
 
+## 2006
 
+todo
+
+## 2007
+
+todo
+
+## 2008
+
+PhD Dissertation.
+
+**Title:** Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
+
+**Abstract:** The development of adaptive and intelligent computational methods is an important frontier in the field Artificial Intelligence given the fragility of top-down software solutions to complex problems involving incomplete information. This dissertation describes a systematic investigation of the Clonal Selection Theory of acquired immunity as a motivating information processing metaphor of a series of adaptive and distributed Computational Intelligence algorithms. The broader structure and function of the mammalian immune system is used to frame the cellular theory and classically inspired approaches, providing the additional distributed perspectives of a 'host of tissues' called the Tissue Paradigm and a 'population of hosts' called the Hosts Paradigm. This investigation was motivated by three open problems in the broader field of Artificial Immune Systems, specifically the perceived impasse in the development, identity, and application of the field, the promise of distributed information processing, and the need for a framework to motivate such work.
+The state of Clonal Selection Algorithms is investigated in the context of immunological theory, and considered in the context of broader related machine learning fields and adaptive systems theory. A systematic approach is adopted in considering the adaptive qualities of clonal selection beyond a cellular perspective, involving the identification of the lymphatic system and lymphocyte migration as a motivating metaphor for intra-host distributed systems, and host immunisation and evolutionary immunology as a motivating metaphor for intra-population distributed system design. Relevant immunophysiology and theory was reviewed, abstracted to computational models and algorithms, and systematically assessed on model pattern recognition problems to demonstrate and verify expected information processing capabilities. The empirical investigation reveals a variety of tissue and host based clonal selection systems capable of acquiring distributed information via internal processes of controlled localisation and dissemination, in a decentralised information exposure environment.
+The general capabilities of Clonal Selection Algorithms as a Computational Intelligence paradigm are defined in the context of a detailed assessment of the suitability of the approaches to the important problem primitives of Function Optimisation and Function Approximation. The findings highlight the general capabilities of the approaches as mutation-based parallel hill climbers for global optimisation and prototype quantisation approaches to function approximation. Finally, an Integrated Hierarchical Clonal Selection Framework demonstrates the subsumed relationship between the cellular, tissue, and host classes of algorithm, the dependent relationship with the complexity of the abstract antigenic environment addressed by the system, and a general scaffold for a broader class of distributed artificial immune systems.
+
+* [Download](2008/jason.brownlee-phd-thesis-final.pdf)
+	* [Dissertation Source](2008/dissertation-src/): Latex source code for the dissertation, and Java source code for all experiments.
 
 
 

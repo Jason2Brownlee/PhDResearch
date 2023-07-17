@@ -1,0 +1,7 @@
+"Problem","System","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Average Cell Error (ACE)","Average Cell Error (ACE)","Average BMU Per Antigen (ABMU/Antigen)","Average BMU Per Antigen (ABMU/Antigen)"
+"AEP-10","CCSA(N+N)","94.356","0.171","0.027","0.012","1","0"
+"AEP-10","CCSA(N+N)-G","93.995","0.24","0.023","0.014","1.82","0.124"
+"AEP-10","CCSA(N+N)-GS","88.456","0.937","0.062","0.015","4.907","0.528"
+"AEP-10","RCCSA-H","94.37","0.18","0.03","0.013","1","0"
+"AEP-10","RCCSA-H-EP","88.083","0.79","0.028","0.013","2.653","0.385"
+"Significant","-","True, False for CCSA(N+N) and RCCSA-H","-","True","-","True, False for CCSA(N+N) and RCCSA-H","-"

@@ -1,0 +1,6 @@
+"Problem","System","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Average Cell Error (ACE)","Average Cell Error (ACE)"
+"AEP-10","CCSA1_1","86.363","0.808","0.161","0.037"
+"AEP-10","CCSA1_N","86.053","1.016","0.073","0.031"
+"AEP-10","CCSAN_1","95.006","0.103","0.053","0.013"
+"AEP-10","CCSAN_N","95.035","0.094","0.01","0.006"
+"Significant","-","True","-","True","-"

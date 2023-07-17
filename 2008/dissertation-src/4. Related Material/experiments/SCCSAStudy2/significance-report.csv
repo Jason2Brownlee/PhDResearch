@@ -1,0 +1,5 @@
+"Problem","System","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Cell Set Average Eucldiean Error (CSAEE)","Cell Set Average Eucldiean Error (CSAEE)","Average Cell Neighbourhood Diversity (ACND)","Average Cell Neighbourhood Diversity (ACND)","Average SubCell Neighbourhood Diversity (ASCND)","Average SubCell Neighbourhood Diversity (ASCND)"
+"AEP-10","SCCSA_Component","30.93","0.174","0","0","66.786","1.11","22.281","0.487"
+"AEP-10","SCCSA_TopDown","31.517","0.096","0","0","71.173","1","23.763","0.707"
+"AEP-10","SCCSA_BottomUp","31.366","0.156","0","0","68.173","1.08","22.731","0.645"
+"Significant","-","True","-","True","-","True","-","True","-"

@@ -1,0 +1,4 @@
+"Problem","Algorithm","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Average Cell Error (ACE)","Average Cell Error (ACE)","Average BMU Per Antigen (ABMU/Antigen)","Average BMU Per Antigen (ABMU/Antigen)","Average Cell Neighbourhood Diversity (ACND)","Average Cell Neighbourhood Diversity (ACND)"
+"AEP-10","RCCSA","89.128","0.732","0.002","0.002","3.94","0.803","?","?"
+"AEP-10","SCCSA_HR","92.876","0.405","0.012","0.012","2.83","0.352","83.257","0.508"
+"AEP-10","SCCSA_NR","87.592","0.968","0.002","0.001","3.417","0.424","65.119","1.514"

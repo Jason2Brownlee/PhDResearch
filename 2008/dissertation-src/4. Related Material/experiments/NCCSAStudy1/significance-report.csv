@@ -1,0 +1,7 @@
+"Problem","System","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Cell Set Average Eucldiean Error (CSAEE)","Cell Set Average Eucldiean Error (CSAEE)","Average Cell Mapped Diversity (ACMD)","Average Cell Mapped Diversity (ACMD)","Average Network Cell Diversity (ANCD)","Average Network Cell Diversity (ANCD)","Average Mapped BMU Euclidean Error (AMBMUEE)","Average Mapped BMU Euclidean Error (AMBMUEE)"
+"AEP-10","RNCCSA_NM","93.218","0.248","0.019","0.011","?","?","?","?","0","0"
+"AEP-10","RNCCSA_PP","91.974","0.413","0.09","0.025","91.777","0.46","183.751","0.669","0.184","0.026"
+"AEP-10","RNCCSA_PS","91.912","0.31","0.03","0.013","92.032","0.453","183.944","0.597","0.173","0.025"
+"AEP-10","RNCCSA_SS","91.805","0.429","0.211","0.04","91.783","0.419","183.588","0.609","0.147","0.034"
+"AEP-10","RNCCSA_SP","91.744","0.421","0.234","0.039","91.745","0.403","183.489","0.542","0.162","0.03"
+"Significant","-","True","-","True","-","True, False for RNCCSA_PP and RNCCSA_SS, False for RNCCSA_PP and RNCCSA_SP, False for RNCCSA_SS and RNCCSA_SP","-","True, False for RNCCSA_PP and RNCCSA_PS, False for RNCCSA_PP and RNCCSA_SS, False for RNCCSA_PP and RNCCSA_SP, False for RNCCSA_SS and RNCCSA_SP","-","True, False for RNCCSA_PP and RNCCSA_PS, False for RNCCSA_PS and RNCCSA_SP, False for RNCCSA_SS and RNCCSA_SP","-"

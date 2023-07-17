@@ -1,0 +1,6 @@
+#Mon Feb 04 23:27:36 CST 2008
+name=SCCSAStudy2
+stopcondition=class\=com.oat.stopcondition.EpochStopCondition\:MaxEpochs\=1000
+description=SCCSA Study 2.
+runstatistics=com.oat.domains.cells.probes.AbsoluteCellError\:com.oat.domains.cells.probes.AntigenAverageDiversity\:com.oat.domains.cells.probes.AverageBMUPerAntigen\:com.oat.domains.cells.probes.AverageCellDiversity\:com.oat.domains.cells.probes.AverageCellDiversityRatio\:com.oat.domains.cells.probes.AverageCellError\:com.oat.domains.cells.spatial.probes.AverageCellNeighbourhoodDiversity\:com.oat.domains.cells.spatial.probes.AverageSubCellNeighbourhoodDiversity\:com.oat.probes.BestScoreProbe\:com.oat.probes.BestSolutionProbe\:com.oat.domains.cells.probes.CellSetAbsoluteEuclideanError\:com.oat.domains.cells.probes.CellSetAbsoluteHammingError\:com.oat.domains.cells.probes.CellSetAverageComponentEuclideanError\:com.oat.domains.cells.probes.CellSetAverageDiversity\:com.oat.domains.cells.probes.CellSetAverageEuclideanError\:com.oat.domains.cells.probes.CellSetAverageHammingError\:com.oat.probes.EpochCounterProbe\:com.oat.probes.EpochLocateOptimalScore\:com.oat.probes.EvaluationCounterProbe\:com.oat.probes.LastEpochSolutionScoreSummary\:com.oat.probes.RunTimeMillisProbe\:com.oat.probes.SolutionScoreSummary
+domain=com.oat.domains.cells.spatial.SpatialDomain

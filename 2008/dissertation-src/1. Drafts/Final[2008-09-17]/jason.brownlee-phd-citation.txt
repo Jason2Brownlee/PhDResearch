@@ -1,0 +1,18 @@
+Jason Brownlee PhD Citation:
+
+Student Name: Jason Brownlee
+
+Thesis Title: Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
+
+Description: 
+This dissertation describes a systematic investigation of the clonal selection theory of acquired immunity as a motivating information processing metaphor of a series of adaptive and distributed Computational Intelligence algorithms. This research improves the current understanding of the clonal selection paradigm for adaptive information processing and more specifically the state of distributed and decentralised approaches. 
+
+Contact Details:
+
+Student: Jason Brownlee
+M: 04 0120 6131
+E: jason.brownlee05@gmail.com
+
+Supervisor: Professor Tim Hendtlass
+P: 03 9214 8863
+E: thendtlass@swin.edu.au

@@ -1,0 +1,11 @@
+\begin{tabular}{llllllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average B-Cell Diversity (ABCD)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Diversity (ATCD)}} & \multicolumn{2}{c}{\textbf{Average B-Cell Error (ABCE)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Error (ATCE)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & MCCSAEuclidean & 89.399 & 0.822 & 89.234 & 0.718 & 0.003 & 0.002 & 0.009 & 0.006 & 0.009 & 0.006 \\
+AEP-10 & MCCSAHamming & 89.399 & 0.822 & 87.999 & 0.94 & 0.003 & 0.002 & 0.098 & 0.029 & 0.617 & 0.123 \\
+\multicolumn{2}{l}{\emph{Significant}} & False &  & True &  & False &  & True &  & True & \\
+\hline
+\end{tabular}

@@ -1,0 +1,4 @@
+"Problem","System","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Cell Set Average Eucldiean Error (CSAEE)","Cell Set Average Eucldiean Error (CSAEE)","Average Polyclonal Response Error (APRE)","Average Polyclonal Response Error (APRE)"
+"DAEP-10","DCCCSA-Explicit","31.638","0.047","0.003","0.001","0.333","0.018"
+"DAEP-10","DCCCSA-PreCommitted","31.627","0.059","0.008","0.003","0.334","0.019"
+"Significant","-","False","-","True","-","False","-"

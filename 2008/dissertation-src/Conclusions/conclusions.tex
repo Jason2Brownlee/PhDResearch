@@ -1,0 +1,280 @@
+
+%
+% Conclusions Chapter
+% Jason Brownlee
+%
+
+% Guideline: Audience is the Lay-reader
+
+
+%
+% Conclusions
+%
+\chapter{Conclusions}
+\label{chap:conclusions}
+
+
+%
+% Research Goals
+%
+% Impact - related to contributions
+% Does the author appreciate the broader significance of the research
+% Can the author recognise that his/her work may contribute significantly to a narrow field but very little to a broader field?  
+% Does the author recognise the global implications of his/her work?
+%
+\section{Research Goals}
+\label{sec:conclusion:goals}
+% hypothesis
+This work has demonstrated that the interpreted structure and function of the immune system do provide an effective motivating metaphor for the realisation of distributed clonal selection algorithms.
+% goals
+This section reviews the contributions of this dissertation in the context of the research hypothesis, defined by five goals outlined in Section~\ref{sec:intro:goals}.
+
+% Before investigation of a novel immunological inspired framework and resultant models and algorithms, it is essential to identify a systematic methodology to provide a set of well defined procedures as to how such a framework may be realised and how the effectiveness of the models and algorithms may be assessed.
+\paragraph{1. Identify a systematic methodology for realising a novel biological inspired computational framework and models.}
+% general
+A systematic methodology was outlined in Section~\ref{sec:background:methodology}, comprised of (1) an immunological and information processing centric framework for progressing from metaphor, model, strategy, and algorithm, (2) an experimental framework for empirical verification and demonstration of computational models and algorithms, and (3) an adaptive algorithm centric framework for the integration of qualitative and quantitative information regarding so-called `conceptual machines'.
+% application
+This methodology was applied at three different and inter-related scales: (1) \emph{General Metaphor}: The broad consideration of the information processing properties of the clonal selection theory, investigated in the context of three specific and distinct interpretations called paradigms. (2) \emph{Specific Metaphors}: The consideration of computational paradigms inspired by a specific immunological metaphors that constrain the clonal selection process, which are investigated through instantiations of specific models and algorithms. (3) \emph{Specific Algorithms}: The consideration of a specific algorithm in the context of a broader paradigm which is described in terms of its further constrained metaphor, information processing strategy, general model, algorithmic procedure instantiation, and empirical verification and demonstration of expected behaviours.
+
+% The clonal selection paradigm is a core information processing pattern in cellular immunology and inspired computational models, therefore it is essential that both the capabilities and limitations of existing adaptive and distributed computational models are understood.
+\paragraph{2. Identify limitations with and elaborate upon the base clonal selection paradigm.}
+% general
+The Clonal Selection Theory was considered in depth in Section~\ref{sec:cs:theory} providing a context for effectively interpreting the motivations for the state of the art in clonal selection algorithms. More importantly, the depth of immunological background provided insight into the constraints that were imposed in realising the classical and state of the art algorithms. 
+% problems
+The review of clonal selection algorithms in Section~\ref{sec:cs:algorithms} highlighted three main limitations, specifically: (1) \emph{Lack of explicit consideration of adaptive qualities}: Information processing inspired by structures and functions of the clonal selection theory were traditional considered adaptive implicitly given the theories relationship with evolutionary theory and resultant evolutionary algorithms. (2) \emph{Lack of positioning in the broader field}: Consideration of inspired algorithms was traditionally limited to related algorithms in the field of Artificial Immune Systems with some consideration of the related approaches in the field of Evolutionary Computation, broader consideration in computational and machine intelligence was rarely considered. (3) \emph{Lack of consideration beyond the cellular}: Clonal selection algorithms, as well as the majority of the broader Artificial Immune System algorithms are concerned primarily with the structure and function of the immune system at the cellular level, specifically given the cellular (lymphocyte immune cell) and molecular (antibody protein) focus of the principle inspiring theories.
+
+% addressed and elaboration
+Each of these three limitations were address in turn, specifically: Section~\ref{sec:cs:related} considered clonal selection in the broader context of Computational and Machine Intelligence, strengthening the relationship with Evolutionary Computation and Lazy Learning, and highlighting the relationship with Hill Climbing algorithms and Competitive Learning. Section~\ref{sec:cs:adaptive} considered clonal selection as an adaptive strategy, phrasing the approach in Holland's adaptive systems formalism.  Section~\ref{sec:cs:beyond} outlined an agenda for the investigation and elaboration of the broader clonal selection paradigm, including: the \emph{Cellular Clonal Selection} perspective involving the investigation of the classical paradigm pursued in Chapter \ref{chap:cells}, the new \emph{Tissue Clonal Selection} perspective investigated in Chapter \ref{chap:tissues}, and the new \emph{Host Clonal Selection} perspective investigated in Chapter \ref{chap:hosts}.
+
+% The structures and functions of mammalian immune system must be scrutinised through a lens of clonal selection for processes and architectures that constitute distributed information processing, and formulated into abstracted computational models.
+\paragraph{3. Identify immunological structures and/or functions which clearly exhibit distributed information processing.}
+% promise
+An important motivation for the project was the identified promise of decentralised, autonomous, and distributed information processing from in the broader field of Artificial Immune Systems reviewed in Section~\ref{sec:background:distributedais}. The review demonstrated that although such approaches had been proposed, few investigated the intersection of clonal selection and distributed information processing explicitly.
+% general
+Section~\ref{sec:cs:beyond} identified two distinct perspectives of clonal selection that exhibited distributed information processing properties: clonal selection across the tissues of a host organism, and clonal selection across the hosts in a population of organisms.
+% tissues
+The \emph{Tissue Clonal Selection Paradigm} was investigated in Chapter \ref{chap:tissues}, involving a review of the motivating metaphor in the physiology of the lymphatic system and the behaviour of migrating lymphocytes. The underlying strategy of Tissue Clonal Selection Algorithms was defined as the localised although decentralised acquisition and application of information with continuous dissemination toward general system capability. Toward this end, investigation of tissue algorithms focused on the localisation and dissemination of information in unknown distributed exposure scenarios.
+% hosts
+The \emph{Host Clonal Selection Paradigm} was investigated in Chapter \ref{chap:hosts}, providing a review of the motivating metaphor in the immunisation and evolutionary pressures on the immune system. The underlying trend of Host Clonal Selection algorithms was defined as similar to that of Tissue Algorithms involving the localisation and dissemination of information, with the increase in localisation providing host-specialisation, and the variation of disseminated giving hosts control over what information is disseminated, and when. Toward this end, investigation of host algorithms also focused on the information acquisition and application capabilities under a range of unknown distributed exposure scenarios.
+
+% In order to assess the effectiveness of the devised abstracted models they must be examined and understood with regard to their information processing capabilities, limitations, and general behaviours.
+\paragraph{4. Study the behaviours, capabilities, and limitations of devised computational models.}
+% context - colour space
+A model problem domain and problem instances were defined in Section~\ref{subsec:cells:paradigm:colourspace} called the Colour Space Domain suitable for testing and assessing clonal selection algorithms with properties of optimisation and pattern recognition. 
+% expectations
+Each clonal selection paradigm was phrased in terms of (1) abstract models that outlined the motivating structural and/or functional metaphor and general computational concerns (Sections \ref{sec:cells:paradigm}, \ref{sec:tissues:paradigm}, and \ref{sec:hosts:paradigm} for the cellular, tissue, and host paradigms respectively), and (2) realised algorithms, problems, and measures that outlined the specific system behavioural and capability expectations (Sections \ref{sec:cells:realised}, \ref{subsec:tissues:paradigm:method}, and \ref{subsec:hosts:paradigm:realised} for the cellular, tissue, and host paradigms respectively). 
+% systematic verification with bounds (limitation)
+Clonal Selection Algorithm behavioural capabilities and expectations were systematically demonstrated and verified empirically with specific algorithm instantiations on specific problem instance scenarios across the three paradigms. Importantly, the verification process bounded the claims of expected capability, limiting them to specific algorithms and/or problem scenarios.
+% features and suitability
+The suitability of application of the general paradigms was assessed in Chapter \ref{chap:iidle}. This involved a distillation of each approach into distinctive information processing features based on observed and verified behaviours (Section~\ref{sec:iidle:suitability}). The information processing features were then systematically mapped onto specialised cases of Function Optimisation (Section~\ref{subsec:iidle:function:optimization:applicability}) and Function Approximation (Section~\ref{subsec:iidle:function:approximation:applicability}) problem domains.
+
+% Finally, the adaptive clonal selection paradigm and realised distributed models must be integrated into a framework such that its benefits and limitations can be assessed given the success of its descriptive and predictive capabilities.
+\paragraph{5. Propose an integrated clonal selection framework that unites the base and distributed variants.}
+% general
+The clonal selection paradigm was partitioned in section Section~\ref{sec:cs:beyond} into that of `\emph{systems}' and `\emph{environments}', where clonal selection governed immune systems were mapped to `systems', and the scope of antigen and pathogen were mapped to `environments' (elaborated initially in Section~\ref{subsec:cells:paradigm:antigenicexposures}). The clonal selection (systems) partition was reduced into the three distinct paradigms, each of which was investigated. 
+% back together
+Chapter \ref{chap:framework} considered the reconstruction of the three paradigms and the system-environment partition into a hierarchical framework.
+% clonal selection
+A Hierarchical Clonal Selection Framework was defined in Section~\ref{sec:framework:hcsf} that aggregated the clonal selection algorithms from across the three paradigms, highlighting the specific constraints imposed on the quintessential information processing procedure. 
+% antigenic exposures
+A Hierarchical Antigenic Exposure Framework was defined in Section~\ref{sec:framework:haef} that aggregated the contrived antigenic environments from across the three paradigms, highlighting the commonality of piece-wise information exposure, and the common source of complexity in the cardinality and spatial temporal patterns of exposure, which are compounded across the paradigms.
+% integration
+The frameworks were combined into an Integrated Hierarchical Clonal Selection Framework in Section~\ref{sec:framework:ihcsf}, uniting the system and environmental concerns, suggesting at additional perspectives, and accounting for the bracketing of complexity in each specific clonal selection paradigm.
+% methodology
+Finally, the adopted partition-reduction methodology was reviewed and its application considered in the broader context in the field of Artificial Immune Systems, and as a general tool for investigating related Computational Intelligence fields of study (Section~\ref{sec:framework:ihcsf:applicability}).
+
+%
+% Contributions
+%
+\section{Contributions}
+\label{sec:conclusion:contributions}
+This section reviews the contributions as standalone conceptual and computational artefacts. Artefacts are defined as discrete and differentiable objects produced and qualified within this investigation that may drawn from and used beyond the work.
+
+%
+% Computational Artefacts
+%
+\subsection{Computational Artefacts}
+A computational artefact contribution is a defined formalism that may be exploited beyond this investigation for computation, including tools such as metaheuristics or solvers and benchmark problems.
+
+\begin{enumerate}
+
+	% cellular 
+	\item \emph{Cellular Clonal Selection}: A generic paradigm for unifying existing cellular-based clonal selection algorithms (Chapter \ref{chap:cells}), and promoting the development of novel algorithms based on inter-cellular interactions, specifically the Spatial Clonal Selection Algorithm (Section~\ref{sec:cells:spatial}), Mediated Clonal Selection Algorithm (Section~\ref{sec:cells:mediated}), and the integration of the network metaphor embodied in the Network Clonal Selection Algorithm (Section~\ref{sec:cells:network}). These algorithms are generally suited to global function optimisation and vector quantisation based function approximation using a holistic inductive model of a given problem (Sections \ref{subsec:iidle:function:optimization:applicability:cells} and \ref{subsec:iidle:function:approximation:applicability:cells}).
+	
+	% tissues
+	\item \emph{Tissue Clonal Selection}: A distributed clonal selection paradigm inspired by the lymphatic system and lymphocyte recirculation (Chapter \ref{chap:tissues}), including the following specific decentralised algorithms: the Recirculation (Section~\ref{sec:tissues:recirculation}), Homing (Section~\ref{sec:tissues:homing}), and Inflammation (Section~\ref{sec:tissues:recruitment}) Tissue Clonal Selection Algorithms. These algorithms are generally suited to cooperative function optimisation and approximation with hybrid approaches and/or partial inductive models based on functional decompositions of the problem (Sections \ref{subsec:iidle:function:optimization:applicability:tissues} and \ref{subsec:iidle:function:approximation:applicability:tissues}).
+
+	% host	
+	\item \emph{Host Clonal Selection}: A distributed clonal selection paradigm inspired by populations of organisms with immune systems undergoing immunisation and evolution (Chapter \ref{chap:hosts}), including the following specific decentralised algorithms: Transmission (Section~\ref{sec:hosts:population:elicited}) and Shared Immunity (Section~\ref{sec:hosts:population:shared}) Population Host Clonal Selection Algorithms generally suited to parallel and cooperative function optimisation and ensemble function approximation, and the Maternal (Section~\ref{sec:hosts:generational:maternal}) and Evolved Immunity (Section~\ref{sec:hosts:generational:evolved}) Generational Host Clonal Selection Algorithms generally suited to multiple restart and adaptation of process for both optimisation and function approximation problems (Sections \ref{subsec:iidle:function:optimization:applicability:hosts} and \ref{subsec:iidle:function:approximation:applicability:hosts}). 
+	
+\end{enumerate}
+
+
+%
+% Conceptual Artefacts
+% 
+\subsection{Conceptual Artefacts}
+A conceptual artefact contribution is a defined formalism that may be exploited beyond this investigation for structuring practices, including methodologies and frameworks.
+
+\begin{enumerate}
+	% general methodology	
+	\item \emph{Systematic Methodology}: An integrated set of practices derived from best practices for realising biologically inspired computational intelligence models from metaphor to computational artefact, including an immunological-centric conceptual framework (Section~\ref{sec:background:methodology:cf}), an experimental framework (Section~\ref{subsec:methodology:experimental}), an engineering-centric integration framework (Section~\ref{subsec:smallmodels}), a partition and reduction framework for investigation a specific information processing strategy (Sections \ref{sec:cs:beyond} and \ref{subsec:framework:ihcsf:applicability:methodology}), and a feature-centric suitability framework for assessing applicability, comparability, and transferability (Section~\ref{sec:iidle:suitability:framework}).
+
+	
+	% frameworks
+	\item \emph{Hierarchical Framework}: A conceptual scaffold were the capabilities and complexity of a given constrained perspective of the information processing principle is subsumed by the successive level (Chapter \ref{chap:framework}), used to integrate clonal selection algorithms (Section~\ref{sec:framework:hcsf}), antigenic exposure problems (Section~\ref{sec:framework:haef}), integration of these two frameworks into a unified hierarchical model of clonal selection (Section~\ref{sec:framework:ihcsf}), with suggested broader applicability in for other immunological-based computational intelligence approaches (Sections \ref{subsec:framework:ihcsf:applicability:ais}).
+	
+\end{enumerate}
+
+
+%
+% Limitations
+% Has the author critically evaluated the limitations his/her own work?  
+%
+\section{Limitations}
+\label{sec:conclusions:limitations}
+Limitations are observed as decision points with alternative options, each of which represents a trade-off in terms of the contributions made from the investigation in the context of the hypothesis and research goals. This section critically assesses the limitations of this work, specifically in the context of design and methodological constraints imposed on the investigation, as well as the alternatives, benefits, and restrictions they provide. The limitations of three specific decision points are considered: (1) the method of biological interpretation and transition to computational intelligence algorithm, (2) the focus in the chosen method of algorithm development, and (3) the methodology adopted to verify and demonstrate expected behaviours and capabilities of developed algorithms.
+
+%
+% Biological Interpretation
+%
+\subsection{Biological Interpretation}
+% what i did
+The motivating immunological metaphor for the Cellular, Tissue, and Host Clonal Selection Paradigms was based on a qualitative interpretation of the structure and function of the acquired immune system at different scales resulting in generalised models and algorithms. A problem with this approach is that the behavioural expectations of realised models was also qualitative, and therefore difficult to assess and verify.
+% alternative
+An alternative approach which is common in the field of Artificial Immune Systems is to use \emph{mathematical models} of immunological function as a basis for computational intelligence models and algorithms, for example the shape-space and affinity landscape geometric formalisms that underlie the principles of much of the field (Section~\ref{subsec:cs:ssandal}). 
+% benefit of alternative
+This alternative reduces up-front effort by exploiting interpretations made by theoretical immunologists and produces specific rather than general approaches with a clear mathematical foundation. The strong specialisation of such approaches likely limits the broader applicability of the approaches, and the inspiring models are likely bounded by immunological dogma (for example self-nonself discrimination) which may or may not be a useful perspective in computational intelligence modelling and algorithm development. 
+% comparative example
+A specific and relevant example from this work is the tissue paradigm which suggests at multiple tissues communicating in series (general), whereas the alternative may be to base the organisation of tissues on a specific model of the lymphatic system \cite{Anderson1990a}, or a communication mechanism based on mathematical models of lymphocyte trafficking \cite{Stekel1997, Stekel1998, Srikusalanukul2000}.
+% why choose my way
+The qualitative interpretation approach taken in this work was chosen as it facilitates the conception of broader fields of study (paradigms) which may be useful in and of themselves, and which may be specialised at a later time with restrictive mathematical models.
+
+%
+% Approach Development
+%
+\subsection{Approach Development}
+% what i did
+The development of the clonal selection algorithms was focused on the strategy and the constraints to its information processing properties resulting in the broadly conceived algorithms and paradigms for grouping algorithms without an explicit problem domain application.
+% alternative 
+A standard alternative is to take a problem centric perspective of the development of approaches, and specialise an existing strategy or paradigm for a given problem domain or instance.
+% benefit of alternative
+The benefit of this alternative is that it results in specific and comparable findings for a specialised algorithm on a known difficult problem class, directly contributing to an assessment of the relative utility of the approach. The strong problem focus of this alternative in turn imposed strong limitations on the broader applicability of an approach given its specialisation to the features and available information regarding the problem.
+% comparative example
+A specific example from his work is the foundational cellular clonal selection algorithms developed in the context of global function optimisation (such as BCA, the IA family, and to a lesser extent CLONALG). Although this class of algorithm is well suited for this application, the single-antigen perspective of the strategy ignores the potential application of the approach to function approximation, and has the compound effect of bounding the applicability of algorithms that subsume the cellular level\footnote{The field of Evolutionary Computation is generally bound by the first application of the approach to function optimisation \cite{Jong1992}, that in turn has generally limited subsumed approaches such as Parallel Evolutionary Algorithms.}.
+% why I chose the way i did
+The strategy focus in the development of approaches was chosen in the spirit of the goals of Computational Intelligence toward investigating generalised unconventional methods of computation, specifically bound to the information processing qualities of clonal selection. The generality of the developed approaches may be bound at a later time through specialisations of the algorithms in the context of known problem instances to which they are highly suited.
+
+%
+% Verification and Demonstration
+%
+\subsection{Verification and Demonstration}
+% what i did
+The verification of the behaviours and capabilities of developed modes as achieved empirically using experimentation with general algorithm instances on a generalised and trivial pattern recognition problem domain. A problem with this approach of verification and demonstration is that it is qualitative and inaccurate, specifically in the context of Goldberg's economy of modelling in Section~\ref{subsec:smallmodels}.
+% alternative
+An alternative is to demonstrate the capability and verify behaviour using mathematical modelling tools. 
+% benefit to alternative
+Analytical tools would provide generalised descriptions of relationships and behaviours that would be more accurate although a more restricted interpretation of the motivating information processing properties. 
+% intermediate alternative
+An alternative to the development of costly mathematical models is the approach outlined by Goldberg's is to use a spectrum of modelling types in addition to empirical assessment and statistical analysis, specifically facet-wise and dimensional models. 
+% comparative example
+% ?
+% why i chose what i did
+The qualitative empirical approach was chosen primarily given the speed both in implementation and in obtaining results. Empirical  demonstration required implementation providing a grounding of conceptual models to the specific concerns of a functioning information processing system. The broader inaccuracy of qualitative observations was address through the use of multiple problem scenarios providing calibration and cross-correlation of behaviour, and through the use of statistical tools.
+
+
+%
+% Extensions
+% (further work, future work)
+% Have recommendations been made for further research and improvement?
+%
+\section{Further Research}
+\label{sec:conclusions:extensions}
+% general
+This section proposes recommendations for further research and improvements on the work from the investigation.  
+% specific
+Extensions are partitioned as follows: (1) \emph{framework} in which additional related metaphors are proposed as a basis for new paradigms within the integrated hierarchical clonal selection framework, (2) \emph{paradigms} in which additional and related constrained metaphors are considered within the context of each clonal selection paradigm as the basis for new algorithms and architectures, (3) and \emph{algorithms} in which elaborations and improvements on algorithms proposed in this work are considered. 
+% not random, i investigated them already
+Many of the proposed extensions, particularly the alternate and additional motivating metaphors were preliminary investigated as apart of this work, although were not integrated into the framework given the constraints imposed on the project.
+
+%
+% Framework Extensions
+%
+\subsection{Framework Extensions}
+Integrated frameworks were considered in Chapter \ref{chap:framework} which proposed a hierarchical clonal selection, antigenic exposure, and integrated clonal selection frameworks. The integration of the three clonal selection paradigms highlighted the following extensions that may be pursued beyond this work:
+
+\begin{enumerate}
+	% configurations
+	\item \emph{Additional Configurations}: The investigation of clonal selection systems beyond the simplest configuration (such as minimum component or interaction cardinality) in what was referred to as varied interpretation of clonal selection models, as highlighted by the bracketing analysis of the integrated framework (Section~\ref{subsec:framework:ihcsf:bracketing:cardinality}). This investigation would immediately provide new interpretations of clonal selection algorithms from across the three paradigms, and reveal insights into the behaviour and application of clonal selection algorithms covered by the framework.
+	% new tiers
+	\item \emph{Additional Tiers}: The elicitation and investigation of systems motivated by constraints on the information processing properties of clonal selection \emph{below the cellular level} (such as the molecular concerns of epitopes and paratopes) and \emph{above the host level} (such as interacting species of organisms) (Section~\ref{subsec:framework:ihcsf:bracketing:additionaltiers}). These investigations would reveal insights into the scope of sub-cellular and super-host bracketing already imposed by the algorithms covered by the framework, as well as provide a basis for new constraints and interpretations of clonal selection as a basis for Computational Intelligence algorithms.
+	% other AIS paradigms
+	\item \emph{Additional Mappings}: The investigation of the clonal selection centric acquired immune system models across the hierarchies biased by one or more of the related computational paradigms (such as negative selection, immune network, or danger theory) as remarked in the bracketing analysis (Section~\ref{sec:framework:ihcsf:summary}), and explicitly considered with regard to the integrated framework in Section~\ref{subsec:framework:ihcsf:applicability:ais}. This investigation would not only provide insights into the approaches covered by the framework, it would explicitly merge related immunological computational paradigms immediately providing a firm basis of models, architectures, and algorithms to be exploited by the integrated paradigm.
+\end{enumerate}
+
+% totally new things
+In addition to improving and augmenting the integrated clonal selection framework, additional holistic metaphors may be incorporated toward providing further general insights into the computational strategy, as well as additional metaphors for information processing, as follows:
+
+\begin{enumerate}
+	% asexual evolution
+	\item \emph{Asexual Evolution}: Clonal Selection Theory describes a process of asexual evolution, akin to the evolution of micro-organisms not limited to bacteria, virus, unicellular organisms, as well as multi-cellular asexual reproduces. This obvious connection was made by Burnet in his monograph on the theory where he described the relationship of the principles of clonal selection with bacteria and cancer cells \cite{Burnet1959}. Much is known regarding the genetic and adaptive models of asexual evolution, for example advantagious and deleterious mutation rates in populations \cite{Gerrish1998, Rouzine2003}, which may be interpreted and integrated into an improved computational model of B-cell receptor evolution in the cellular paradigm. This fundamental work would not only provide insights into the configuration and application of cellular algorithms, given the cellular basis of all three paradigms (and the high-level constraints imposed on the cellular mechanisms) it would provide insights for all clonal selection based approaches.
+	% pathogen
+	\item \emph{Pathogen Models}: The antigenic exposure paradigm was defined as an abstract problem for clonal selection systems encapsulating the properties of all self and foreign antigen (defined in Section~\ref{subsec:cells:paradigm:antigenicexposures}, elaborated in Sections \ref{subsec:tissues:paradigm:exposures} and \ref{sec:hosts:paradigm:exposures}, and integrated in Section~\ref{sec:framework:haef}). As such, the paradigm received little elaboration beyond definition providing a large opportunity for the investigation of pathogenic models. Pathogen models may be elicited and investigated as either models for problems to be solved by clonal selection systems, or as distinct computational models for problem solving in and of themselves. Three clear motivating metaphors for the latter case are as follows: (1) \emph{Pathogen Evolution}: Suggested in Section~\ref{sec:hosts:paradigm:exposures:habitats} as providing a model for dynamic problems in which a system and problem co-adapt in response to each other based on reviewed parasitism in Section~\ref{sec:hosts:biology:evolution}, (2) \emph{Intra-Host Dynamics}: That describe the strategies and behaviours of a pathogen after it enters a host organism including evasive and adaptive qualities \cite{Andre2003, Ganusov2002} (3) \emph{Intra-Population Dynamics}: Also suggested in Section~\ref{sec:hosts:paradigm:exposures:habitats} and providing part of the motivation for system-controlled transmission in the PT-HCSA (Section~\ref{sec:hosts:population:elicited})\footnote{There is much work on epidemiology, specifically adaptive transmission \cite{Bonhoeffer1994}, and adaptive virulence \cite{Regoes2000}, to motivate this paradigm.}. 
+	% cancer
+	\item \emph{Cancer}: Uniting asexual somatic evolution and an elaborated self-antigen exposure paradigm, cancer provides a motivation for a computational paradigm that may be investigated independently or as a complement clonal selection. Cancer provides a co-evolutionary problem model for clonal selection in which the accumulation of mutations is exploited for survival of tumour cells. The acquired immune system must discriminate the endogenous antigen and (at the very least) counter the adaptations to surface structures. More interestingly, cancer also provides an intra-host Darwinian microcosm \cite{Vineis2003, Breivik2006, Vineis2006}, that can aggressively recruit resources such as cells and nutrient sources, disseminate throughout the host (such as the metastasis of malignant tumour cells), and in some cases can be transmitted between hosts \cite{Murgia2006}.
+\end{enumerate}
+
+%
+% Paradigm Extensions
+%
+\subsection{Paradigm Extensions}
+% general
+This section enumerates the three clonal selection paradigms and highlights elaborations of proposed models as additional motivating metaphors for new computational models, not specific to any given algorithm within the paradigms.
+
+% clonal selection
+\begin{enumerate}
+	% cellular
+	\item \emph{Cellular Paradigm}: Likely the most important of the three paradigms, the cellular paradigm may be elaborated in three specific directions: (1) lymphocyte life cycle and types, and (2) regulatory mechanisms. The model of lymphocytes as atomic data points is a dramatic simplification of both the complexity of the life cycle of immune cells, as well as the diverse variety of cells that are involved in the immune response. The computational properties of cellular life cycles introduces task-division and developmental mechanism (Section~\ref{subsubsec:tissues:migration:mobility:cells}), whereas the exploitation of the diverse set of immune cell types further promotes task division and more importantly interaction and collaboration between cells. 
+	% homoeostasis
+	The regulation of lymphocytes under clonal selection in which the cellular repertoire is continually acquiring information and expanding, presents problems of cell population size regulation whilst maintaining an effective immunological memory. More elaborate homoeostasis mechanisms should be investigated toward providing improved flexibility in cellular algorithms, in particular with regard to promoting decentralised rather than centralised resource allocation in response to antigenic exposures within a given repertoire. Such approaches may be motivated by the variety of mathematical models that describe lymphocyte homoeostasis \cite{McLean1997, Cunliffe2006}.
+	
+	% tissue
+	\item \emph{Tissue Paradigm}: Two general areas for elaboration of the tissue paradigm include (1) the investigation of the variety of lymphocyte trafficking behaviours and the decentralised receptor centric mechanisms that influence them (Section~\ref{subsec:tissues:migration:mobility}) and (2) the tissues of the lymphatic system and the behavioural restrictions and antigenic-interactions promoted by the different tissue structures and arrangements (reviewed in Section~\ref{subsec:tissues:migration:lymphatic}, with models proposed in Section~\ref{subsec:tissues:paradigm:architectures}).
+	% population biology
+	A final additional motivating metaphor is the emerging field of \emph{Lymphocyte Population Biology}, in which the behaviours and interactions of immune cells are studied using the tools of population genetics and ecology, driven more recently by Freitas Antonio and colleagues at the Pasteur Institute in France \cite{Freitas2000, Gaudin2004, Agenes2000}. This aggregated perspective of lymphocyte behaviours introduces interesting models of lymphocyte niche exploitation and regulatory concerns of density dependent competition.
+	
+	% host
+	\item \emph{Host Paradigm}: The two principle areas of the host paradigm present a large capacity for elaboration given the generality of base motivations, specifically (1) host population immunisation (reviewed in Section~\ref{sec:hosts:biology:immunisation}), and (2) host immune system evolution (reviewed in Section~\ref{sec:hosts:biology:evolution}). Host vaccination provides a promising area for elaboration, specificly the computational concerns of vaccine identification and transmission regimes in the context of the benefits of population coverage called `herd immunity'. Such investigations are expected to provide models for information dissemination in distributed databases such as database replication \cite{Demers1987}, and peer-to-peer content dissemination networks \cite{Voulgaris2005} suggested in Section~\ref{subsec:iidle:function:approximation:applicability:hosts}. The evolution of the immune system is a broader motivating metaphor, although further research may consider the following two promising cases: (1) the adaptation of innate immunity where a selective process motivates the integration of lifetime acquired traits into the genome (the intersection of lifetime and evolutionary learning considered in Section~\ref{sec:hosts:paradigm:interaction:evolution}), and (2) the adaptation of the affinity maturation process beyond the base repertoire where the mechanisms used in lifetime are also evolved.
+\end{enumerate}
+
+
+%
+% Algorithm Extensions
+%
+\subsection{Algorithm Extensions}
+The investigation of algorithms in this work was broad in coverage although shallow in depth, providing plenty of opportunity for further `basic science'. Two general classes of fundamental research are highlighted regarding the proposed algorithms: (1) application of algorithms as outlined in Chapter \ref{chap:iidle}, and (2) investigation into the predictable elicitation of information processing capabilities not limited to parameter studies, specialisation, and additional empirical benchmarking. This section highlights specific cases of the second class of fundamental research for specific algorithms across the three clonal selection paradigms.
+
+\begin{enumerate}
+	% cellular
+	\item \emph{Cellular Algorithms}: Three specific cellular algorithms are in need of elaboration to capitalise on their expected potential: (1) degenerate, (2) mediated, and (3) network. Cohen's notions of emergent specificity through degenerate pattern recognition cells in different contexts (reviewed in Section~\ref{sec:cells:ccsa:dcsa}) provides the potential for a powerful sub-symbolic population-based adaptive paradigm, requiring investigation into viable representation and aggregation mechanisms. The two-signal model of lymphocyte activation provides an important capability for the system to decide to which signals to respond and not respond. The mediated algorithm requires further investigation into mapping mechanisms for affinity-based activation potentials between cell populations (see Section~\ref{sec:cells:mediated}). Finally, the the immune network paradigm has motivated many immuno-cognitive models, although the specific approach suggested in this work was an explicit pattern recognition method akin to Learning Classifier Systems, requiring much work into representation and mapping schemes (Section~\ref{sec:cells:network}). An opportunistic improvement on the cell-cell interaction models would be to adopt a LCS architecture, representation, and credit assignment mechanism and bias the approaches by immune network behaviours.
+	
+	% tissue
+	\item \emph{Tissue Algorithms}: The tissue algorithms, specifically the use of recirculation and mechanisms to impose localisation biases on recirculation (such as homing and inflammation) would benefit from analytical analysis. Specifically, (1) probabilistic models of information availability across a given structure and how such models are effected by localisation biases, and (2) probabilistic models of information dissemination based on varied exposure models. These models would motivate predictable configurations (such as migration or imprinting rates) for eliciting well defined system capability under different exposure scenarios supporting empirical findings. Further, an investigation into the field of \emph{Spatial-Temporal Learning} and the relationship of Tissue (and Host) Algorithms would provide a deeper theoretical understanding of the fundamental problem and recirculation-based strategy solution of systemic immunity within a host \cite{Segel2002}.
+	
+	% host
+	\item \emph{Host Algorithms}: Mathematical models of vaccination and virus transmission are available with which to bias the configuration of shared immunity and transmission host clonal selection algorithms. Such models would provide predictable intra-population interactions allowing focus of these algorithms to shift from base interaction mechanism toward more interesting population-based information acquisition and application scenarios (mixtures of experts and ensembles). A similar situation exists with the generational host algorithms that must overcome the fundamentals predictable inter-generational interaction before investigating the interesting and desirable effects of cross-generational information acquisition. This highlights that the compounded complexity effect of the host level of algorithms that are both dependent on predictable algorithms which they subsume, as well as the predictable foundational behaviours (such as interaction) of the paradigm. 
+\end{enumerate}
+
+%
+% Final Words
+% 
+\section{Final Words}
+\label{sec:conclusions:finalwords}
+% generally
+This work has demonstrated that a holistic perspective of the immune system as a computational metaphor provides a fertile ground for \emph{adaptive} and \emph{distributed} Artificial Immune Systems, and Clonal Selection Algorithms specifically.
+% impasse
+The culmination of this work advocates a broader perspective of the acquired immune system beyond a classical cellular focus as a viable path toward a so-called second generation of Artificial Immune Systems. This path not only facilitates, but requires the currently accepted approach of turning back to the motivating metaphor as a strategy for developing systems that incorporate more detailed information processing models of immunology. 
+% agenda
+The computational focus of immunophysiology and the integrated framework presented in this work provide a general scaffold for such work, the ongoing investigation of which promotes a multifaceted Computational Intelligence research agenda of (1) basic (foundational) research, (2) exploratory research, and (3) application-focused research.
+
+% EOF

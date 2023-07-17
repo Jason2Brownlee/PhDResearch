@@ -1,0 +1,11 @@
+\begin{tabular}{llllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}} & \multicolumn{2}{c}{\textbf{Average Polyclonal Response Error (APRE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+DAEP-10 & DCCCSA-Explicit & 31.638 & 0.047 & 0.003 & 0.001 & 0.333 & 0.018 \\
+DAEP-10 & DCCCSA-PreCommitted & 31.627 & 0.059 & 0.008 & 0.003 & 0.334 & 0.019 \\
+\multicolumn{2}{l}{\emph{Significant}} & False &  & True &  & False & \\
+\hline
+\end{tabular}

@@ -1,0 +1,2 @@
+R0,class=com.oat.domains.cells.degenerate.problems.DAEP_10:Seed=5:NumAntigen=10,class=com.oat.domains.cells.degenerate.algorithms.component.DCCCSA_Explicit:Seed=1:NumClones=1:NumCells=100:NumSelected=3,30
+R1,class=com.oat.domains.cells.degenerate.problems.DAEP_10:Seed=5:NumAntigen=10,class=com.oat.domains.cells.degenerate.algorithms.component.DCCCSA_PreCommitted:Seed=1:NumClones=1:NumCells=100:NumSelected=3,30

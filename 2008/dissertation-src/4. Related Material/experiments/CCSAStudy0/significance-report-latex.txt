@@ -1,0 +1,13 @@
+\begin{tabular}{llllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Average Cell Error (ACE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-1 & AEP1-CCSA1-1 & 0 & 0 & 0.165 & 0.074 \\
+AEP-1 & AEP1-CCSA1-N & 0 & 0 & 0.004 & 0.007 \\
+AEP-1 & AEP1-CCSAN-1 & 85.267 & 1.104 & 0.041 & 0.027 \\
+AEP-1 & AEP1-CCSAN-N & 86.233 & 1.055 & 0.014 & 0.027 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{False for AEP1-CCSA1-1 and AEP1-CCSA1-N} &  & True & \\
+\hline
+\end{tabular}

@@ -1,0 +1,7 @@
+"Problem","Algorithm","Response Error (RE)","Response Error (RE)","Average Cell Diversity (ACD)","Average Cell Diversity (ACD)","Average Cell Error (ACE)","Average Cell Error (ACE)","Average BMU Per Antigen (ABMU/Antigen)","Average BMU Per Antigen (ABMU/Antigen)","Average Cell Mapped Diversity (ACMD)","Average Cell Mapped Diversity (ACMD)","Average Network Cell Diversity (ANCD)","Average Network Cell Diversity (ANCD)","Average Mapped BMU Euclidean Error (AMBMUEE)","Average Mapped BMU Euclidean Error (AMBMUEE)"
+"AEP-10","PNCCSA_A_PP","0.617","0.072","91.799","0.438","?","?","?","?","91.84","0.486","183.639","0.636","0.178","0.031"
+"AEP-10","PNCCSA_A_PS","0.636","0.081","91.771","0.369","?","?","?","?","92.006","0.361","183.777","0.506","0.184","0.038"
+"AEP-10","PNCCSA_A_SP","0.558","0.077","91.685","0.33","?","?","?","?","91.744","0.379","183.429","0.519","0.18","0.045"
+"AEP-10","PNCCSA_A_SS","0.535","0.075","91.909","0.393","?","?","?","?","91.659","0.489","183.568","0.557","0.176","0.046"
+"AEP-10","PNCCSA_C_SP","0.635","0.081","91.737","0.456","?","?","?","?","91.711","0.46","183.448","0.591","0.152","0.047"
+"AEP-10","PNCCSA_C_SS","0.631","0.092","91.664","0.412","?","?","?","?","91.649","0.428","183.313","0.642","0.151","0.042"

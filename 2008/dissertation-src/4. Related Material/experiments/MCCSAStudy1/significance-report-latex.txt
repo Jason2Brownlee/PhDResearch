@@ -1,0 +1,13 @@
+\begin{tabular}{llllllllllllllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average B-Cell Diversity (ABCD)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Diversity (ATCD)}} & \multicolumn{2}{c}{\textbf{Average B-Cell Error (ABCE)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Error (ATCE)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Mapping Error (ATCME)}} & \multicolumn{2}{c}{\textbf{Average T-Cell Selected Set Mapping Error (ATCSSME)}} & \multicolumn{2}{c}{\textbf{Average B-Cell BMU Per Antigen (ABC-BMU/Antigen)}} & \multicolumn{2}{c}{\textbf{Average T-Cell BMU Per Antigen (ATC-BMU/Antigen)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & MCCSA1-1 & 88.333 & 0.812 & 88.005 & 0.755 & 0.027 & 0.024 & 0.052 & 0.021 & 0.604 & 0.065 & 0.042 & 0.02 & 2.713 & 0.33 & 3.25 & 0.318 & 0.059 & 0.031 \\
+AEP-10 & MCCSA1-N & 87.967 & 0.721 & 94.298 & 0.146 & 0.028 & 0.012 & 0.076 & 0.015 & 0.648 & 0.04 & 0.158 & 0.023 & 3.13 & 0.426 & 1 & 0 & 0.083 & 0.016 \\
+AEP-10 & MCCSAN-1 & 94.419 & 0.113 & 88.103 & 0.924 & 0.067 & 0.014 & 0.102 & 0.019 & 3.523 & 0.307 & 0.844 & 0.129 & 1 & 0 & 2.597 & 0.549 & 0.112 & 0.022 \\
+AEP-10 & MCCSAN-N & 94.408 & 0.147 & 94.309 & 0.105 & 0.067 & 0.015 & 0.093 & 0.013 & 3.845 & 0.188 & 1.161 & 0.121 & 1 & 0 & 1 & 0 & 0.122 & 0.019 \\
+\multicolumn{2}{l}{\emph{Significant}} & True &  & True &  & True &  & True &  & True &  & True &  & True\footnote{False for MCCSAN-1 and MCCSAN-N} &  & True\footnote{False for MCCSA1-N and MCCSAN-N} &  & True\footnote{False for MCCSAN-1 and MCCSAN-N} & \\
+\hline
+\end{tabular}

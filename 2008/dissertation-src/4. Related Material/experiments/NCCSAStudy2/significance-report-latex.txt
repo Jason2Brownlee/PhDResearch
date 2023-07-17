@@ -1,0 +1,13 @@
+\begin{tabular}{llllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}} & \multicolumn{2}{c}{\textbf{Average Cell Mapped Diversity (ACMD)}} & \multicolumn{2}{c}{\textbf{Average Network Cell Diversity (ANCD)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & DE-NCCSA-PPSS & 89.213 & 0.647 & 0.02 & 0.02 & 89.069 & 1.001 & 178.282 & 1.267 \\
+AEP-10 & DE-NCCSA-PSSP & 89.231 & 0.678 & 0.018 & 0.016 & 89.382 & 0.766 & 178.613 & 1.09 \\
+AEP-10 & DE-NCCSA-SPPS & 89.289 & 0.705 & 0.211 & 0.05 & 89.551 & 0.751 & 178.839 & 1.233 \\
+AEP-10 & DE-NCCSA-SSPP & 89.301 & 0.876 & 0.214 & 0.041 & 89.581 & 0.835 & 178.882 & 1.382 \\
+\multicolumn{2}{l}{\emph{Significant}} & False &  & True &  & False\footnote{True for DE-NCCSA-PPSS and DE-NCCSA-SSPP} &  & False & \\
+\hline
+\end{tabular}

@@ -1,0 +1,15 @@
+\begin{tabular}{llllllllllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Response Error (RE)}} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Average Cell Error (ACE)}} & \multicolumn{2}{c}{\textbf{Average BMU Per Antigen (ABMU/Antigen)}} & \multicolumn{2}{c}{\textbf{Average Cell Mapped Diversity (ACMD)}} & \multicolumn{2}{c}{\textbf{Average Network Cell Diversity (ANCD)}} & \multicolumn{2}{c}{\textbf{Average Mapped BMU Euclidean Error (AMBMUEE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & PNCCSA-A-PP & 0.617 & 0.072 & 91.799 & 0.438 & ? & ? & ? & ? & 91.84 & 0.486 & 183.639 & 0.636 & 0.178 & 0.031 \\
+AEP-10 & PNCCSA-A-PS & 0.636 & 0.081 & 91.771 & 0.369 & ? & ? & ? & ? & 92.006 & 0.361 & 183.777 & 0.506 & 0.184 & 0.038 \\
+AEP-10 & PNCCSA-A-SP & 0.558 & 0.077 & 91.685 & 0.33 & ? & ? & ? & ? & 91.744 & 0.379 & 183.429 & 0.519 & 0.18 & 0.045 \\
+AEP-10 & PNCCSA-A-SS & 0.535 & 0.075 & 91.909 & 0.393 & ? & ? & ? & ? & 91.659 & 0.489 & 183.568 & 0.557 & 0.176 & 0.046 \\
+AEP-10 & PNCCSA-C-SP & 0.635 & 0.081 & 91.737 & 0.456 & ? & ? & ? & ? & 91.711 & 0.46 & 183.448 & 0.591 & 0.152 & 0.047 \\
+AEP-10 & PNCCSA-C-SS & 0.631 & 0.092 & 91.664 & 0.412 & ? & ? & ? & ? & 91.649 & 0.428 & 183.313 & 0.642 & 0.151 & 0.042 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{False for PNCCSA-A-PP and PNCCSA-A-PS, False for PNCCSA-A-PP and PNCCSA-C-SP, False for PNCCSA-A-PP and PNCCSA-C-SS, False for PNCCSA-A-PS and PNCCSA-C-SP, False for PNCCSA-A-PS and PNCCSA-C-SS, False for PNCCSA-A-SP and PNCCSA-A-SS, False for PNCCSA-C-SP and PNCCSA-C-SS} &  & False\footnote{True for PNCCSA-A-SP and PNCCSA-A-SS, True for PNCCSA-A-SS and PNCCSA-C-SS} &  & True &  & True &  & False\footnote{True for PNCCSA-A-PS and PNCCSA-A-SP, True for PNCCSA-A-PS and PNCCSA-A-SS, True for PNCCSA-A-PS and PNCCSA-C-SP, True for PNCCSA-A-PS and PNCCSA-C-SS} &  & False\footnote{True for PNCCSA-A-PS and PNCCSA-A-SP, True for PNCCSA-A-PS and PNCCSA-C-SP, True for PNCCSA-A-PS and PNCCSA-C-SS} &  & False\footnote{True for PNCCSA-A-PP and PNCCSA-C-SP, True for PNCCSA-A-PP and PNCCSA-C-SS, True for PNCCSA-A-PS and PNCCSA-C-SP, True for PNCCSA-A-PS and PNCCSA-C-SS, True for PNCCSA-A-SP and PNCCSA-C-SP, True for PNCCSA-A-SP and PNCCSA-C-SS, True for PNCCSA-A-SS and PNCCSA-C-SS} & \\
+\hline
+\end{tabular}

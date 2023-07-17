@@ -1,0 +1,664 @@
+
+\begin{comment}
+
+%
+% Optimisation Applicability Demonstration
+%
+\section{Demonstration of Applicability}
+\label{sec:iidle:demonstration}
+
+what is this section all about?
+	- show that my claims are founded and accurate
+	- specific examples of highest suitability
+
+
+
+
+%
+% Global Optimisation
+%
+\subsection{Global Optimisation}
+\label{sec:iidle:demonstration:function:global}
+%
+% Aim
+%
+\subsubsection{Aim}
+The aim of this study is to demonstrate the general capability of Clonal Selection Algorithms as a local and global optimisation procedure. Further, this experiment aims to provide preliminary evidence regarding the claims that the clonal selection procedure is akin both to both the Mutation Hill Climbing Algorithm, and the Genetic Algorithm without crossover (reviewed in Section \ref{subsec:cs:taxonomy:related}). As such, this experiment has the following goals:
+
+\begin{enumerate}
+	\item Demonstrate that classical Clonal Selection Algorithms can be used to address difficult function optimisation problems.
+	\item Compare and contrast the capability (performance) of classical Clonal Selection Algorithms both with Mutation Hill Climbing and Genetic Algorithms.
+\end{enumerate}
+
+%
+% Method
+%
+\subsubsection{Method}
+
+%
+% Algorithms
+%
+\paragraph{Algorithms}
+% csa
+Three classical Clonal Selection Algorithms are considered, one from each of the three main families of algorithms: CLONALG, BCA, and SIA (see Section \ref{subsec:cs:algorithms:taxonomy}). 
+% ga
+Three Genetic Algorithms are considered: as Simple Genetic Algorithm with binary (pair-based) tournament selection both with and without two-point crossover \cite{Goldberg1989a, Back2000}. %, and the Deterministic Crowding (niching) genetic algorithm \cite{Mahfoud1992}. The crowding-based niching genetic algorithm was included given the implicit niching provided by parallel hill climbing and so-called called niching effects observed in CLONALG. 
+For both genetic algorithms, the population size is set to the number of bits $L$, or $L-1$ in the case that the number of bits is negative\footnote{This was done to ensure there were always an even number of strings for the two-point crossover scheme used in the genetic algorithms.}.
+% hc
+Four varients of the Parallel Mutation Hill Climbing Algorithm are included, providing a mirror to the experiment performed in Section \ref{sec:cells:realised:algorithms} with AEP-1. The implementation is a parallel hill climber in that individual members of the population do not compete with each other, as with the $(\mu + \lambda)$ MHCA that selects the best members from the union of progenitors and progeny each epoch. 
+% my hc
+%Finally, A version of the (N+N) MHCSA was included with the CLONALG mutation function ($p=exp(-\rho \cdot f)$), where instead of raw fitness ($f$) a relative normalised fitness value was used. The intended effect was that as the population converged on an optima, mutation would naturally increase toward one, whereas disparity between fitness in the population would result in a spread of mutation probabilities. A greedy version of the algorithm was included in which progeny are aggregated with progenitors, and the $\mu$ highest fitness strings from the union are selected (as per the CLONALG procedure). The motivation for the dynamic mutation rate was based on the claim of Nijssen and B\''ack that the $\frac{1}{L}$ mutation rate is not appropriate for the MHCA on difficult binary functions, and that one should consider variable mutation rates \cite{Nijssen2003}.
+% summary
+Table \ref{tab:iidle:function:global:algorithms} summarises the algorithms assessed for Binary Function Optimisation in the experiment and the specific configuration parameters used.
+
+\begin{table}[htp]
+	\centering
+		\begin{tabularx}{\textwidth}{llX}
+		\hline
+		\textbf{Name} & \textbf{Description} & \textbf{Parameters} \\ 
+		\hline
+		CLONALG & Clonal Selection Algorithm & $N=L$, $\beta=0.1$, $\rho=2.5$, $d=0$, $n=N$ \\
+		BCA & B-Cell Algorithm & $P=4$, $C=4$, $N_{randoms}=1$, $P_m=\frac{1}{L}$\\
+		SIA & Simple Immune Algorithm & $d=L$, $dup=10$ \\
+		\hline
+		MHCA1-1 & Mutation Hill Climber & $\mu=1$, $\lambda=1$, $P_m=\frac{1}{L}$ \\
+		MHCAN-1 & Mutation Hill Climber & $\mu=L$, $\lambda=1$, $P_m=\frac{1}{L}$ \\
+		MHCA1-N & Mutation Hill Climber & $\mu=1$, $\lambda=10$, $P_m=\frac{1}{L}$ \\
+		MHCAN-N & Mutation Hill Climber & $\mu=L$, $\lambda=10$, $P_m=\frac{1}{L}$ \\
+		\hline
+		GA & Genetic Algorithm & $P_c=0.98$, $P_m=\frac{1}{L}$, $\mu=L$, $N_{bout}=2$\\
+		GA-NC & GA (no crossover) & $P_c=0$, $P_m=\frac{1}{L}$, $\mu=L$, $N_{bout}=2$\\
+		DC & Deterministic Crowding & $P_c=1$, $\mu=L$, $\mu=L$ \\		
+	%	\hline
+	%	AHC & Adaptive MHCA & $\mu=L$, $\lambda=10$, $P_m=\frac{1}{L}$, $\rho=2.5$\\
+	%	AHC-G & Greedy AHC & $\mu=L$, $\lambda=10$, $P_m=\frac{1}{L}$, $\rho=2.5$\\
+		\hline
+		\end{tabularx}
+	\caption{Summary of the algorithms and their configuration for Binary Function Optimisation.}
+	\label{tab:iidle:function:global:algorithms}
+\end{table}
+
+%
+% Problems
+%
+\paragraph{Problems}
+The experiment considers two classes of Binary Function Optimisation (BFO) problem instances: (1) binary trap functions, and (2) massively multi-modal trap functions.
+% trap
+The basic trap function was defined by Deb and Goldberg \cite{Deb1993}, although was investigated in depth in using a (1+1) and (1+$lambda$) mutation hill climbing algorithm by Nijssen and B\''ack \cite{Nijssen2003}. The experiment uses the four so-called basic trap functions used in that study. Generally, trap functions are difficult because they provide attractive false (or local) optima that deceive optimisation strategies with hill climbing behaviours.
+% multi-modal
+Goldberg, et al. extended the difficulty of deceptive functions from that of a single local and global optima, to a function comprised of many deceptive sub functions, called Massively Multi-modal Deceptive Functions \cite{Goldberg1992a}. Mahfoud, used a suite of three of such function in his doctoral dissertation for the investigation of binary-based niching genetic algorithms, that are used here as instances of difficult binary problems \cite{Mahfoud1995}. Specifically, two instances of Goldberg's massively multi-modal problem are used (standard and scaled) that each have 32 global optima, as well as a hamming distance-based problem with 27 global optima. Unlike the studies of niching algorithms where these functions were used to assess an algorithms capability to locate and maintain multiple equivalent optima, these functions were used because of their general difficulty, therefore the problem is considered solved if at least one of the optima is located.
+% summary
+The five trap functions and three massively multi-modal trap functions are summarised in Table \ref{tab:iidle:function:global:problems:cfg}.
+
+\begin{table}[htp]
+	\centering
+		\begin{tabular}{llllc}
+		\hline
+		\textbf{Name} & \textbf{Extrema} & \textbf{Bits} & \textbf{Parameters} & \textbf{Optimal Score} \\ 
+		\hline
+		\emph{BTF1} & Maximum & 10  & $a=12$, $b=6$, $z=3$ & 12 \\ 
+		\emph{BTF2} & Maximum & 20  & $a=20$, $b=14$, $z=5$ & 20 \\ 
+		\emph{BTF3} & Maximum & 50  & $a=80$, $b=39$, $z=10$ & 80 \\ 
+		\emph{BTF4} & Maximum & 75  & $a=80$, $b=54$, $z=20$ & 80 \\ 
+		\emph{BTF5} & Maximum & 100 & $a=100$, $b=74$, $z=25$ & 100 \\ 
+		\hline
+		\emph{MMM-M7} & Maximum & 30 & N/A & 5 \\ 
+		\emph{MMM-M8} & Maximum & 30 & $s\prime=5\times(\frac{s}{5})^{15}$ & 5 \\ 
+		\emph{MMM-M9} & Maximum & 24 & N/A & 30 \\ 
+		\hline
+		\end{tabular}
+	\caption{Summary of the configuration used in the five Binary Trap Functions.}
+	\label{tab:iidle:function:global:problems:cfg}
+\end{table}
+
+%
+% Experiment
+%
+\paragraph{Experiment}
+A Maximum Function Evaluations Stop Condition (MFESC) defined in Equation \ref{eq:iidle:stopcondition:evaluations} was used with $MaxEpochs=200,000$. This value allows the average algorithm to use 100 evaluations per epoch over 2000 epochs. Two problem measures were collected as follows: (1) Best Evaluated Score (BES) is the best structure obtained by the algorithm throughout a given run irrespective of whether it is retained by the system or not, and (2) Average System Diversity (ASD) for those algorithms that maintain a set of binary strings in a population, this is a diversity calculation (the same as Average Cell Diversity in Equation \ref{eq:cells:realisation:acd}) from the state of the system before the stop condition is triggered.
+%, and (3) Evaluations To Reach Optima (ERO) which is the number of evaluations an algorithm took to reach an optima.
+
+\begin{equation}	
+	StopCondition(Evaluation_i) = (Evaluation_i \geq MaxEvaluations)
+	\label{eq:iidle:stopcondition:evaluations}
+\end{equation}
+
+%
+% Results
+%
+\subsubsection{Results}
+% trap
+Tables \ref{tab:iidle:optimisation:function:traps:1}, \ref{tab:iidle:optimisation:function:traps:2}, \ref{tab:iidle:optimisation:function:traps:3}, \ref{tab:iidle:optimisation:function:traps:4}, and \ref{tab:iidle:optimisation:function:traps:5} summarises the results for the Binary Trap Functions.
+% multimodal
+Tables \ref{tab:iidle:optimisation:function:multimodal:M7}, \ref{tab:iidle:optimisation:function:multimodal:M8}, \ref{tab:iidle:optimisation:function:multimodal:M9} summarise the results for the Massively Multimodal Binary Optimisation Problems. All results include the mean ($\bar{x}$) and standard deviation ($\sigma$) of collected measure values. 
+% stats
+The non-parametric Mann-Whitney U statistical test was calculated pair-wise for all algorithms on each problem. Results are summarised as statistically significant if the null hypothesis that any two given populations in the group are drawn from the same distribution ($H_0: \mu_0 = \mu_1$) is rejected if the calculated $p$-value $< \alpha=0.05$ (statistically significant at the 5\% level).
+% plots
+Box-and-whisker plots are provided in which the results for each algorithm on each test problem. 
+
+% trap
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+			\small{
+			\begin{tabular}{llllll}
+			\hline
+			\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+			\hline
+			  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ \\
+			\hline
+BTF1 & CLONALG & 6.39 & 1.309 & 0 & 0 \\
+BTF1 & SIA & 11 & 2.274 & 0 & 0 \\
+BTF1 & BCA & 12 & 0 & 0 & 0 \\
+BTF1 & MHCA1-1 & 6.4 & 1.522 & 0 & 0 \\
+BTF1 & MHCA1-N & 6.4 & 1.522 & 0 & 0 \\
+BTF1 & MHCAN-1 & 10.6 & 2.581 & 2.16 & 1.364 \\
+BTF1 & MHCAN-N & 11.8 & 1.095 & 3.133 & 1.204 \\
+BTF1 & GA & 9.733 & 2.016 & 2.796 & 0.529 \\
+BTF1 & GA-NC & 11.6 & 1.221 & 2.783 & 0.581 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{CLONALG and MHCA1-1, CLONALG and MHCA1-N, SIA and BCA, SIA and MHCAN-1, SIA and MHCAN-N, SIA and GA-NC, BCA and MHCAN-1, BCA and MHCAN-N, BCA and GA-NC, MHCA1-1 and MHCA1-N, MHCAN-1 and MHCAN-N, MHCAN-1 and GA, MHCAN-1 and GA-NC, MHCAN-N and GA-NC} &  & True\footnote{CLONALG and SIA, CLONALG and BCA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, SIA and BCA, SIA and MHCA1-1, SIA and MHCA1-N, BCA and MHCA1-1, BCA and MHCA1-N, MHCA1-1 and MHCA1-N, MHCAN-1 and GA, MHCAN-1 and GA-NC, MHCAN-N and GA, MHCAN-N and GA-NC, GA and GA-NC} & \\
+			\hline
+			\end{tabular}
+		}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on Binary Trap Functions.}
+	\label{tab:iidle:optimisation:function:traps:1}
+\end{table}	
+			
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+			\small{
+			\begin{tabular}{llllll}
+			\hline
+			\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+			\hline
+			  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ \\
+			\hline				
+BTF2 & CLONALG & 8.4 & 0.917 & 1.669 & 2.364 \\
+BTF2 & SIA & 14.4 & 1.522 & 0 & 0 \\
+BTF2 & BCA & 18.267 & 2.716 & 5.85 & 3.519 \\
+BTF2 & MHCA1-1 & 14 & 0 & 0 & 0 \\
+BTF2 & MHCA1-N & 14 & 0 & 0 & 0 \\
+BTF2 & MHCAN-1 & 14.8 & 2.074 & 0.253 & 0.657 \\
+BTF2 & MHCAN-N & 16.2 & 2.941 & 0.753 & 1.051 \\
+BTF2 & GA & 14 & 0 & 4.225 & 0.611 \\
+BTF2 & GA-NC & 14 & 0 & 4.569 & 0.622 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{SIA and MHCA1-1, SIA and MHCA1-N, SIA and MHCAN-1, SIA and GA, SIA and GA-NC, MHCA1-1 and MHCA1-N, MHCA1-1 and MHCAN-1, MHCA1-1 and GA, MHCA1-1 and GA-NC, MHCA1-N and MHCAN-1, MHCA1-N and GA, MHCA1-N and GA-NC, MHCAN-1 and MHCAN-N, MHCAN-1 and GA, MHCAN-1 and GA-NC, GA and GA-NC} &  & True\footnote{CLONALG and MHCAN-1, CLONALG and MHCAN-N, SIA and MHCA1-1, SIA and MHCA1-N, SIA and MHCAN-1, MHCA1-1 and MHCA1-N, MHCA1-1 and MHCAN-1, MHCA1-N and MHCAN-1, MHCAN-1 and MHCAN-N, GA and GA-NC} & \\
+			\hline
+			\end{tabular}
+		}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on Binary Trap Functions.}
+	\label{tab:iidle:optimisation:function:traps:2}
+\end{table}			
+			
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+			\small{
+			\begin{tabular}{llllll}
+			\hline
+			\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+			\hline
+			  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ \\
+			\hline			
+BTF3 & CLONALG & 22.165 & 1.716 & 1.107 & 3.462 \\
+BTF3 & SIA & 39 & 0 & 0 & 0 \\
+BTF3 & BCA & 39 & 0 & 0.317 & 0.185 \\
+BTF3 & MHCA1-1 & 39 & 0 & 0 & 0 \\
+BTF3 & MHCA1-N & 39 & 0 & 0 & 0 \\
+BTF3 & MHCAN-1 & 39 & 0 & 0 & 0 \\
+BTF3 & MHCAN-N & 39 & 0 & 0 & 0 \\
+BTF3 & GA & 39 & 0 & 6.362 & 0.61 \\
+BTF3 & GA-NC & 38.968 & 0.178 & 7.289 & 1.112 \\
+\multicolumn{2}{l}{\emph{Significant}} & False\footnote{CLONALG and SIA, CLONALG and BCA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and MHCAN-1, CLONALG and MHCAN-N, CLONALG and GA, CLONALG and GA-NC} &  & True\footnote{CLONALG and SIA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and MHCAN-1, CLONALG and MHCAN-N, SIA and MHCA1-1, SIA and MHCA1-N, SIA and MHCAN-1, SIA and MHCAN-N, MHCA1-1 and MHCA1-N, MHCA1-1 and MHCAN-1, MHCA1-1 and MHCAN-N, MHCA1-N and MHCAN-1, MHCA1-N and MHCAN-N, MHCAN-1 and MHCAN-N} & \\			\hline
+			\end{tabular}
+		}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on Binary Trap Functions.}
+	\label{tab:iidle:optimisation:function:traps:3}
+\end{table}	
+
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+			\small{
+			\begin{tabular}{llllll}
+			\hline
+			\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+			\hline
+			  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ \\
+			\hline	
+BTF4 & CLONALG & 27.458 & 2.038 & 4.233 & 7.816 \\
+BTF4 & SIA & 54 & 0 & 0 & 0 \\
+BTF4 & BCA & 53.935 & 0.249 & 0.325 & 0.19 \\
+BTF4 & MHCA1-1 & 54 & 0 & 0 & 0 \\
+BTF4 & MHCA1-N & 54 & 0 & 0 & 0 \\
+BTF4 & MHCAN-1 & 54 & 0 & 0 & 0 \\
+BTF4 & MHCAN-N & 54 & 0 & 0 & 0 \\
+BTF4 & GA & 54 & 0 & 6.991 & 0.828 \\
+BTF4 & GA-NC & 53.149 & 0.339 & 9.224 & 1.644 \\
+\multicolumn{2}{l}{\emph{Significant}} & False\footnote{CLONALG and SIA, CLONALG and BCA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and MHCAN-1, CLONALG and MHCAN-N, CLONALG and GA, CLONALG and GA-NC, SIA and GA-NC, BCA and GA-NC, MHCA1-1 and GA-NC, MHCA1-N and GA-NC, MHCAN-1 and GA-NC, MHCAN-N and GA-NC, GA and GA-NC} &  & True\footnote{CLONALG and SIA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and MHCAN-1, CLONALG and MHCAN-N, SIA and MHCA1-1, SIA and MHCA1-N, SIA and MHCAN-1, SIA and MHCAN-N, MHCA1-1 and MHCA1-N, MHCA1-1 and MHCAN-1, MHCA1-1 and MHCAN-N, MHCA1-N and MHCAN-1, MHCA1-N and MHCAN-N, MHCAN-1 and MHCAN-N} & \\
+			\hline
+			\end{tabular}
+		}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on Binary Trap Functions.}
+	\label{tab:iidle:optimisation:function:traps:4}
+\end{table}	
+
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+			\small{
+			\begin{tabular}{llllll}
+			\hline
+			\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+			\hline
+			  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ \\
+			\hline	
+BTF5 & CLONALG & 37.263 & 2.132 & 5.479 & 8.899 \\
+BTF5 & SIA & 74 & 0 & 0 & 0 \\
+BTF5 & BCA & 73.967 & 0.18 & 0.375 & 0.254 \\
+BTF5 & MHCA1-1 & 74 & 0 & 0 & 0 \\
+BTF5 & MHCA1-N & 74 & 0 & 0 & 0 \\
+BTF5 & MHCAN-1 & 74 & 0 & 0.029 & 0.022 \\
+BTF5 & MHCAN-N & 74 & 0 & 0.081 & 0.052 \\
+BTF5 & GA & 74 & 0 & 7.053 & 0.595 \\
+BTF5 & GA-NC & 72.125 & 0.599 & 10.951 & 1.408 \\
+\multicolumn{2}{l}{\emph{Significant}} & False\footnote{CLONALG and SIA, CLONALG and BCA, CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and MHCAN-1, CLONALG and MHCAN-N, CLONALG and GA, CLONALG and GA-NC, SIA and GA-NC, BCA and GA-NC, MHCA1-1 and GA-NC, MHCA1-N and GA-NC, MHCAN-1 and GA-NC, MHCAN-N and GA-NC, GA and GA-NC} &  & True\footnote{CLONALG and BCA, CLONALG and MHCAN-1, SIA and MHCA1-1, SIA and MHCA1-N, MHCA1-1 and MHCA1-N} & \\
+			\hline
+			\end{tabular}
+		}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on Binary Trap Functions.}
+	\label{tab:iidle:optimisation:function:traps:5}
+\end{table}
+
+
+
+
+
+% multimodal
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+		\small{
+				\begin{tabular}{llllll}
+				\hline
+				\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+				\hline
+				  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+				\hline
+MMM-M7 & CLONALG & 3.427 & 0.18 & 0.068 & 0.219 \\
+MMM-M7 & SIA & 3.667 & 0.264 & 6.224 & 3.297 \\
+MMM-M7 & BCA & 4.56 & 0.219 & 11.35 & 1.357 \\
+MMM-M7 & MHCA1-1 & 5 & 0 & 0 & 0 \\
+MMM-M7 & MHCA1-N & 4.987 & 0.073 & 0 & 0 \\
+MMM-M7 & MHCAN-1 & 4.467 & 0.243 & 14.525 & 0.109 \\
+MMM-M7 & MHCAN-N & 4.547 & 0.203 & 14.483 & 0.114 \\
+MMM-M7 & GA & 5 & 0 & 7.601 & 1.244 \\
+MMM-M7 & GA-NC & 4.907 & 0.172 & 7.734 & 1.443 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{BCA and MHCAN-1, BCA and MHCAN-N, MHCA1-1 and MHCA1-N, MHCA1-1 and GA, MHCA1-1 and GA-NC, MHCA1-N and GA, MHCA1-N and GA-NC, MHCAN-1 and MHCAN-N, GA and GA-NC} &  & True\footnote{CLONALG and MHCA1-1, CLONALG and MHCA1-N, SIA and GA, SIA and GA-NC, MHCA1-1 and MHCA1-N, MHCAN-1 and MHCAN-N, GA and GA-NC} & \\	
+				\hline
+				\end{tabular}
+			}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on the MMM-M7 Massively Multimodal Functions.}
+	\label{tab:iidle:optimisation:function:multimodal:M7}
+\end{table}
+
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+		\small{
+				\begin{tabular}{llllll}
+				\hline
+				\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+				\hline
+				  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\			
+				\hline
+MMM-M8 & CLONALG & 4.262 & 1.703 & 1.352 & 4.131 \\
+MMM-M8 & SIA & 0.081 & 0.102 & 6.241 & 3.286 \\
+MMM-M8 & BCA & 1.575 & 1.237 & 11.35 & 1.357 \\
+MMM-M8 & MHCA1-1 & 5 & 0 & 0 & 0 \\
+MMM-M8 & MHCA1-N & 4.881 & 0.652 & 0 & 0 \\
+MMM-M8 & MHCAN-1 & 1.279 & 1.134 & 14.522 & 0.107 \\
+MMM-M8 & MHCAN-N & 1.456 & 1.055 & 14.481 & 0.115 \\
+MMM-M8 & GA & 5 & 0 & 7.553 & 1.167 \\
+MMM-M8 & GA-NC & 4.643 & 1.089 & 7.702 & 1.324 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{CLONALG and MHCA1-1, CLONALG and MHCA1-N, CLONALG and GA, CLONALG and GA-NC, BCA and MHCAN-1, BCA and MHCAN-N, MHCA1-1 and MHCA1-N, MHCA1-1 and GA, MHCA1-1 and GA-NC, MHCA1-N and GA, MHCA1-N and GA-NC, MHCAN-1 and MHCAN-N, GA and GA-NC} &  & True\footnote{CLONALG and MHCA1-1, CLONALG and MHCA1-N, SIA and GA, SIA and GA-NC, MHCA1-1 and MHCA1-N, MHCAN-1 and MHCAN-N, GA and GA-NC} & \\		
+				\hline
+				\end{tabular}
+			}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on the MMM-M8 Massively Multimodal Functions.}
+	\label{tab:iidle:optimisation:function:multimodal:M8}
+\end{table}
+
+\begin{table}[htp]
+	\centering
+		\begin{minipage}{\textwidth}
+		\small{
+				\begin{tabular}{llllll}
+				\hline
+				\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{BES}} & \multicolumn{2}{c}{\textbf{ASD}}\\
+				\hline
+				  &   & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\			
+				\hline
+MMM-M9 & CLONALG & 14.067 & 2.273 & 1.892 & 3.032 \\
+MMM-M9 & SIA & 23.6 & 2.486 & 0.75 & 0.884 \\
+MMM-M9 & BCA & 26.267 & 1.015 & 8.642 & 1.761 \\
+MMM-M9 & MHCA1-1 & 18 & 0 & 0 & 0 \\
+MMM-M9 & MHCA1-N & 18.267 & 1.015 & 0 & 0 \\
+MMM-M9 & MHCAN-1 & 21.867 & 1.961 & 1.198 & 0.894 \\
+MMM-M9 & MHCAN-N & 22.667 & 1.516 & 1.871 & 0.919 \\
+MMM-M9 & GA & 23.9 & 2.771 & 5.291 & 0.833 \\
+MMM-M9 & GA-NC & 26.633 & 2.988 & 5.498 & 1.252 \\
+\multicolumn{2}{l}{\emph{Significant}} & True\footnote{SIA and MHCAN-N, SIA and GA, BCA and GA-NC, MHCA1-1 and MHCA1-N, MHCAN-1 and MHCAN-N, MHCAN-N and GA} &  & True\footnote{CLONALG and SIA, MHCA1-1 and MHCA1-N, GA and GA-NC} & \\
+				\hline
+				\end{tabular}
+			}
+		\end{minipage}
+	\caption{Summary of results from Function Optimisation Algorithms on the M9 Massively Multimodal Functions.}
+	\label{tab:iidle:optimisation:function:multimodal:M9}
+\end{table}
+
+% first page
+\begin{landscape}
+\begin{figure}[ht]
+	\subfloat[Best Evaluation Score on BTF1.]{
+	\label{fig:iidle:demo:function:results1:a} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/BTF1-BestScore-chart}
+	\end{minipage}}%
+	\hfill
+	\subfloat[Best Evaluation Score on BTF2.]{
+	\label{fig:iidle:demo:function:results1:b} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/BTF2-BestScore-chart}
+	\end{minipage}}\\
+	% new line for second set
+	\subfloat[Best Evaluation Score on BTF3.]{
+	\label{fig:iidle:demo:function:results1:c} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/BTF3-BestScore-chart}
+	\end{minipage}}%
+	\hfill
+	\subfloat[Best Evaluation Score on BTF4.]{
+	\label{fig:iidle:demo:function:results1:d} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/BTF4-BestScore-chart}
+	\end{minipage}}%
+	\caption{Summary of results for Binary Function Optimisation.}
+	\label{fig:iidle:demo:function:results1} %% label for entire figure
+\end{figure}
+\end{landscape}
+
+% second page
+\begin{landscape}
+\begin{figure}[ht]
+	\subfloat[Best Evaluation Score on BTF5.]{
+	\label{fig:iidle:demo:function:results2:a} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/BTF5-BestScore-chart}
+	\end{minipage}}%
+	\hfill
+	\subfloat[Best Evaluation Score on MMM-M7.]{
+	\label{fig:iidle:demo:function:results2:b} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/MMM_M7-BestScore-chart}
+	\end{minipage}}\\
+	% new line for second set
+	\subfloat[Best Evaluation Score on MMM-M8.]{
+	\label{fig:iidle:demo:function:results2:c} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/MMM_M8-BestScore-chart}
+	\end{minipage}}%
+	\hfill
+	\subfloat[Best Evaluation Score on MMM-M9.]{
+	\label{fig:iidle:demo:function:results2:d} %% label 
+	\begin{minipage}[t]{0.50\textwidth}
+		\centering \includegraphics[scale=0.45]{IIDLE/MMM_M9-BestScore-chart}
+	\end{minipage}}%
+	\caption{Summary of results for Binary Function Optimisation.}
+	\label{fig:iidle:demo:function:results2} %% label for entire figure
+\end{figure}
+\end{landscape}
+
+
+%
+% Analysis
+%
+\subsubsection{Analysis}
+This section provides an analysis of the results from the previous section in the context of the aims and goals of the experiment.
+
+%
+% Clonal Selection and Mutation Hill Climbers
+%
+\paragraph{Clonal Selection and Mutation Hill Climbers}
+% section
+This section considers the results of the clonal selection and mutation hill climbers, and specifically whether the capabilities are generally equivalent. 
+% expectations
+The general expectations is that the classical CSA will perform much like the MHCA with an (N+N) configuration. This is because the CLONALG, BCA, and SIA all operate in a similar way, although CLONALG and SIA use a union-based selection strategy each epoch, and all three approaches use a different mutation scheme to MHCA.
+% trap functions
+Regarding the trap functions CLONALG generally performed poorly across all five functions, where the performance of the approach was similar to that of the 1+$\ast$ approaches on BTF1. An important finding from this experiment was the correlation in behaviour between the BCA and SIA with the N+1 and N+N approaches respectively. This relationship held for BTF1 and BTF2 specifically, across the remaining trap functions by default where all approaches achieved the same sub-optimal result on average except CLONALG.
+% multi-modal functions
+Regarding massively multi-modal functions, the general correlated relationship between SIA and BCA with N+1 and N+N held. Importantly, these approaches failed to solve MMM-M7 and MMM-M8, and were outperformed by the 1+$\ast$ MHC approaches, and in the case of MMM-M8 they were outperformed by CLONALG. This suggests that CLONALG, specifically the mutation function requires a large differential relationship between high and low fitness to perform reasonably, an effect provided by the highly-scaled MMM-M8 function. Finally, although neither the hill climbing or clonal selection algorithms were able to solve MMM-M9, the BCA-SIA and N+$\ast$ MHCA approaches performed better than the 1+$\ast$ counterparts. 
+% findings
+The findings regarding the relationships between the classical clonal selection algorithms and the assessed mutation hill climbers may be summarised as follows.
+
+\begin{enumerate}
+	\item CLONALG consistently performed poorly demonstrating that on the tested Binary Function Optimisation problems, it is a poor optimisation method, and likely poor realisation of the clonal selection principle compared to other CSA such as BCA and SIA, as well as MHCA.
+	\item As expected given the structure of the algorithmic procedures, the BCA and SIA algorithms demonstrated behaviour that generally correlated with the behaviour of the N+1 and N+N MHCA, verifying the suggestion made in Section \ref{subsec:cs:taxonomy:related}.
+\end{enumerate}
+
+%
+% Clonal Selection and Genetic Algorithms
+%
+\paragraph{Clonal Selection and Genetic Algorithms}
+% section
+This section considers the results in the context of clonal selection algorithms and genetic algorithms.
+% expectations
+The general expectation is that clonal selection algorithms, and N+$\ast$ MHCA perform in a similar way to a genetic algorithm without crossover. The important difference besides the mutation functions in the case of CSA, is the use of a probabilistic and fitness-proportionate (tournament) selection mechanism in the case of GA's compared to the deterministic elitist or uniform selection in CSA and MHCSA.
+% trap functions
+Regarding trap functions, the GA did not perform as well as BCA, SIA, and the N+$\ast$ MHCA on BTF1 and BTF2. The results were equivalent and sub-optimal on average between these approaches on the remaining trap functions with the exception of the GA without crossover that achieved a slightly lower performance on BTF4 and BTF5.
+% multi-modal functions
+Interestingly, regarding massively multi-modal functions the GA performed as well as the 1+$\ast$ MHCA locating a global optima on MMM-M7 and MMM-M8 and outperforming the CSA and remaining MHCA, although the performance of the GA without crossover was slightly lower. This trend was again reversed for MMM-M9, in which the CSA and GA without crossover outperformed the MHCA and GA with crossover. 
+% findings
+The findings from comparing CSA and the Genetic Algorithm with and without crossover are summarised as follows:
+
+\begin{enumerate}
+	\item The BCA and SIA Clonal Selection Algorithms outperform (BTF1-2) and perform as well as a GA with and without crossover (BTF3-5, MMM-M9) on the investigated optimisation problems.
+	\item Importantly the Genetic Algorithm with or without crossover has qualities (the selection mechanism) that differentiates the capabilities of SIA, BCSA and N+$\ast$ MHCA on some of the more difficult problem instances (MMM-M7-8).
+\end{enumerate}
+
+%
+% Conclusions
+%
+\subsubsection{Conclusions}
+From a procedural perspective, parallel hill climbing algorithms and genetic algorithms without crossover provide a reasonable model for the clonal selection principle in the context of a clone and a single antigenic stimulus. This empirical study provided some evidence to support both of these observations, specifically SIA and BCA perform similarly to N+$\ast$ MHCA and a GA with and without crossover under a variety of deceptive and massively multi-modal deceptive binary function optimisation problem instances. Further, the results demonstrate that Clonal Selection Algorithms are suitable to global function optimisation, performing as well as Parallel Hill Climbing and Genetic Algorithms, they are likely to shed little light on these approaches toward solving such problems. Specifically, an investigation of this computation interpretation of clonal selection provide a platform for investigating varied mutation and selection mechanisms for existing function optimisation strategies as opposed to a different strategy for addressing such problems. This suggestion may be invalidated through the elaboration of sub-symbolic (degenerate) and intra-repertoire interaction schemes outlined in Chapter \ref{chap:cells}.
+
+%
+% Hybrid and Cooperative Global Optimisation
+%
+\subsection{Hybrid and Cooperative Global Optimisation}
+
+
+%
+% Aim
+%
+\subsubsection{Aim}
+- how would you use this thing for hybrid search?
+
+
+%
+% Method
+%
+\subsubsection{Method}
+
+
+%
+% Algorithms
+%
+\paragraph{Algorithms}
+
+base algorithms
+
+DE as defined in \cite{Price1999}
+ES as defined in \cite{Rudolph2000} - n is the number of dimensions
+
+
+
+
+
+configurations
+
+
+too parts
+1. coop
+2. hybrid
+
+SI-HCSA is the so called Small-small configuration
+RTCSA i the so called small configuration
+
+
+
+\begin{table}[htp]
+	\centering
+		\begin{tabularx}{\textwidth}{lX}
+		\hline
+		\textbf{Name} & \textbf{Parameters} \\ 
+		\hline
+		DE	& $N_{size}$=100, CR=0.9, F=0.8, Mode=RAND/1/EXP\\
+		ES	& $N_{size}$=100, $P_{crossover}$=0.95 $\tau$=${2\times n}^{\frac{-1}{2}}$, $\epsilon$=${4\times n}^{\frac{-1}{4}}$, $\rho$=$\frac{5\times\pi}{180}$, mode=($\mu+\lambda$)\\
+		MTCSA	& $N_{tissues}$=5, TER=Symmetric \\
+		RTCSA	& $N_{tissues}$=5, TER=Symmetric, $N_{migrants}$=10\\
+		SI-HCSA	& $N_{hosts}$=5, $N_{tissues}$=1 HER=Symmetric, $N_{sharers}$=1, $N_{recpients}$=2, $N_{sharedcells}$=10\\
+		\hline
+		\end{tabularx}
+	\caption{Summary of the algorithms and their configuration for Continuous Function Optimisation.}
+	\label{tab:iidle:function:hybrid:algorithms:configurations}
+\end{table}
+
+	
+
+%
+% Problems
+%
+\paragraph{Problems}
+
+- unimodal problems
+- multimodal problems
+- taken from \cite{Yao1999}
+
+
+
+
+%
+% Experiment
+%
+\paragraph{Experiment}
+
+coop evaluations: 10000 * 100 
+- about 10,000 epochs with a pop of 100
+- or about 2000 epochs if dived between 5 algorithms
+
+probes:
+- score
+- epoch located optima
+
+
+
+%
+% Results
+%
+\subsubsection{Results}
+
+- evaluations
+- score
+
+
+%
+% Analysis
+%
+\subsubsection{Analysis}
+
+
+%
+% Conclusions
+%
+\subsubsection{Conclusions}
+
+Findings
+- generally, behaves as expected, SI-HCSA does well with cooperative, hybrid is slow and likely not a good app.
+
+
+
+
+
+%
+% Functional Decomposition
+% 
+\subsection{Functional Decomposition}
+
+
+%
+% Aim
+%
+\subsubsection{Aim}
+
+- consider some of the things with functional decomposition
+
+
+%
+% Method
+%
+\subsubsection{Method}
+
+
+%
+% Algorithms
+%
+\paragraph{Algorithms}
+
+DE basis
+
+
+%
+% Problems
+%
+\paragraph{Problems}
+
+
+%
+% Experiment
+%
+\paragraph{Experiment}
+
+
+
+%
+% Results
+%
+\subsubsection{Results}
+
+
+
+%
+% Analysis
+%
+\subsubsection{Analysis}
+
+
+%
+% Conclusions
+%
+\subsubsection{Conclusions}
+
+Finding:
+- performs as expected - SI is good on asymmetric, RTCSA and others are good on random
+	- both get poor results generally in the context of the problem type.
+
+\end{comment}

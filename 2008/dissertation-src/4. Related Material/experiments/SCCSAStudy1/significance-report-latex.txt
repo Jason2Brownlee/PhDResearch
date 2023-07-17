@@ -1,0 +1,12 @@
+\begin{tabular}{llllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Average Cell Error (ACE)}} & \multicolumn{2}{c}{\textbf{Average BMU Per Antigen (ABMU/Antigen)}} & \multicolumn{2}{c}{\textbf{Average Cell Neighbourhood Diversity (ACND)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & RCCSA & 89.128 & 0.732 & 0.002 & 0.002 & 3.94 & 0.803 & ? & ? \\
+AEP-10 & SCCSA-HR & 92.876 & 0.405 & 0.012 & 0.012 & 2.83 & 0.352 & 83.257 & 0.508 \\
+AEP-10 & SCCSA-NR & 87.592 & 0.968 & 0.002 & 0.001 & 3.417 & 0.424 & 65.119 & 1.514 \\
+\multicolumn{2}{l}{\emph{Significant}} & True &  & True\footnote{False for RCCSA and SCCSA-NR} &  & True &  & True & \\
+\hline
+\end{tabular}

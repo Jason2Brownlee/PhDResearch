@@ -1,0 +1,172 @@
+
+%
+% Introduction Chapter
+% Jason Brownlee
+%
+
+% Guideline
+% The reader must be introduced, in a step by step fashion, to the purpose of the project, 
+% concepts and ideas related to the project and the structure of the following sections of the thesis.
+
+% Guideline: Audience is the Lay-reader
+
+% Assessment: 
+% Does the chapter place the project work into its proper perspective for the reader?  Does the chapter spell out the objectives and set the scene for the remainder of the thesis?  Does the thesis formally list the contributions of the research work to society or industry?  
+
+%
+% Introduction
+%
+\chapter{Introduction}
+\label{chap:introduction}
+
+%
+% Motivation, Scope, Thesis
+% Why did I spend 3 years on this project, why was it worth it?
+%
+\section{Motivation}
+\label{sec:intro:motivation}
+% AI, SI, AIS
+Artificial Intelligence is concerned with the investigation of the information processing mechanisms that underlie intelligent behaviour in systems that act \emph{rationally} or like \emph{humans}. The traditional approach toward designing and investigating such systems is a rigorous top-down approach using a symbolic representation that provides clear indication \emph{why} such systems work. A newer scruffy paradigm called Computational Intelligence considers intelligence from a bottom-up perspective of \emph{strategies} and \emph{outcomes}. Examples of systems of this type are prescriptive indicating \emph{how} they work, although they are typically too complex to analyse to see \emph{why} they work. The process for developing such strategies, like many other fields of science and engineering, is to begin by patterning them from biological and natural processes. Toward this end, the field of Artificial Immune Systems is concerned with abstracting and exploiting the computational patterns observed in the structure and function of the immune system \cite{Castro2002a}.
+
+% Immunity and CS are cool
+The immune system is vast in scale and complexity, comprised of specialised organs and trillions of cells and molecules. The complexity of the system is commonly considered in the same order as the central nervous system. It is responsible for maintaining the homoeostasis of a host organism and in particular it is responsible for identifying and eliminating invading micro-organisms called pathogen \cite{Cohen2001a, Paul1991}. The immune systems of vertebrates has a capacity to adapt so as to acquire immunity and better respond in the future to the same and similar infections. The immune system is both essential to a hosts survival and a powerfully efficient garbage disposal. The precision mechanisms that exist to keep a host alive can become corrupted and turn on and attack the host, an affliction that underlies many types of autoimmune disease. The acquired immune system is responsible for the manufacture of an enormous diversity of detector proteins called antibodies, such that collectively a repertoire of these molecules can potentially detect many millions or billions of different molecular structures. Interestingly the information required to prepare such a potentially diverse army of protective protein conformations is far greater than the number of genes encoded in a given vertebrates genome. This mismatch between the limited information that a genome can represent and what the acquired immune system is capable of detecting is achieved via an adaptive learning process described by the Clonal Selection Theory \cite{Burnet1957}. This Darwinian inspired theory for antibody diversity begins with a repertoire of general-purpose detectors that can partially detect most infections. A process of \emph{selection of the fittest} and cellular mitosis with mutations that affect what descendant cells can identify, results in the specialisation of a host organisms detection repertoire to its environment.
+
+% AIS has done some things, but there are more things to do
+The learning, memory, and adaptive information processing properties of clonal selection are a `corner stone' in the field of Artificial Immune Systems (AIS). The abstracted clonal selection strategy has been embodied in optimisation, pattern recognition, and classification algorithms and provides a foundational improvement procedure for those AIS that exploit the information processing attributes of other cell-centric immunological theories. Beyond adaptation, clonal selection describes a process by which the acquired immune system coordinates learning and memory of a lifetime of unknown infections without central control or organisation. This adaptive process occurs autonomously and concurrently throughout the distributed tissues of a host organism. Interestingly the distributed and decentralised attributes are an often cited advantage of patterning strategies from the immune system, although much of the research in the field has focused on monolithic systems and algorithms \cite{Watkins2003, Watkins2004}. There has been provoking work on the investigation of distributed signature based computer security applications \cite{Hofmeyr1999a, Kim2002}, and in autonomous navigation and group decision making in mobile robotics \cite{Jun1999, Singh2001, Lau2006}, although there exists no clear framework to guide the realisation of such systems and little work on investigating the clonal selection paradigm toward this end. Finally, there is some consensus among leaders in the field of a recent impasse in the general progress in the field of Artificial Immune Systems. The same authors suggested a trend of turning back to the biological system to abstract novel and more accurate models to replace the crude \emph{first generation} approaches with so-called \emph{second generation artificial immune systems} \cite{Andrews2005, Timmis2005, Timmis2007, Twycross2007}. 
+
+% my thesis
+% Thesis: A thesis statement is the statement that begins a formal essay or argument, or that describes the central argument of an academic paper or proposition.
+The thesis of this work is that the clonal selection paradigm can be elaborated to exploit the distributed and decentralised information processing characteristics inherent in the inspiring metaphor, and that the structure and function of the immune system provide a path toward realising such computational models. 
+% motivate distributed ais
+Such information processing characteristics are beneficial for classes of problems that can be addressed using parallel or cooperative problem solving strategies, such as those problems partitioned along functional or information availability axes. 
+% second generation - fixing problems in the field
+This work addresses the open problem of considering a \emph{second generation} of artificial immune systems, in this case distributed clonal selection algorithms, by following the trend of devising novel and more accurate abstractions and models from the inspiring biological system.
+
+%
+% Hypothesis
+% A tentative supposition with regard to an unknown state of affairs, the truth of which is thereupon subject to investigation by any available method, either by logical deduction of consequences which may be checked against what is known, or by direct experimental investigation or discovery of facts not hitherto known and suggested by the hypothesis.
+% 
+\section{Hypothesis}
+\label{sec:intro:hypothesis}
+The main hypothesis of this research is defined, as follows:
+
+\begin{quote}
+	% \emph{Immunological structure and function provide an effective computational inspiration for the elaboration of existing clonal selection algorithms, and realisation of distributed varieties.}
+	\emph{An in depth study of immunological structure and function, in particular the distributed nature of the immune system, provides effective computational inspiration for the extension and improvement of existing clonal selection algorithms.}
+	
+\end{quote}
+
+The aim of this research is to improve the current understanding of the clonal selection paradigm for adaptive information processing and more specifically the state of distributed and decentralised approaches. This aim was pursued by using an understanding of immunological structure and function to provide a conceptual framework for the investigation. To verify the effectiveness of the investigated framework and clonal selection algorithms the hypothesis was divided into a series of goals, defined in Section~\ref{sec:intro:goals}.
+
+%
+% Goals
+% Sub goals or tasks distilled from the thesis and aims of this work
+%
+\section{Goals}
+\label{sec:intro:goals}
+The research thesis is addressed in the context of five main research goals, as follows:
+
+%
+% Methodology - systematic way of doing the framework and algorithms assessments
+%
+\paragraph{1. Identify a systematic methodology for realising a novel biological inspired computational framework and models.}
+Before the investigation of a novel immunological inspired framework and resultant models and algorithms, it is essential to identify a systematic methodology to provide a set of well defined procedures as to how such a framework may be realised and how the effectiveness of the models and algorithms may be assessed.
+
+%
+% Clonal Selection - what its all about, how its broken, and how to fix it
+%
+\paragraph{2. Identify limitations with and elaborate upon the base clonal selection paradigm.}
+The clonal selection paradigm is a core information processing pattern in cellular immunology and inspired computational models, therefore it is essential that both the capabilities and limitations of existing adaptive and distributed computational models are understood.
+
+%
+% Inspiration - immune structure and function, and their relation to clonal selection
+%
+\paragraph{3. Identify immunological structures and/or functions which clearly exhibit distributed information processing.}
+The structures and functions of mammalian immune system must be scrutinised through a lens of clonal selection for processes and architectures that constitute distributed information processing, and formulated into abstracted computational models.
+
+%
+% Assessment - ensure algorithms are effective, how effective is measured 
+%
+\paragraph{4. Study the behaviours, capabilities, and limitations of devised computational models.}
+In order to assess the effectiveness of the devised abstracted models they must be examined and understood with regard to their information processing capabilities, limitations, and general behaviours.
+
+% 
+% Framework - for realisation of distributed clonal selection algorithms, how is effective measured?
+%
+\paragraph{5. Propose an integrated clonal selection framework that unites the base and distributed variants.}
+Finally, the adaptive clonal selection paradigm and realised distributed models must be integrated into a framework such that their benefits and limitations can be assessed given the success of its descriptive and predictive capabilities.
+
+
+%
+% Contributions
+% Does the thesis formally list the contributions of the research work to society or industry?  
+
+\section{Contributions}
+\label{sec:intro:contributions}
+This dissertation makes the following specific contributions:
+
+\begin{enumerate}
+
+	% elaborated understanding of clonal selection as an adaptive strategy
+	\item The systematic elaboration and development of the existing clonal selection computational paradigm as an explicit adaptive strategy and suggestion of additional models based on the interaction of cells and molecules, called the \emph{Cellular Clonal Selection Paradigm} (Chapter \ref{chap:cs} and Chapter \ref{chap:cells}).
+	
+	% new clonal selection algorithms simulated on test domains
+	\item The design and investigation of novel \emph{Spatial}, \emph{Mediated}, and \emph{Network} Cellular Clonal Selection Algorithms (Chapter \ref{chap:cells}).
+	
+	% new tissue paradigm for clonal selection algorithms
+	\item The identification and abstraction of the lymphatic system and lymphocyte trafficking as a framework for distributed Clonal Selection Algorithms called the \emph{Tissue Clonal Selection Paradigm} (Chapter \ref{chap:tissues}).
+	
+	% new tissue based algorithms simulated on test domains
+	\item The design and investigation of novel \emph{Recirculation}, \emph{Homing}, and \emph{Inflammation} Tissue Clonal Selection Algorithms (Chapter \ref{chap:tissues}).
+	
+	% new host paradigm for clonal selection algorithms
+	\item The identification and abstraction of host immunisation and evolution as a framework for distributed Clonal Selection Algorithms called the \emph{Host Clonal Selection Paradigm} (Chapter \ref{chap:hosts}).
+	
+	% new host algorithms simulated on test domains
+	\item The design and investigation of novel \emph{Transmission} and \emph{Shared Immunity} Population Host Clonal Selection Algorithms, and the \emph{Maternal Immunity} and \emph{Inherited Immunity} Generational Host Clonal Selection Algorithms (Chapter \ref{chap:hosts}).
+		
+	% new integrated hierarchical clonal selection framework unifying the three clonal selection paradigms
+	\item The integration of the three perspectives of the computational properties of clonal selection (Cellular, Tissue, Host) into an \emph{Integrated Hierarchical Clonal Selection Framework} with both explanatory and predictive properties (Chapter \ref{chap:framework}).
+
+	% application to optimisation and approximation
+	\item The elicitation of salient features of the Cellular, Tissue, and Host Clonal Selection Algorithms and systematic assessment of the suitability of application of the algorithms to the foundational problem domains of \emph{Function Optimisation} and \emph{Function Approximation} (Chapter \ref{chap:iidle}).
+
+\end{enumerate}
+
+
+
+
+%
+% Overview
+% Does the chapter spell out the objectives and set the scene for the remainder of the thesis?
+%
+\section{Thesis Organisation}
+\label{sec:intro:organisation} 
+This section presents the organisation for this work, highlighting the objectives and setting the scene for the remainder of the dissertation.
+
+% background
+\paragraph{Chapter \ref{chap:background}} provides background documentation on the general fields of study in which this work is situated, specifically Computational Intelligence and Biologically Inspired Computation. A clear definition of Artificial Immune Systems (AIS) is outlined highlighting the computational and problem solving ends, and differentiating it from theoretical and computational immunology. This chapter supports the contention of a cellular-theoretic focus in the field of AIS, and the promise of patterns for distributed, decentralised and autonomous systems. The three dominant paradigms of the field are reviewed as is the state of distributed AIS, highlighting the lack of a suitable framework and limited elaboration of the clonal selection paradigm toward this end. Finally, this section outlines a systematic research methodology for realising immune inspired algorithms, an experimental methodology to ensure systematic assessment of devised systems, and an integrated methodology that focus on decomposition and an economy of models.
+
+% clonal selection paradigm
+\paragraph{Chapter \ref{chap:cs}} provides a review of clonal selection theory providing a context for the effective interpretation of the state of the art of inspired computational models. A taxonomy is presented of clonal selection algorithms highlighting the commonality, and more importantly open problems in the field. The placement and assessment of the field is considered in the broader context of computational intelligence demarcating related research that contributes to an improved understanding of the approach. The underlying computational strategy is considered in the context of relevant adaptive systems theory demonstrating the importance of the information environment of the strategy, interactions of components, and emergent behaviours. The cellular perspective of the field is addressed and an agenda is defined which involves the investigation and elaboration of the classical cellular clonal selection perspective, and the consideration of a `host of tissues' and a `population of hosts' as distributed cellular perspectives of the immunological theory.
+
+% cellular clonal selection
+\paragraph{Chapter \ref{chap:cells}} presents a conceptual framework for the clonal selection paradigm from a cellular perspective called the \emph{Cellular Clonal Selection Paradigm}. The framework includes the principle components and base models that describe the current state of clonal selection algorithms referred to as \emph{Quintessential Clonal Selection}. Symmetry is provided to the framework in the form of a complementary \emph{Antigenic Exposure Paradigm} that encapsulates the domain information to which a system governed by clonal selection is triggered and to which it must respond. Exploiting the predictive properties of the cellular framework, three clonal selection approaches are defined and investigated: a \emph{Spatial}, \emph{Mediated}, and \emph{Network Clonal Selection Algorithm}, that are empirically demonstrated on an antigenic exposure inspired pattern recognition problem domain called \emph{Colour Space}. 
+	
+% tissue clonal selection
+\paragraph{Chapter \ref{chap:tissues}} considers the clonal selection paradigm in the context of the entire host organism. The structure and function of the human immune system are reviewed, highlighting the important role of the lymphoid tissues and related systems in the trafficking of immune cells around the body. The tissue architecture and cell mobility information processing are abstracted into a \emph{Tissue Clonal Selection Paradigm} that both describes the cellular clonal selection paradigm as a single constrained instance of a tissue-based system, and predicts a range of tissue-based clonal selection architectures and algorithms. Matching the symmetry provided in the cellular paradigm, an \emph{Infection Exposure Paradigm} is defined to satisfy tissue-centric concerns of multiple concurrent points of exposure and information acquisition. A \emph{Lymphocyte Recirculation}, \emph{Lymphocyte Homing} and \emph{Tissue Inflammation} Clonal Selection Algorithm are investigated and demonstrated on problem instances drawn from the colour space pattern recognition domain. Generally, the empirical results confirm the expected localisation and dissemination of acquired information as emergent behaviours from the decentralised cellular repertoires.
+
+% host clonal selection
+\paragraph{Chapter \ref{chap:hosts}} considers the clonal selection paradigm in the context of a population of host organisms with interacting immune systems. Immunisation and host evolution are identified as the two primary facets of immune system interactions at the population level that provide a different perspective on information dissemination and organisation than the tissue paradigm. A \emph{Population} and \emph{Generational Host Clonal Selection Paradigm} are proposed that are descriptive at both considering an instance of the tissue paradigm as a constrained host system, and at integrating the related work on models of gene library evolution. A \emph{Habitat Exposure Paradigm} is defined to facilitate the asymmetric properties of population-based exposure and transmission. The predictive qualities of the framework are exploited in the design and empirical investigation of four host-based algorithms on problem instances from the colour space domain. These include a \emph{Transmission} and \emph{Shared Immunity} algorithms from the Population paradigm, and the \emph{Maternal Immunity} and \emph{Evolved Immunity} algorithms from the Generational paradigm. Results confirm the expectation of the higher level localisation and dissemination of acquired information emergent behaviours from the decentralised systems using varied structures and functions to those used in the Tissue paradigm. 
+
+% hierarchical framework
+\paragraph{Chapter \ref{chap:framework}} provides a systematic integration firstly of the computational clonal selection models into a \emph{Hierarchical Clonal Selection Framework}, and secondly of the exposure paradigm into a \emph{Hierarchical Antigenic Exposure Framework}. Each framework provides a one-sided perspective for the development and investigation of clonal selection approaches and the mapping of complementary exposure problem domains. The integration of the frameworks highlight both the specific design decisions that bound and control the complexity of the investigated algorithms. In addition to explanatory power, the \emph{Integrated Hierarchical Clonal Selection Framework} suggests at the potential for the development and investigation of additional models, algorithms, and even new paradigms inspired by the structure and function of the immune system that constrain the computational concerns of clonal selection. The generality of the immunologically-centric framework is considered as a model for the broader study of Artificial Immune Systems, and the methodology adopted to develop and investigate the framework is considered as a model for related Computational Intelligence fields of research.
+
+% distributed learning environment
+\paragraph{Chapter \ref{chap:iidle}} considers the applicability of the developed clonal selection algorithms. A feature-based methodology for addressing the suitability of an approach is proposed and adopted to elicit the salient features from the algorithms from across the three clonal selection paradigms. Two foundational problem domains from Computational Intelligence are considered and systematically reviewed: \emph{Function Optimisation} and \emph{Function Approximation}. The salient features of each domain are described and elaborated in the context of specific application examples that demonstrate information processing properties relevant to the clonal selection algorithms. The applicability of the algorithms from each clonal selection paradigm is defined by the overlap in features between specific approaches and problem instances, suggesting at an abundance of ongoing application-centric research.
+
+
+% conclusions
+\paragraph{Chapter \ref{chap:conclusions}} provides a detailed assessment of the research hypothesis by highlighting the specific examples of how each research goal from Section~\ref{sec:intro:goals} was addressed in this work. Immunological structure and function are demonstrated as providing an effective path for both the elaboration of the classical clonal selection computational paradigm, and as a path toward realising decentralised and distributed extensions of the paradigm. The contributions of the work are rephrased in terms of computational and conceptual artefacts, highlighting the discrete and standalone products that may be differentiated and drawn from this work. Three key methodological limitations of the project are considered as acceptable trade-off's in addressing the specific research question that highlight alternative and potentially future approaches of investigating the emerging sub-field of study. Finally, the hierarchical perspective of the work is used to organise and systematically suggested extensions to the project at three levels of abstraction including \emph{Framework}, \emph{Paradigm}, and \emph{Algorithm}, outlining an ongoing research agenda for the study of Clonal Selection Algorithms. 
+
+% EOF

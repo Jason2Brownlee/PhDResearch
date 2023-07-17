@@ -1,0 +1,36 @@
+\contentsline {algocf}{\numberline {1}{\ignorespaces Depiction of the Clonal Selection Algorithm (CLONALG) for Function Optimisation.\relax }}{53}
+\contentsline {algocf}{\numberline {2}{\ignorespaces B-Cell Algorithm (BCA).\relax }}{55}
+\contentsline {algocf}{\numberline {3}{\ignorespaces Simple Immune Algorithm (SIA).\relax }}{57}
+\contentsline {algocf}{\numberline {4}{\ignorespaces Antigenic Exposure Problem (AEP).\relax }}{108}
+\contentsline {algocf}{\numberline {5}{\ignorespaces Exposure operation called a Cellular Exposure Regime (CER) for the Antigenic Exposure Problem.\relax }}{108}
+\contentsline {algocf}{\numberline {6}{\ignorespaces Initialisation operation for the Cellular Clonal Selection Algorithm (CCSA).\relax }}{110}
+\contentsline {algocf}{\numberline {7}{\ignorespaces Exposure operation for the Cellular Clonal Selection Algorithm (CCSA).\relax }}{111}
+\contentsline {algocf}{\numberline {8}{\ignorespaces Exposure operation for the Replacement Cellular Clonal Selection Algorithm (RCCSA).\relax }}{112}
+\contentsline {algocf}{\numberline {9}{\ignorespaces Returns a set of the Best Matching Cells (BMC's) for a given Antigen.\relax }}{121}
+\contentsline {algocf}{\numberline {10}{\ignorespaces Exposure operation for the Mediated Cellular Clonal Selection Algorithm (ECCSA).\relax }}{145}
+\contentsline {algocf}{\numberline {11}{\ignorespaces Exposure operation for the Recurrent Exposure Network Cellular Clonal Selection Algorithm (RE-NCCSA).\relax }}{163}
+\contentsline {algocf}{\numberline {12}{\ignorespaces Exposure operation for the Dual Exposure Network Cellular Clonal Selection Algorithm (DE-NCCSA).\relax }}{168}
+\contentsline {algocf}{\numberline {13}{\ignorespaces Infection Antigenic Exposure Problem (IAEP).\relax }}{204}
+\contentsline {algocf}{\numberline {14}{\ignorespaces Symmetric Tissue Exposure Regime (STER).\relax }}{206}
+\contentsline {algocf}{\numberline {15}{\ignorespaces Asymmetric Tissue Exposure Regime (ATER).\relax }}{206}
+\contentsline {algocf}{\numberline {16}{\ignorespaces Point Tissue Exposure Regime (PTER).\relax }}{206}
+\contentsline {algocf}{\numberline {17}{\ignorespaces Random Tissue Exposure Regime (RTER).\relax }}{207}
+\contentsline {algocf}{\numberline {18}{\ignorespaces Probabilistic Tissue Exposure Regime (OTER).\relax }}{207}
+\contentsline {algocf}{\numberline {19}{\ignorespaces Tissue Clonal Selection Algorithm (TCSA).\relax }}{208}
+\contentsline {algocf}{\numberline {20}{\ignorespaces Bit Frequency Histogram (BFH).\relax }}{209}
+\contentsline {algocf}{\numberline {21}{\ignorespaces Definition of the $TissueInteractions(H)$ operation for the Recirculation Tissue Clonal Selection Algorithm (RTCSA).\relax }}{215}
+\contentsline {algocf}{\numberline {22}{\ignorespaces Example Cell Imprinting operation for the Homing Tissue Clonal Selection Algorithm (HTCSA).\relax }}{226}
+\contentsline {algocf}{\numberline {23}{\ignorespaces Defined $TissueInteractions(H)$ operation with differential migration for the Homing Tissue Clonal Selection Algorithm (HCSA).\relax }}{227}
+\contentsline {algocf}{\numberline {24}{\ignorespaces Example increasing arraying capacity in the tissue exposure operation for the Inflammation Tissue Clonal Selection Algorithm (ITCSA).\relax }}{235}
+\contentsline {algocf}{\numberline {25}{\ignorespaces Definition of the $TissueInteractions(H)$ operation for the Inflammation Tissue Clonal Selection Algorithm (ITCSA).\relax }}{235}
+\contentsline {algocf}{\numberline {26}{\ignorespaces Habitat Antigenic Exposure Problem (HAEP).\relax }}{261}
+\contentsline {algocf}{\numberline {27}{\ignorespaces Host Clonal Selection Algorithm (HCSA), also referred to as a Population Host Clonal Selection Algorithm (PHCSA).\relax }}{262}
+\contentsline {algocf}{\numberline {28}{\ignorespaces Generational Host Clonal Selection Algorithm (GHCSA).\relax }}{263}
+\contentsline {algocf}{\numberline {29}{\ignorespaces Example of storing all exposures in a Host for later sampling in the Transmission Host Clonal Selection Algorithm (THCSA).\relax }}{268}
+\contentsline {algocf}{\numberline {30}{\ignorespaces Example of random $H$ pairings specialisation of $HostInteractions(P)$ for the Pathogen Transmission Host Clonal Selection Algorithm (PT-HCSA).\relax }}{270}
+\contentsline {algocf}{\numberline {31}{\ignorespaces Example of random-spatial pairings specialisation of $HostInteractions(P)$ for the Pathogen Transmission Host Clonal Selection Algorithm (PT-HCSA).\relax }}{271}
+\contentsline {algocf}{\numberline {32}{\ignorespaces Example of random $P$ subset specialisation of $HostInteractions(P)$ for the Vaccination Transmission Host Clonal Selection Algorithm (VT-HCSA).\relax }}{272}
+\contentsline {algocf}{\numberline {33}{\ignorespaces Definition of the $HostInteractions(P)$ operation for the Shared Immunity Host Clonal Selection Algorithm (SI-HCSA).\relax }}{279}
+\contentsline {algocf}{\numberline {34}{\ignorespaces Definition of the $CreatePopulation(P)$ operation for the Minimal Generational Host Clonal Selection Algorithm (MG-HCSA).\relax }}{287}
+\contentsline {algocf}{\numberline {35}{\ignorespaces Definition of the $CreatePopulation(P)$ operation for the Maternal Immunity Host Clonal Selection Algorithm (MI-HCSA).\relax }}{287}
+\contentsline {algocf}{\numberline {36}{\ignorespaces Definition of the $CreatePopulation(P)$ operation for the Evolved Immunity Host Clonal Selection Algorithm (EI-HCSA).\relax }}{294}

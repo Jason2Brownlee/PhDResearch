@@ -1,0 +1,14 @@
+\begin{tabular}{llllllllllll}
+\hline
+\textbf{Problem} & \textbf{System} & \multicolumn{2}{c}{\textbf{Average Cell Diversity (ACD)}} & \multicolumn{2}{c}{\textbf{Cell Set Average Eucldiean Error (CSAEE)}} & \multicolumn{2}{c}{\textbf{Average Cell Mapped Diversity (ACMD)}} & \multicolumn{2}{c}{\textbf{Average Network Cell Diversity (ANCD)}} & \multicolumn{2}{c}{\textbf{Average Mapped BMU Euclidean Error (AMBMUEE)}}\\
+\hline
+\emph{EP} & \emph{CSA} & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$ & $\bar{x}$ & $\sigma$\\
+\hline
+AEP-10 & RNCCSA-NM & 93.218 & 0.248 & 0.019 & 0.011 & ? & ? & ? & ? & 0 & 0 \\
+AEP-10 & RNCCSA-PP & 91.974 & 0.413 & 0.09 & 0.025 & 91.777 & 0.46 & 183.751 & 0.669 & 0.184 & 0.026 \\
+AEP-10 & RNCCSA-PS & 91.912 & 0.31 & 0.03 & 0.013 & 92.032 & 0.453 & 183.944 & 0.597 & 0.173 & 0.025 \\
+AEP-10 & RNCCSA-SS & 91.805 & 0.429 & 0.211 & 0.04 & 91.783 & 0.419 & 183.588 & 0.609 & 0.147 & 0.034 \\
+AEP-10 & RNCCSA-SP & 91.744 & 0.421 & 0.234 & 0.039 & 91.745 & 0.403 & 183.489 & 0.542 & 0.162 & 0.03 \\
+\multicolumn{2}{l}{\emph{Significant}} & True &  & True &  & True\footnote{False for RNCCSA-PP and RNCCSA-SS, False for RNCCSA-PP and RNCCSA-SP, False for RNCCSA-SS and RNCCSA-SP} &  & True\footnote{False for RNCCSA-PP and RNCCSA-PS, False for RNCCSA-PP and RNCCSA-SS, False for RNCCSA-PP and RNCCSA-SP, False for RNCCSA-SS and RNCCSA-SP} &  & True\footnote{False for RNCCSA-PP and RNCCSA-PS, False for RNCCSA-PS and RNCCSA-SP, False for RNCCSA-SS and RNCCSA-SP} & \\
+\hline
+\end{tabular}

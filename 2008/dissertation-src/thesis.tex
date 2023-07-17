@@ -1,0 +1,106 @@
+%
+% PhD Dissertation
+% Jason Brownlee
+%
+
+% Guideline: 
+% Generally, should be no longer than 100,000 words (ideally 50K-80K words)
+
+% Guideline: Grammatical Tense
+% All general discussions and all discussions of experiments, equipment, etc. are written in the past tense
+% References to mathematical formulae (and objects) are written in the present tense 
+% References to future work are also written in the past tense
+\documentclass[a4paper,11pt]{report}
+
+  % a file containing your definitions, which packages to load etc.
+  \include{definitions}  
+  % Guideline: not less than 40 mm on the left hand side, 20 mm on the right hand side, 30 mm at the top and 20 mm at the bottom.
+  \geometry{a4paper, lmargin=40mm, rmargin=20mm, tmargin=30mm, bmargin=20mm}
+  % line-spacing factor (must be 1.5 of normal), footnotes, figures, and tables will still be single spaced
+  \onehalfspacing 
+
+% --- remove/comment-out to build whole thesis
+
+	% version for distribution
+	% \includeonly{Header/titlepage, Header/abstract, Header/tableofcontents, Introduction/introduction}	
+
+	% working front matter
+	%\includeonly{Header/titlepage, Header/abstract, Header/acknowledgements, Header/declaration, Header/tableofcontents, Header/figurestableslist}	
+
+  % working chapters
+  % \includeonly{Introduction/introduction}
+  % \includeonly{Background/background}
+  % \includeonly{ClonalSelection/clonalselection}
+  % \includeonly{Cells/cells}
+  % \includeonly{Tissues/tissues}
+  % \includeonly{Hosts/hosts}
+  % \includeonly{Framework/framework}
+  %\includeonly{IIDLE/iidle}
+  % \includeonly{Conclusions/conclusions}
+	
+	% working backmatter
+	% \includeonly{Appendices/results, Appendices/publications, Bibliography/Bibliography}
+	
+% ---
+
+\begin{document}
+  
+% HEADER  
+
+	% ensure numbering is roman
+ \pagenumbering{roman}
+ \begin{singlespace}
+  % header sections
+  \include{Header/titlepage}\blanknonumber  
+  \include{Header/abstract}\blanknonumber  
+  \include{Header/acknowledgements}\blanknonumber
+  \include{Header/declaration}\blanknonumber  
+  \include{Header/tableofcontents}\blanknonumber
+  \include{Header/figurestableslist}
+ \end{singlespace}
+ 
+% CONTENT
+
+  % set page numbers to arabic, reset to 1
+  \pagenumbering{arabic}
+  % content sections
+  \include{Introduction/introduction}
+  \include{Background/background}
+	\include{ClonalSelection/clonalselection}
+	\include{Cells/cells}
+	\include{Tissues/tissues}
+	\include{Hosts/hosts}
+	\include{Framework/framework}
+	\include{IIDLE/iidle}
+	\include{Conclusions/conclusions}
+
+% APPENDICES
+
+% Guideline:
+% Appendices should contain supplementary material that the author considers necessary to the interpretation of the text itself. 
+% Long tables, essential raw data, detailed reports or computer are generally more appropriately included in an appendix. 
+% Appendices should not be longer that the body of the thesis and normally would be considerably shorter. 
+% If there is more than one appendix, the appendices should be numbered in sequence using Arabic numerals.
+
+% Guideline:
+% Appendices are used to store important calculations, proofs, tables or code which would interrupt the flow of qualitative descriptions in the body of the thesis.  
+
+% Guideline: the appendices should be no more than 10-20% of the size of the main body of the thesis
+
+  % change chapter name and counters (eg Chapter 1 -> Appendix A)
+  \appendix
+  
+ \begin{singlespace}
+  \include{Appendices/results}
+  \include{Appendices/publications}
+ \end{singlespace}
+
+% BIBLIOGRAPHY
+
+\begin{singlespace}
+	% All works, from which the author has abstracted information, are listed in a reference section at the back of the thesis.
+	\include{Bibliography/Bibliography}	
+\end{singlespace}
+ 	
+\end{document}  
+% EOF

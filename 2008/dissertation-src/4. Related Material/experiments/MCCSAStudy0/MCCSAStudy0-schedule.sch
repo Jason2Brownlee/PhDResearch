@@ -1,0 +1,2 @@
+R0,class=com.oat.domains.cells.cellular.problems.AEP_10:NumAntigen=10:Seed=5,class=com.oat.domains.cells.mediated.algorithms.mapping.MCCSAEuclidean:NumBCellClones=10:NumBCells=100:NumBCellsSelected=1:NumTCellClones=10:NumTCells=100:NumTCellsSelected=1,30
+R1,class=com.oat.domains.cells.cellular.problems.AEP_10:NumAntigen=10:Seed=5,class=com.oat.domains.cells.mediated.algorithms.mapping.MCCSAHamming:NumBCellClones=10:NumBCells=100:NumBCellsSelected=1:NumTCellClones=10:NumTCells=100:NumTCellsSelected=1,30
