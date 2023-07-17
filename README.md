@@ -170,4 +170,4 @@ The research was collected from a number of webpages via internet archive.
 * [http://wekaclassalgos.sourceforge.net/](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/) (archived)
 * [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
 * [http://pensive-pondering.blogspot.com/](https://web.archive.org/web/20060423080351/http://pensive-pondering.blogspot.com/) (archived)
-* [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/)
+* [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/) (archived)
