@@ -171,3 +171,5 @@ The research was collected from a number of webpages via internet archive.
 * [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
 * [http://pensive-pondering.blogspot.com/](https://web.archive.org/web/20060423080351/http://pensive-pondering.blogspot.com/) (archived)
 * [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/) (archived)
+* [http://members.optushome.com.au/jasonbrownlee/lvq/](https://web.archive.org/web/20030822043752/http://members.optushome.com.au/jasonbrownlee/lvq/) (archived)
+* [http://www.users.on.net/~nbcraven/jasonbrownlee/](https://web.archive.org/web/20040727053311/http://www.users.on.net/~nbcraven/jasonbrownlee/) (archived)
