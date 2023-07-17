@@ -173,3 +173,6 @@ The research was collected from a number of webpages via internet archive.
 * [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/) (archived)
 * [http://members.optushome.com.au/jasonbrownlee/lvq/](https://web.archive.org/web/20030822043752/http://members.optushome.com.au/jasonbrownlee/lvq/) (archived)
 * [http://www.users.on.net/~nbcraven/jasonbrownlee/](https://web.archive.org/web/20040727053311/http://www.users.on.net/~nbcraven/jasonbrownlee/) (archived)
+* https://www.scribd.com/user/15463196/Jason-Brownlee
+
+
