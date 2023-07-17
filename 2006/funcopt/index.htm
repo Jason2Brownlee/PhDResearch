@@ -1,0 +1,324 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/funcopt/index.htm","20060821063339","https://web.archive.org/","web","/_static/",
+	      "1156142019");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Jason Brownlee Personal Webpage</title>
+</head>
+
+<body>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="AutoNumber1">
+    <tr>
+      <td width="100%">
+          
+          <h2>
+	<font color="#000080">
+		<b><font size="6">Jason Brownlee</font></b>
+		<br/>
+		<i><font size="4">Personal Webpage</font></i>
+    	<font size="1">[<a href="/web/20060821063339/http://ict.swin.edu.au/personal/jbrownlee/index.htm">home</a>]</font>
+    </font>
+</h2>
+    <p>
+&nbsp;</p>
+    <hr color="#000000" size="1">
+ 
+<h3><font size="5" color="#000080">Continuous Function Optimization</font></h3>
+<p> 
+
+<font size="4" color="#000080"><b>Overview</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The global optimization of a 
+continuous cost function is a general search problem  frequently 
+encountered in many real-world scientific and engineering situations. Many 
+algorithms have been developed specifically for this class of problem, and it 
+is a common practice to empirically evaluate the sampling behaviour of these 
+algorithms on artificial test or benchmark problems. See Wikipedia's
+<a href="https://web.archive.org/web/20060821063339/http://en.wikipedia.org/wiki/Optimization_(mathematics)">Optimization 
+(mathematics)</a> page, and Mathworld's
+<a href="https://web.archive.org/web/20060821063339/http://mathworld.wolfram.com/GlobalOptimization.html">Global 
+Optimization</a> page for an introduction into this field of research.</span></font></h3>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Software</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">While working on the
+<a href="https://web.archive.org/web/20060821063339/http://gungurru.csse.uwa.edu.au/cara/huygens/">Huygens Search &amp; 
+Optimization competition</a> for <a href="https://web.archive.org/web/20060821063339/http://www.wcci2006.org/">CEC2006</a> 
+I found myself implementing and evaluating many different stochastic-based 
+global search techniques. Rather than letting all of that research and 
+development work go to waste I decided to bundle all of the more standard and 
+interesting  algorithms together and provide them as suite in a function 
+optimization demonstration software package.</span></font></h3>
+ 
+<p>The software is written in Java and is provided for <i>free</i>. It can be 
+accessed from within a browser as an applet, as a standalone application, and 
+the source code is provided. An simple software architecture has been 
+implemented permitting the easy inclusion of additional algorithms and test 
+problem domains. I have a personal interest in niching genetic algorithms and 
+immune system approaches so there is a heavy bias towards these techniques in 
+the software. The following is a list of the implemented algorithms with 
+references (where appropriate):</p>
+ 
+    <ul>
+      <li><b>Simple Genetic Algorithm (GA)</b> </li>
+      	<ul>
+      <li>as described in &quot;Genetic algorithms&quot; by Larray Eshelman in
+      <a href="https://web.archive.org/web/20060821063339/http://www.amazon.com/gp/product/0750306645/102-9270927-0189746?v=glance&amp;n=283155">
+      Evolutionary Computation 1 - Basic Algorithms and Operations</a> (2000)</li>
+      <li>using a binary representation (64 bits per parameter)</li>
+      <li>uses tournament selection with re-selection</li>
+      <li>uses one-point crossover</li>
+      	</ul>
+      <li><b>Real-Valued Genetic Algorithm (RVGA)</b></li>
+      	<ul>
+      <li>as described in &quot;Real-valued vectors&quot; by David Fogel in
+      <a href="https://web.archive.org/web/20060821063339/http://www.amazon.com/gp/product/0750306645/102-9270927-0189746?v=glance&amp;n=283155">
+      Evolutionary Computation 1 - Basic Algorithms and Operations</a> (2000)</li>
+      <li>using uniform-random crossover</li>
+      <li>using Gaussian mutation where the stdev parameter is a ratio of the 
+      objective function range in each dimension</li>
+      	</ul>
+      <li><b>Crowding Genetic Algorithm (CGA)</b> (niching GA)
+		<ul>
+      <li>added <i>simple crowding</i> as described in &quot;<a href="https://web.archive.org/web/20060821063339/http://www.it.swin.edu.au/personal/jbrownlee/thesis/Minor%20Thesis%20-%20Release%20Version%201.6.pdf">Parallel Niching Genetic Algorithms - A Crowding Perspective</a>&quot;, Jason 
+      Brownlee (2004)<li>
+      added <i>deterministic crowding</i> as described in &quot;<a href="https://web.archive.org/web/20060821063339/http://leitl.org/docs/92004.ps.gz">Crowding 
+      and Preselection Revisited</a>&quot; by Samir Mahfoud (1992)<li>
+      based upon the real-valued genetic algorithm<li>
+      uses full crossover (all children are crossover)<li>
+      uses uniform selection (entire population participates in reproduction 
+      with random pairings)</ul>
+     <li> <b>Fitness Sharing Genetic Algorithm (FSGA)</b> (niching GA)
+      <ul>
+     	<li>as described in &quot;<a href="https://web.archive.org/web/20060821063339/http://portal.acm.org/citation.cfm?doid=534133">Genetic 
+        Algorithms in Search, Optimization &amp; Machine Learning</a>&quot; (1989) by 
+        David Goldberg</li>
+      	<li>using Stochastic Universal Sampling (SUS)</li>
+      	<li>using genotype distance function (Hamming distance / bit-string 
+        length)</li>
+      	<li>repaired de-rated fitness equation (positive with zero offset - 
+        linear mapping)</li>
+     </ul>
+      <li> <b>Evolution Strategies (ES)</b> (mu+lambda &amp; mu,lamda) </li>
+      	<ul>
+      	<li>as described in &quot;Evolution strategies&quot; by Gunter Rudolph in
+      <a href="https://web.archive.org/web/20060821063339/http://www.amazon.com/gp/product/0750306645/102-9270927-0189746?v=glance&amp;n=283155">
+      Evolutionary Computation 1 - Basic Algorithms and Operations</a> (2000)</li>
+      	<li>uses uniform crossover</li>
+      	</ul>
+      <li><b>Differential Evolution (DE)</b> </li>
+      	<ul>
+      <li>as described in &quot;<a href="https://web.archive.org/web/20060821063339/http://portal.acm.org/citation.cfm?id=329069">An Introduction to 
+      Differential Evolution</a>&quot; by Kenneth Price in &quot;<a href="https://web.archive.org/web/20060821063339/http://evonet.lri.fr/evoweb/resources/books_journals/record.php?id=264">New Ideas in Optimization</a>&quot; 
+      (1999)</li>
+      <li>supports a number of standard combination modes</li>
+      <li>uses a random &quot;K&quot; value where appropriate</li>
+      	</ul>
+      <li><b>Particle Swarm Optimization (PSO)</b> (g-best &amp; l-best) </li>
+      	<ul>
+      <li>as described in the
+      <a href="https://web.archive.org/web/20060821063339/http://www.swarmintelligence.org/tutorials.php">PSO Tutorial</a></li>
+      <li>added momentum that specifies the ration of previous velocity to use, 
+      and the inverse ratio for the amount of new velocity to contribute to the 
+      new velocity </li>
+      <li>the vMax parameter is a ratio of the objective function range in each 
+      dimension</li>
+      <li>set neighbourhood size to popsize to get g-best behaviour</li>
+        </ul>
+      <li><b>Simulated Annealing (SA)</b></li>
+		<ul>
+      <li>as described in &quot;<a href="https://web.archive.org/web/20060821063339/http://portal.acm.org/citation.cfm?id=29864">Minimizing 
+      multimodal functions of continuous variables with the 'simulated 
+      annealing' algorithm</a>&quot; (1987) by Corana, Marchesi, Martini, Ridella</li>
+      <li>uses an initial random sample to determine the starting point of the 
+      search</li>
+      	</ul>
+      <li><b>Parallel Hillclimbing Algorithm</b> </li>
+      <ul>
+      <li>as&nbsp; described in &quot;<a href="https://web.archive.org/web/20060821063339/http://www.leitl.org/docs/ICGA6.ps.gz">A Comparison of Parallel and Sequential Niching 
+      Methods</a>&quot; by Samir Mahfoud (1995)</li>
+      <li>the initialStepSizeRatio parameter is a ratio of the objective function range in each 
+      dimension</li>
+      </ul>
+      <li><b>Clonal Selection Algorithm (CLONALG)</b></li>
+		<ul>
+      <li>as described in in &quot;<a href="https://web.archive.org/web/20060821063339/http://ieeexplore.ieee.org/iel5/4235/21802/01011539.pdf">Learning 
+      and optimization using the clonal selection principle</a>&quot; by de Castro 
+      and Von Zuben (2002)</li>
+      </ul>
+      <li><b>Generalized Extremal Optimization (GEO)</li> </b>
+      	<ul>
+      <li>as described in &quot;Generalized Extremal Optimization: A new 
+      meta-heuristic inspired by a model of natural evolution&quot; by de Sousa, 
+      Ramos, Galski and Muraoka in
+      <a href="https://web.archive.org/web/20060821063339/http://www.idea-group.com/books/additional.asp?id=4376&amp;title=Preface&amp;col=preface">
+      Recent Developments in Biologically Inspired Computing</a> (2005)</li>
+      <li>added an initial random sample to seed the starting point (like SA)</li>
+      	</ul>
+      <li><b>Diffuse (Cellular) Genetic Algorithm </b>
+      	<ul>
+      <li>as described in &quot;Diffusion (cellular) models&quot; by Chrisila 
+      Pettey in <a href="https://web.archive.org/web/20060821063339/http://vector.iop.org/abstract/0750306653">Evolutionary 
+      Computation 2 - Advanced Algorithms and Operations</a> (2000)</li>
+      <li>2D lattice where the population is a square (square root of popsize)</li>
+      <li>Neighbourhood is taken as N, S, E, W directions on the lattice without 
+      toroidal wrapping</li>
+      <li>Cell member is first parent, second parent is taken as a tournament 
+      selected neighbour</li>
+      	</ul>
+      </li>
+      <li><b>Random Search</b></li>
+      <li><b>Uniform Search</b> (grid)</li>
+    </ul>
+ 
+<p>A number of common test functions are provided with 2D and 3D visualisations. 
+The functions were taken from the literature ad hoc, as well as from dedicated 
+websites such as <a href="https://web.archive.org/web/20060821063339/http://www.geatbx.com/docu/fcnindex-01.html">here</a>. 
+The number of evaluations per run is limited (user-defined) and although 
+&quot;best&quot; scores are provided in a log window, the intent of this software is to 
+investigate the <i> <b>sampling behaviour</b></i> of these algorithms, not race them 
+against each other.</p>
+ 
+<p><font size="4">The most recent version of the <b>applet</b> can be 
+accessed <a href="Version1.3/applet.html">here</a></font></p>
+ 
+<p>All comments and features requests can be directed to
+<a href="https://web.archive.org/web/20060821063339/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">me</a>.</p>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Screenshots</b></font></p>
+ 
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+      <tr>
+        <td width="50%">
+        <p align="center">
+        <img border="0" src="/web/20060821063339im_/http://ict.swin.edu.au/personal/jbrownlee/funcopt/fo1.JPG" width="200" height="150"></td>
+        <td width="50%">
+        <p align="center">
+        <img border="0" src="/web/20060821063339im_/http://ict.swin.edu.au/personal/jbrownlee/funcopt/fo2.JPG" width="200" height="150"></td>
+      </tr>
+    </table>
+<p> 
+
+<font size="4" color="#000080"><b>Download</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The software requires
+<a href="https://web.archive.org/web/20060821063339/http://java.com/">Java 1.5 (5.0)</a> to run, as well as the
+<a href="https://web.archive.org/web/20060821063339/http://www.opensourcephysics.org/">open-source physics</a> library and 
+the <a href="https://web.archive.org/web/20060821063339/http://www.jfree.org/jfreechart">JFreeChart</a> library 
+(provided in the offline download)</span></font></h3>
+ 
+    <ul>
+      <li><font size="3"><span style="font-weight: 700">Version 1.0,</span><span style="font-weight: 400">
+      <i>March 13th 2006</i>,
+      <a href="v1.0/FunctionOptimisation-bin[1.0].zip">binary</a>,
+      <a href="v1.0/FunctionOptimisation-src[1.0].zip">source</a> (initial 
+      version)</span></font></li>
+      <li><b>Version 1.1</b>, <i>March 15th 2006</i>, 
+      <a href="v1.1/FunctionOptimisation-bin[1.1].zip">binary</a>, 
+      <a href="v1.1/FunctionOptimisation-src[1.1].zip">source</li></a>
+      <ul>
+      	<li>Minor bug fixes</li>
+      	<li>Added a display of problem specific information</li>
+      	<li>Added a number of interesting test problems</li>
+      	<li>Added Simulated Annealing (SA)</li>
+      	<li>Added  Crowding Genetic Algorithm (CGA) with a number of variants</li>
+      	<li>Added Fitness Sharing Genetic Algorithm (FSGA)</li>
+      	<li>Added Parallel Hill climbing Algorithm</li>
+      	<li>Added the Clonal Selection Algorithm (CLONALG)</li>
+      	<li>Added the Generalized Extremal Optimization (GEO) Algorithm</li>
+      </ul>
+      <li><b>Version 1.2</b>, <i>March 29th 2006</i>,
+      <a href="Version1.2/Version1.2.zip">download</a> <font size="1">[2,769KB]</font><ul>
+      <li>Minor bug fixes with algorithms (PSO, Real-Valued GA, Fitness sharing, 
+      CLONALG)</li>
+      <li>Added crossover parameter to crowding genetic algorithm</li>
+      <li>Improvements to the GUI (problem information panel)</li>
+      <li>Supports variable number of function evaluations (user defined)</li>
+      <li>Loads algorithms and problems from properties files (for easy 
+      extension)</li>
+      <li>Added a line graph for algorithm performance over algorithm iterations</li>
+      <li>Supports binary and gray code for bit string based algorithms (SGA, 
+      fitness sharing, GEO, CLONALG)</li>
+      <li>Added Diffuse (Cellular) Genetic Algorithm</li>
+      </ul>
+      <li><b>Version 1.3</b>, <i>April 20th 2006</i>,
+      <a href="Version1.3/Version1.3.zip">download</a> <font size="1">[2,780KB]</font><ul>
+      <li>Made the master pane more modular for extensibility</li>
+      <li>Support toroidal and fixed boundary problem domains</li>
+      <li>Support SYSTIME as random seed (default)</li>
+      <li>plot the best of run on the line graph</li>
+      <li>Supports l-best and g-best PSO</li>
+      <li>removed bout size from fitness sharing GA (was not being used)</li>
+      <li>ES supports both mu+lambda and mu,lambda, also supports a crossover 
+      probability</li>
+      <li>Addition test problems</li>
+      </ul>
+      <li><b>Version 1.4</b>, <i>soon...</i><ul>
+      <li>asdf</li>
+	</ul>
+    </ul>
+ 
+<p><font size="4" color="#000080"><b>To-Do</b></font></p>
+ 
+<p>The following are features I would like to add to this software over time, as 
+well as user-requested features that I'd like to include (time permitting):</p>
+ 
+      <ul>
+        <li>Support arbitrary problem dimensionality in the GUI</li>
+        <li>Add the Adaptive Clonal Selection (ACS) algorithm</li>
+        <li>Add the Bayesian Optimization Algorithm (BOA)</li>
+        <li>Add the Messy Genetic Algorithm (mGA)</li>
+        <li>Add the Compact Genetic Algorithm (cGA)</li>
+        <li>Add the Restricted Tournament Selection (RTS) niching GA algorithm</li>
+        <li>Add the Continuous Fitness Sharing (fixed fitness sharing) niching 
+        GA algorithm</li>
+    </ul>
+ 
+      </td>
+      </tr>
+    
+    </table>
+  </center>
+  </div>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 06:33:39 Aug 21, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:55:46 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 182.861
+  exclusion.robots: 0.187
+  exclusion.robots.policy: 0.179
+  RedisCDXSource: 0.663
+  esindex: 0.007
+  LoadShardBlock: 165.132 (3)
+  PetaboxLoader3.datanode: 310.886 (4)
+  load_resource: 204.897
+  PetaboxLoader3.resolve: 34.711
+-->

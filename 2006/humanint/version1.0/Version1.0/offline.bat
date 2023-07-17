@@ -1,0 +1,1 @@
+java -cp humaninteractive-bin1.0.jar humint.gui.InteractiveFrame

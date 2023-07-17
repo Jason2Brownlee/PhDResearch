@@ -1,0 +1,207 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/huygens/index.htm","20060821060043","https://web.archive.org/","web","/_static/",
+	      "1156140043");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Jason Brownlee Personal Webpage</title>
+</head>
+
+<body>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="AutoNumber1">
+    <tr>
+      <td width="100%">
+          
+          <h2>
+	<font color="#000080">
+		<b><font size="6">Jason Brownlee</font></b>
+		<br/>
+		<i><font size="4">Personal Webpage</font></i>
+    	<font size="1">[<a href="/web/20060821060043/http://ict.swin.edu.au/personal/jbrownlee/index.htm">home</a>]</font>
+    </font>
+</h2>
+    <p>
+&nbsp;</p>
+    <hr color="#000000" size="1">
+ 
+<h3><font size="5" color="#000080">Huygens Search &amp; Optimization Competition 
+(CEC'06)<br>
+</font><font color="#000080">Competition Software </font></h3>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Competition</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">As apart of the
+<a href="https://web.archive.org/web/20060821060043/http://www.wcci2006.org/">IEEE World Congress on Computational 
+Intelligence conference</a> 2006, specifically the Congress on Evolutionary 
+Computation (CEC 2006), a number of competitions are held for computational 
+intelligence algorithms (see the competition pages
+<a href="https://web.archive.org/web/20060821060043/http://www.wcci2006.org/WCCI-Web_CompetitionProgram.html">here</a> and
+<a href="https://web.archive.org/web/20060821060043/http://www.hi.is/~tpr/cec2006contests/">here</a>). One competition that 
+caught my interest was the
+<a href="https://web.archive.org/web/20060821060043/http://gungurru.csse.uwa.edu.au/cara/huygens/">Huygens Probe 
+Competition</a> in which algorithms are tested and compete on a number of 
+black-box function optimisation problems. The clincher is that for each test 
+problem the algorithm is exposed to only 1000 function evaluations are 
+permitted, thus the problem of exploration and exploitation must be very 
+carefully managed under this constraint of limited evaluations. For a complete 
+description of the competition see
+<a href="https://web.archive.org/web/20060821060043/http://gungurru.csse.uwa.edu.au/cara/huygens/cec2006.php">here</a>.</span></font></h3>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Software</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The first thing I did for this 
+competition was build a framework that would support a stack of standard 
+off-line test problems and algorithms. The result was this
+<a href="/web/20060821060043/http://ict.swin.edu.au/personal/jbrownlee/funcopt/index.htm">function optimization software</a> (14 
+algorithms, 30 problems, free source code, written in Java, etc.). </span>
+</font></h3>
+ 
+<p>The second thing I did was write a test harness that would provide consistent 
+benchmark results. The result is the free software provided on this page that 
+permits <i><b>any novice or expert computational intelligence practitioner to 
+get involved in the competition without writing having to write a line of code</b></i>.</p>
+ 
+<p>The software uses the HTTP interface for the competition for function 
+evaluations, and supports all of the algorithms supported by the afore mentioned 
+function optimisation software as well as any additional third-party algorithms 
+added to the framework. The software was written for speed, and supports 
+batch-HTTP evaluations using a multithreaded evaluation engine (up to 50 
+simultaneous evaluations), which if improperly configured could cause harm to 
+the competition evaluation server (so handle with care please). The software 
+also supports proxy configuration and <u>it should be noted</u> is configured by 
+default for the Swinburne University network proxy (non-Swinburne uses can 
+simply change the properties file). A properties file is provided &quot;<i>huygens.properties</i>&quot; 
+to configure all meaningful aspects of the client software. User login 
+information for the competition is entered in to the software at runtime as a 
+property of the problem. Graphs, and sample plots are provided to assist in 
+tuning selected algorithms. Further, the software is written as a modular 
+framework meaning that it is trivial to write alternative interfaces for batch 
+runs or any other desired usage.</p>
+ 
+<p>The software supports three problem modes as follows:</p>
+ 
+    <ol>
+      <li><b>Huygens Any Moon</b> - Used for one-off algorithm tests. The user 
+      enters their login details and the moon they want to test against. The 
+      number of evaluations the can be reduced from 1000 for rapid proof of 
+      concept testing. </li>
+      <li><b>Internal Benchmark</b> - A benchmark interface is provided that 
+      captures test results across multiple moons and with multiple repetitions. 
+      A configured algorithm is evaluated on the first 10 moons (20_1 to 20_10). 
+      Benchmark results can be exported as csv (excel format) for offline 
+      algorithm comparison. This mode was invented for offline benchmarking 
+      using the single-moon training interface provided by the competition such 
+      that results would not be entered into the league table. It provides a 
+      means of comparing competitive algorithms &quot;internally&quot; before exposing 
+      results to the world via the server benchmark - very useful indeed for my 
+      own testing!</li>
+      <li><b>Server Benchmark</b> - This mode will test a configured algorithm 
+      on 10 unknown moons selected by the competition server, and results are 
+      entered in to the league table
+      <a href="https://web.archive.org/web/20060821060043/http://gungurru.csse.uwa.edu.au/cara/huygens/leagueTables.php">
+      here</a>. Progress bars are provided for user feedback of benchmark 
+      status.</li>
+    </ol>
+ 
+<p><i>Why release this software before the competition opens?</i> Well I just 
+like sharing, and I'm interested in third-party algorithm contributions or 
+interesting algorithm configurations, so please contact me and tell me how you 
+are using this software or framework? All comments and features requests can be directed to
+<a href="https://web.archive.org/web/20060821060043/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">me</a>.</p>
+ 
+<p>Enjoy.</p>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Screenshots</b></font></p>
+ 
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+      <tr>
+        <td align="center">
+        <img border="0" src="/web/20060821060043im_/http://ict.swin.edu.au/personal/jbrownlee/huygens/Picture3.png" width="233" height="174"></td>
+        <td align="center">
+        <img border="0" src="/web/20060821060043im_/http://ict.swin.edu.au/personal/jbrownlee/huygens/Picture4.png" width="233" height="174"></td>
+      </tr>
+    </table>
+<p> 
+
+<font size="4" color="#000080"><b>Download</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The software requires
+<a href="https://web.archive.org/web/20060821060043/http://java.com/">Java 1.5 (5.0)</a> to run, as well as the
+<a href="https://web.archive.org/web/20060821060043/http://www.jfree.org/jfreechart/index.php">JFreeChart</a> library, and 
+a few Jakarta commons libraries 
+(all provided in the offline download). There is no applet version of this 
+software at this stage.</span></font></h3>
+ 
+    <ul>
+      <li><font size="3"><span style="font-weight: 700">Version 1.0,</span><span style="font-weight: 400">
+      <i>April 20th 2006</i>, <a href="Version1.0/HuygensCompetition-1.0.zip">download</a> </span> </font>
+      <span style="font-weight: 400">
+      <font size="1">[1,882KB]</font><font size="3"> (initial 
+      version)</font></span></li>
+      <li><b>Version 1.1</b>, <i>Soon...</i></li>
+      	<ul>
+      	<li>asdf</li>
+	  	</ul>
+    </ul>
+ 
+<p><font size="4" color="#000080"><b>To-Do</b></font></p>
+ 
+<p>The following are features I would like to add to this software over time, as 
+well as user-requested features that I'd like to include (time permitting):</p>
+ 
+      <ul>
+        <li>Support an interpolated plot of the first 10 moons using offline 
+        data files</li>
+        <li>Support both the HTTP and web services interfaces for the 
+        competition</li>
+    </ul>
+ 
+      </td>
+      </tr>
+    
+    </table>
+  </center>
+  </div>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 06:00:43 Aug 21, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:56:19 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 58.864
+  exclusion.robots: 0.148
+  exclusion.robots.policy: 0.14
+  RedisCDXSource: 0.559
+  esindex: 0.009
+  LoadShardBlock: 40.457 (3)
+  PetaboxLoader3.datanode: 67.784 (4)
+  load_resource: 159.058
+  PetaboxLoader3.resolve: 116.592
+-->

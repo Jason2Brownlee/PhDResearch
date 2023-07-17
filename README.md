@@ -24,7 +24,7 @@ Research work from summer scholarship (2004-2005) and the start of PhD program (
 * Jason Brownlee. [Clonal Selection Theory and CLONALG - The Clonal Selection Classification Algorithm (CSCA)](2005/TR02-2005.pdf) [Technical Report]. Victoria, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2005 Jan; Technical Report ID: 2-01.
 * Jason Brownlee. [Immunos-81 - The Misunderstood Artificial Immune System](2005/TR03-2005.pdf) [Technical Report]. Victoria, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2005 Feb; Technical Report ID: 3-01.
 
-Software:
+**Software:**
 
 * [WEKA Classification Algorithms](2005/classification/): Immunological Classification Algorithms (Weka Plugin)
 	* [jbweka-1.6.zip](2005/classification/jbweka-1.6.zip)
@@ -42,7 +42,7 @@ Software:
 * Jason Brownlee. [Implementation Specification for IIDLE](2005/TR10-2005.pdf) [Technical Report]. Victoria, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2005 Sep; Technical Report ID: 10-01.
 * Jason Brownlee. [Further Preliminary Experiments with IIDLE](2005/TR11-2005.pdf) [Technical Report]. Victoria, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2005 Oct; Technical Report ID: 11-01.
 
-Software:
+**Software:**
 
 * [IIDLE Webpage](2005/iidle/): Description, applets, and source code for the IIDLE system.
 	* [release-1.0.zip](2005/iidle/release-1.0.zip)
@@ -55,6 +55,16 @@ Software:
 * Jason Brownlee. [IIDLE: An Immunological Inspired Distributed Learning Environment for Multiple Objective and Hybrid Optimisation](2006/JB-CEC2006.pdf). Proceedings of the IEEE Congress in Evolutionary Computation (CEC'06); Sheraton Vancouver Wall Centre Hotel, Vancouver, BC, Canada. USA: IEEE Press; 2006: 507-513.
 	* [CEC Presentation Slides](2006/JB-CEC2006-Slides.pdf)
 * Jason Brownlee, [Pensive Pondering](2006/Pensive-Pondering-Posts.pdf), Blog Post Archive, 2005-2006.
+
+
+**Software:**
+
+* [Combinatorial Optimization](2006/comopt/): Java code to solve the Travelling Salesman Problem (TSP) with algorithms like Simple Genetic Algorithm, Greedy Search, Ant System, Rank-Based Ant System, Max-Min Ant System, Ant Colony System, etc.
+* [Function Optimization](2006/funcopt/): Java code to solve function optimization with algorithms like Simple Genetic Algorithm, Real-Valued Genetic Algorithm, Crowding Genetic Algorithm, Fitness Sharing Genetic Algorithm, Evolution Strategies, Differential Evolution, Particle Swarm Optimization, Simulated Annealing, etc.
+* [Coverage Models in 2D](2006/coverage/): Self-organizing maps for covering 2d shapes with different network structures.
+* [Human Interactive Optimization](2006/humanint): Optimize problems using human guided search.
+* [Huygens Search & Optimization Competition](2006/huygens): Code to solve complex fractal function optimization problems.
+
 
 ## 2007
 
@@ -112,6 +122,8 @@ Software:
 
 PhD Dissertation.
 
+Presented for fulfillment of the requirements for the degree of Doctor of Philosophy, Swinburne University of Technology, 2008.
+
 **Title:** Clonal Selection as an Inspiration for Adaptive and Distributed Information Processing
 
 **Abstract:** The development of adaptive and intelligent computational methods is an important frontier in the field Artificial Intelligence given the fragility of top-down software solutions to complex problems involving incomplete information. This dissertation describes a systematic investigation of the Clonal Selection Theory of acquired immunity as a motivating information processing metaphor of a series of adaptive and distributed Computational Intelligence algorithms. The broader structure and function of the mammalian immune system is used to frame the cellular theory and classically inspired approaches, providing the additional distributed perspectives of a 'host of tissues' called the Tissue Paradigm and a 'population of hosts' called the Hosts Paradigm. This investigation was motivated by three open problems in the broader field of Artificial Immune Systems, specifically the perceived impasse in the development, identity, and application of the field, the promise of distributed information processing, and the need for a framework to motivate such work.
@@ -126,9 +138,10 @@ The general capabilities of Clonal Selection Algorithms as a Computational Intel
 
 ## Sources
 
-The research was collected from a number of webpages archived via internet archive.
+The research was collected from a number of webpages via internet archive.
 
 * [http://www.it.swin.edu.au/personal/jbrownlee/](https://web.archive.org/web/20081201035451/http://www.it.swin.edu.au/personal/jbrownlee/) (archived)
 * [http://wekaclassalgos.sourceforge.net/](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/) (archived)
 * [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
 * [http://pensive-pondering.blogspot.com/](https://web.archive.org/web/20060423080351/http://pensive-pondering.blogspot.com/) (archived)
+* [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/)

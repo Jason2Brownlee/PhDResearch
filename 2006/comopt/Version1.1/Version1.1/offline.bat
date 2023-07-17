@@ -1,0 +1,1 @@
+java -cp comopt-bin1.1.jar;jfreechart-0.9.21.jar;gnujaxp.jar;jcommon-0.9.6.jar comopt.gui.ComOptFrame

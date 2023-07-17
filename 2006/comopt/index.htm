@@ -1,0 +1,220 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/comopt/index.htm","20060821064042","https://web.archive.org/","web","/_static/",
+	      "1156142442");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Jason Brownlee Personal Webpage</title>
+</head>
+
+<body>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="AutoNumber1">
+    <tr>
+      <td width="100%">
+          
+          <h2>
+	<font color="#000080">
+		<b><font size="6">Jason Brownlee</font></b>
+		<br/>
+		<i><font size="4">Personal Webpage</font></i>
+    	<font size="1">[<a href="/web/20060821064042/http://ict.swin.edu.au/personal/jbrownlee/index.htm">home</a>]</font>
+    </font>
+</h2>
+    <p>
+&nbsp;</p>
+    <hr color="#000000" size="1">
+ 
+<h3><font size="5" color="#000080">Combinatorial Optimization<br>
+</font><font color="#000080">Travelling Salesman Problem (TSP)</font></h3>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Software</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">Combinatorial optimisation is 
+a wide area of study, and the travelling salesman problem is a single problem 
+instance from this field which is very commonly taken as a benchmark 
+combinatorial problem. The intent of this page is to provide a software package 
+with a number of standard stochastic-based combinatorial optimisation algorithms 
+applied to the TSP problem, specifically canonical instances of symmetrical 2D
+<i>Euclidean</i> and <i>Geographical</i> TSP's from the TSP library
+<a href="https://web.archive.org/web/20060821064042/http://www.iwr.uni-heidelberg.de/groups/comopt/software/TSPLIB95/">
+TSPLIB</a>. For background on this area of research see the Wikipedia pages on
+<a href="https://web.archive.org/web/20060821064042/http://en.wikipedia.org/wiki/Combinatorial_optimization">combinatorial 
+optimisation</a> and
+<a href="https://web.archive.org/web/20060821064042/http://en.wikipedia.org/wiki/Traveling_salesman_problem">TSP</a>, as 
+well as the Mathworld page on
+<a href="https://web.archive.org/web/20060821064042/http://mathworld.wolfram.com/GlobalOptimization.html">global 
+optimisation</a> and
+<a href="https://web.archive.org/web/20060821064042/http://mathworld.wolfram.com/TravelingSalesmanProblem.html">TSP</a>. 
+See <a href="https://web.archive.org/web/20060821064042/http://www.densis.fee.unicamp.br/~moscato/TSPBIB_home.html">TSPBIB</a> 
+for an excellent TSP bibliography and the <a href="https://web.archive.org/web/20060821064042/http://www.tsp.gatech.edu/">
+TSP page</a> for an excellent software package TSP solver called
+<a href="https://web.archive.org/web/20060821064042/http://www.tsp.gatech.edu/concorde/index.html">Concorde</a>.</span></font></h3>
+ 
+<p>The software is written in Java and is provided for <i>free</i>. It can be 
+accessed from within a browser as an applet, as a standalone application, and 
+the source code is provided. An simple software architecture has been 
+implemented permitting the easy inclusion of additional algorithms and test 
+problem domains. In building this software I had a personal interest in  genetic algorithms 
+(GA), ant colony optimization (ACO), and and 
+immune system (AIS) approaches so there is a heavy bias towards these techniques in 
+the software. The following is a list of the implemented algorithms with 
+references (where appropriate):</p>
+ 
+    <ul>
+      <li><b>Simple Genetic Algorithm (GA)</b> </li>
+      	<ul>
+      <li>as described in &quot;Genetic algorithms&quot; by Larray Eshelman in
+      <a href="https://web.archive.org/web/20060821064042/http://www.amazon.com/gp/product/0750306645/102-9270927-0189746?v=glance&amp;n=283155">
+      Evolutionary Computation 1 - Basic Algorithms and Operations</a> (2000)</li>
+      <li>using a permutation representation</li>
+      <li>population is initialised with mutated version of the nearest 
+      neighbour solution</li>
+      <li>uses tournament selection with re-selection</li>
+      <li>using edge recombination </li>
+      <li>using 2-opt mutation (always accept mutated solution)</li>
+      	</ul>
+      <li><b>Greedy Search</b><ul>
+      <li>starts with a nearest neighbour solution and a population of mutated 
+      variations</li>
+      <li>uses swap mutation to produce progeny, only accepting the n best 
+      solutions from the union of parents and children populations</li>
+      	</ul>
+      <li><b>Ant System (AS) </b>
+		<ul>
+      <li>as described in &quot;<a href="https://web.archive.org/web/20060821064042/http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=10139">Ant 
+      Colony Optimization</a>&quot; by Dorigo and Stutzle (2004)<li>supports elitism, 
+      which can be disabled by setting the elite factor to zero<li>total ants is 
+      recommended to be set to the total cities in the TSP </ul>
+     <li> <b>Rank-Based Ant System (RBAS)</b><ul>
+     	<li>as described in &quot;<a href="https://web.archive.org/web/20060821064042/http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=10139">Ant 
+        Colony Optimization</a>&quot; by Dorigo and Stutzle (2004)</li>
+     </ul>
+      <li> <b>Max-Min Ant System (MMAS)</b><ul>
+      	<li>as described in &quot;<a href="https://web.archive.org/web/20060821064042/http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=10139">Ant 
+        Colony Optimization</a>&quot; by Dorigo and Stutzle (2004)</li>
+      	<li>supports an update selection factor which determines the average 
+        ratio of updates shared between best-found so-far and best-of-iteration 
+        tours. &gt;0.5 bias best-found so-far, &lt; bias towards best-of-iteration.</li>
+      	</ul>
+      <li><b>Ant Colony System (ACS)</b><ul>
+      <li>as described in &quot;<a href="https://web.archive.org/web/20060821064042/http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=10139">Ant 
+      Colony Optimization</a>&quot; by Dorigo and Stutzle (2004)</li>
+      	</ul>
+      <li><b>Random Search</b></li>
+    </ul>
+ 
+<p>A number of common test TSP's are provided with visualisations of the optimal 
+tour, current best tour from the algorithm and real-time adjacency matrix of 
+tours tested by the an algorithm. 
+The number of evaluations per run is limited (user-defined) and although 
+&quot;best&quot; scores are provided in a log window, the intent of this software is to 
+investigate the <i> <b>sampling behaviour</b></i> of these algorithms, not race them 
+against each other.</p>
+ 
+<p><font size="4">The most recent version of the <b>applet</b> can be 
+accessed <a href="Version1.1/applet.html">here</a></font></p>
+ 
+<p>All comments and features requests can be directed to
+<a href="https://web.archive.org/web/20060821064042/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">me</a>.</p>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Screenshots</b></font></p>
+ 
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+      <tr>
+        <td align="center"><img border="0" src="/web/20060821064042im_/http://ict.swin.edu.au/personal/jbrownlee/comopt/co1.JPG" width="280" height="210"></td>
+        <td align="center"><img border="0" src="/web/20060821064042im_/http://ict.swin.edu.au/personal/jbrownlee/comopt/co2.JPG" width="280" height="210"></td>
+      </tr>
+    </table>
+<p> 
+
+<font size="4" color="#000080"><b>Download</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The software requires
+<a href="https://web.archive.org/web/20060821064042/http://java.com/">Java 1.5 (5.0)</a> to run, as well as the
+<a href="https://web.archive.org/web/20060821064042/http://www.jfree.org/jfreechart">JFreeChart</a> library 
+(provided in the offline download)</span></font></h3>
+ 
+    <ul>
+      <li><font size="3"><span style="font-weight: 700">Version 1.0,</span><span style="font-weight: 400">
+      <i>March 28th 2006</i>, <a href="Version1.0/Version1.0.zip">download</a> </span> </font>
+      <span style="font-weight: 400">
+      <font size="1">[1,561KB]</font><font size="3"> (initial 
+      version)</font></span></li>
+      <li><b>Version 1.1</b>, <i>April</i><span style="font-weight: 400"><font size="3"><i> 
+      20th 2006</i>, <a href="Version1.1/Version1.1.zip">download</a> </font>
+      <font size="1">[1,565KB]</font></span><ul>
+      <li>plot the best of run on the line graph</li>
+      <li>Support SYSTIME as random seed (default)</li>
+      <li>Bug fix in geographical distance calculation</li>
+      <li>Added additional test problems</li>
+      </ul>
+      <li><b>Version 1.2</b>, <i>Soon...</i></li>
+      	<ul>
+      	<li>asdf</li>
+	  	</ul>
+    </ul>
+ 
+<p><font size="4" color="#000080"><b>To-Do</b></font></p>
+ 
+<p>The following are features I would like to add to this software over time, as 
+well as user-requested features that I'd like to include (time permitting):</p>
+ 
+      <ul>
+        <li>provide a visualisation of all tours tested by an algorithm as as a 
+        graph with line thickness representing the frequency of the number of 
+        times an edge was used </li>
+        <li>add an iterated version of the the Lin Kernighan algorithm (2-opt 
+        and 3-opt)</li>
+        <li>add Clonal Selection Algorithm (CLONALG)</li>
+        <li>add Extremal Optimization (EO)</li>
+        <li>add Simulated Annealing (SA)</li>
+        <li>add Self-Organizing Map (SOM)</li>
+    </ul>
+ 
+      </td>
+      </tr>
+    
+    </table>
+  </center>
+  </div>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 06:40:42 Aug 21, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:54:46 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 74.325
+  exclusion.robots: 0.211
+  exclusion.robots.policy: 0.198
+  cdx.remote: 0.066
+  esindex: 0.01
+  LoadShardBlock: 40.037 (3)
+  PetaboxLoader3.datanode: 55.742 (4)
+  load_resource: 81.813
+  PetaboxLoader3.resolve: 46.278
+-->

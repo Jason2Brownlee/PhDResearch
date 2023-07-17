@@ -1,0 +1,215 @@
+<html>
+
+<head><script type="text/javascript" src="/_static/js/bundle-playback.js?v=1WaXNDFE" charset="utf-8"></script>
+<script type="text/javascript" src="/_static/js/wombat.js?v=txqj7nKC" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.ict.swin.edu.au/personal/jbrownlee/coverage/index.htm","20060821063755","https://web.archive.org/","web","/_static/",
+	      "1156142275");
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=S1zqJCYt" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Jason Brownlee Personal Webpage</title>
+</head>
+
+<body>
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="640" id="AutoNumber1">
+    <tr>
+      <td width="100%">
+          
+          <h2>
+	<font color="#000080">
+		<b><font size="6">Jason Brownlee</font></b>
+		<br/>
+		<i><font size="4">Personal Webpage</font></i>
+    	<font size="1">[<a href="/web/20060821063755/http://ict.swin.edu.au/personal/jbrownlee/index.htm">home</a>]</font>
+    </font>
+</h2>
+    <p>
+&nbsp;</p>
+    <hr color="#000000" size="1">
+ 
+<h3><font size="5" color="#000080">Coverage Models in 2-dimensions</font></h3>
+<p> 
+
+<font size="4" color="#000080"><b>Overview</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">This work was inspired by 
+various immunological inspired coverage models, specifically models I was 
+reading about in regard to using negative selection for novelty and anomaly 
+detection. The outcome is the software and applet provided on this page that 
+contains a number of Learning Vector Quantisation (LVQ) and Self-Organising Map 
+(SOM) exemplar placement algorithms and volume filling approaches. I'm not sure 
+where I want to take this work - it was simply the outcome of me trying out some 
+ideas. If you are interested in extending this work or have some interesting 
+configurations, <a href="https://web.archive.org/web/20060821063755/http://www.ict.swin.edu.au/ictstaff/jbrownlee/">please 
+contact me</a>.</span></font></h3>
+ 
+<p> 
+
+<font size="4" color="#000080"><b>Software</b></font></p>
+ 
+<p>The software provides a number of two-dimensional test problems that contain 
+convex regions. The intent of the algorithms is to cover the convex regions of 
+the domains given a set number of point samples from within the convex region - 
+essentially learn the regions from a set number of samples. The algorithms are 
+all SOM and LVQ based for placing and moving exemplars around the domain based 
+on sampling. There are two main types of structures on which the algorithms can 
+operate - conventional SOM structures; a 2D lattice each point with a coordinate 
+on the lattice, and one-dimensional lattice where connectivity (neighbourhoods) 
+are defined by edges and not node coordinates as in conventional SOM. This 
+second approach was implemented to support SOM-like learning on random graphs, 
+small world graphs, and regular graphs. These structures and algorithms were 
+then extended in simple ways to support volume filling using squares and 
+arbitrary adaptive polygons (the vertices of which are called satellites).</p>
+ 
+<p><a href="version1.0/applet.html">Try the latest version of the applet here</a>.</p>
+ 
+<p><b>Algorithms</b></p>
+ 
+    <ul>
+      <li><u>Self-Organizing Map</u> - requires a 2D lattice (placement 
+      algorithm)</li>
+      <li><u>Connectivity-Based SOM</u> - works with any structure (just 
+      placement) - does not use a neighbourhood function, instead it uses the 
+      number of hops through the graph structure</li>
+      <li><u>Satellite-based Volume SOM</u> - the same as the connectivitySOM, 
+      although each exemplar as n (&gt;=3) satellites that define a polygon of the 
+      exemplars coverage volume. The placement of the satellites in relation to 
+      exemplar is adapted over time.</li>
+      <li><u>Square-based Volume SOM</u> - the same as the connectivitySOM, 
+      although each exemplar has a square that is defines the volume coverage of 
+      the exemplar. The size of the square is adaptive over time.</li>
+    </ul>
+ 
+<p><b>Structures</b></p>
+ 
+    <ul>
+      <li><u>2D lattice</u> - a conventional SOM lattice where each exemplar has 
+      a coordinate on a two-dimensional lattice as well as an exemplar 
+      coordinate that is the substrate for adaptation.</li>
+      <li><u>1D lattice</u> - a set of nodes. Each node is connected to 0 or n 
+      of its neighbours (0 permits LVQ like behaviour). Once connected, the 
+      edges of the graph can be rewired with a probability p (1 permits random 
+      graphs), Additional short cut links can then be added with probability p. 
+      This structure supports small-world graphs, random graphs, regular graphs, 
+      unconnected vertices and all manner of in-between configurations.</li>
+      <li><u>Square Volume Map </u>- A 1D lattice structure where each node has 
+      an associated square with a defined initial radius. The square radius will 
+      remain fixed unless adapted using an appropriate algorithm (square-based 
+      volume som)</li>
+      <li><u>Satellite Map</u> - A 1D lattice structure where each node has a 
+      polygon defined by n (&gt;=3) satellites. The satellites will remain at the 
+      exemplars origin unless adapted by an appropriate algorithm 
+      (satellite-based volume som)</li>
+    </ul>
+ 
+<p><font size="4" color="#000080"><b>Scenarios</b></font></p>
+ 
+<p>This section provides example run scenarios with configuration parameters for 
+repeatability. The scenarios provide interesting examples of what the various 
+algorithms are capable of producing.</p>
+ 
+    <table border="0" cellpadding="4" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3">
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov1.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>Canonical Self-Organizing Map (SOM)</b><br>
+        <u>Algorithm</u>: SOM, 0.3, 11, 50,000, Bubble<br>
+        <u>Structure</u>: 2DLattice, 9, 11</td>
+      </tr>
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov6.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>1-D Lattice SOM</b><br>
+        <u>Algorithm</u>: Connectivity-SOM, 0.3, 10, 25,000<br>
+        <u>Structure</u>: 1DLattice, 100, 3, 0, 0</td>
+      </tr>
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov2.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>Canonical Learning Vector Quantization (LVQ)</b><br>
+        <u>Algorithm</u>: Connectivity-SOM, 0.3, 1, 25,000<br>
+        <u>Structure</u>: 1DLattice, 100, 0, 0, 0</td>
+      </tr>
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov3.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>LVQ with Static Radius Square Volumes</b><br>
+        <u>Algorithm</u>: ConnectivitySOM, 0.3, 1, 25,000<br>
+        <u>Structure</u>: SquareVolumeMap, 100, 0, 0, 0, 22</td>
+      </tr>
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov5.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>LVQ with adaptive Satellite Volumes</b><br>
+        <u>Algorithm</u>: SatelliteVolumeSOM, 0.3, 1, 50,000, 1<br>
+        <u>Structure</u>: SatelliteMap, 100, 0, 0, 0, 4</td>
+      </tr>
+      <tr>
+        <td width="28%"><img border="0" src="/web/20060821063755im_/http://ict.swin.edu.au/personal/jbrownlee/coverage/cov7.JPG" width="200" height="150"></td>
+        <td width="72%" valign="top"><b>SOM with Adaptive Radius Square Volumes</b><br>
+        <u>Algorithm</u>: SquareVolumeSOM, 0.3, 7, 25,000, 0.3, 0.1<br>
+        <u>Structure</u>: SquareVolumeMap, 100, 2, 0, 0, 20</td>
+      </tr>
+    </table>
+<p> 
+
+<font size="4" color="#000080"><b>Download</b></font></p>
+ 
+<h3><font size="3"><span style="font-weight: 400">The software requires
+<a href="https://web.archive.org/web/20060821063755/http://java.com/">Java 1.5 (5.0)</a> to run as well as a few Jakarta 
+Commons libraries (math and lang) which are provided in the offline download.</span></font></h3>
+ 
+    <ul>
+      <li><font size="3"><span style="font-weight: 700">Version 1.0,</span><span style="font-weight: 400"> 
+      March 23rd 2006, <a href="version1.0/Version1.0.zip">download</a> (initial 
+      public version)</span></font></li>
+      <li><b>Version 1.1</b>, <i>Soon...</i></li>
+    </ul>
+ 
+<p><font size="4" color="#000080"><b>To-Do</b></font></p>
+ 
+<p>The following are features I would like to add to this software over time, as 
+well as user-requested features that I'd like to include (time permitting):</p>
+ 
+      <ul>
+        <li>Support dynamic problems - specifically convex regions that move 
+        through the problem space</li>
+        <li>Support problem configuration&nbsp; - user selected differing sample 
+        distributions (uniform, Gaussian)</li>
+    </ul>
+ 
+      </td>
+      </tr>
+    
+    </table>
+  </center>
+  </div>
+
+</body>
+
+</html><!--
+     FILE ARCHIVED ON 06:37:55 Aug 21, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:55:09 Jul 14, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 129.731
+  exclusion.robots: 0.227
+  exclusion.robots.policy: 0.216
+  RedisCDXSource: 0.592
+  esindex: 0.009
+  LoadShardBlock: 106.648 (3)
+  PetaboxLoader3.datanode: 87.316 (4)
+  PetaboxLoader3.resolve: 134.984 (2)
+  load_resource: 156.156
+-->

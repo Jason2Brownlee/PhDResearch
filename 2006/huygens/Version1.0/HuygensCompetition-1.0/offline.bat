@@ -1,0 +1,1 @@
+java -cp ./;huygens-comp-bin1.0.jar;funcopt-bin1.3.jar;jfreechart-0.9.21.jar;gnujaxp.jar;jcommon-0.9.6.jar;commons-httpclient-3.0.jar;commons-logging.jar;commons-codec-1.3.jar funcopt.gui.HuygensFrame
