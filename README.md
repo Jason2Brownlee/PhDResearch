@@ -1,13 +1,13 @@
 # Archive of Jason Brownlee's Ph.D. Research
 
-This repository attempts to archive all of the work completed by Jason Brownlee during his PhD degree between 2005-2008, with a focus on papers, technical reports, software, and dissertations.
+This repository attempts to archive all of the work completed by Jason Brownlee during his PhD degree between 2005-2008, with a focus on papers, technical reports, software, and dissertations. It also collects work on a minor Master's thesis completed in 2004.
 
-It also collects work on a minor Master's thesis completed in 2004.
+The hope is that some of this material will help those that follow in some small way.
 
 
 ## 2004
 
-Research work for a minor thesis on niching genetic algorithms for function optimization. Completed as part of a Masters degree program.
+Research work for a minor thesis on niching genetic algorithms for continuous function optimization. Completed as part of a Masters degree program.
 
 * Jason Brownlee. [Parallel Niching Genetic Algorithms: A Crowding Perspective](2004/thesis-2004.pdf) [Masters Minor Thesis]. Melbourne, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2004 Nov.
 	* [Thesis Presentation Slides](2004/thesis-2004-slides.pdf)
