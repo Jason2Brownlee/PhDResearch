@@ -4,7 +4,6 @@ This repository attempts to archive all of the work completed by Jason Brownlee 
 
 The hope is that some of this material will help those that follow in some small way.
 
-
 ## 2004
 
 Research work for a minor thesis on niching genetic algorithms for continuous function optimization. Completed as part of a Masters degree program.
