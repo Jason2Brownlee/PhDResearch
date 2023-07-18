@@ -8,18 +8,33 @@ The hope is that some of this material will help those that follow in some small
 
 Research work for a minor thesis on niching genetic algorithms for continuous function optimization. Completed as part of a Masters degree program.
 
+**Title**: Parallel Niching Genetic Algorithms: A Crowding Perspective
+
+**Abstract:** Genetic algorithms are a class of global search algorithm inspired by biological evolution that return approximate solutions to difficult search problems. Parallel niching genetic algorithms are a specialised type of genetic algorithm that search for and maintain multiple approximate solutions by grouping subpopulations of candidate solutions around areas of interest in the search space. Crowding is one way of achieving a niching effect based on the concept of localised competition for limited resources where similar candidate solutions are matched together and compete for survival based on solution usefulness. An abstract conceptual model called the generalised crowding model is provided to describe discussed traditional crowding algorithms. It provides a template for existing crowding algorithms and a framework for crowding algorithm based analysis and development. A simple crowding algorithm is proposed that has no forced biases or similarity approximations and is shown to be an embodiment of the generalised crowding model and the redefined crowding principle of localised generational competition. The simple crowding algorithm is analysed using crowding centric measures, revealing insights into unbiased parental pairing, candidate solution matching and actual replacement behaviour. Analysis of common crowding functionalities on the simple crowding algorithm and comparison between the proposed algorithm and other crowding techniques reveals a practical trade-off between decreased time until convergence at the cost of decreased niche stability.
+
+Software and technical reports may have been lost.
+
 * Jason Brownlee. [Parallel Niching Genetic Algorithms: A Crowding Perspective](2004/thesis-2004.pdf) [Masters Minor Thesis]. Melbourne, Australia: Centre for Intelligent Systems and Complex Processes (CISCP), Faculty of Information and Communication Technologies (ICT), Swinburne University of Technology; 2004 Nov.
 	* [Thesis Presentation Slides](2004/thesis-2004-slides.pdf)
+	* MastersProjectcode.zip
 
-**Software:**
+**Technical Reports:**
 
-(Not related to the masters thesis, but written in the same lab)
+* Jason Brownlee, Overview of the Canonical Genetic Algorithm, 2004.
+* Jason Brownlee, Overview of Niching, 2004.
+* Jason Brownlee, Preliminary Niching Genetic Algorithm Test Results, 2004.
+* Jason Brownlee, Preliminary Analysis of Niching Genetic Algorithm Results, 2004.
+* Jason Brownlee, Brief Investigation into Population Ecology, 2004.
+* Jason Brownlee, Preliminary Investigation into Fitness Sharing, 2004.
+
+**Other Software:**
+
+Not related to the masters thesis, but written in the same lab.
 
 * [Max Path Competition Solver](2004/maxpath/) Branch and bound solution to the max path puzzle.
 	* [Archived Webpage](https://web.archive.org/web/20060906015450/http://www.it.swin.edu.au/personal/jbrownlee/maxpath/maxpath.htm)
 	* [Archive of Official Homepage](https://web.archive.org/web/20060904135952/http://www.it.swin.edu.au/centres/ciscp/challenge/)
 
-Software and technical reports may have been lost.
 
 
 ## 2005
@@ -167,7 +182,7 @@ The research was collected from a number of webpages via internet archive.
 
 * [http://www.it.swin.edu.au/personal/jbrownlee/](https://web.archive.org/web/20081201035451/http://www.it.swin.edu.au/personal/jbrownlee/) (archived)
 * [http://wekaclassalgos.sourceforge.net/](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/) (archived)
-* [http://jason.brownlee05.googlepages.com/](https://web.archive.org/web/20230000000000*/http://jason.brownlee05.googlepages.com/) (not archived)
+* [http://jason.brownlee05.googlepages.com/home](https://web.archive.org/web/20090501212659/http://jason.brownlee05.googlepages.com/home) (archived)
 * [http://pensive-pondering.blogspot.com/](https://web.archive.org/web/20060423080351/http://pensive-pondering.blogspot.com/) (archived)
 * [http://optalgtoolkit.sourceforge.net/](https://web.archive.org/web/20080708194538/http://optalgtoolkit.sourceforge.net/) (archived)
 * [http://members.optushome.com.au/jasonbrownlee/lvq/](https://web.archive.org/web/20030822043752/http://members.optushome.com.au/jasonbrownlee/lvq/) (archived)
