@@ -51,8 +51,7 @@ Research work from summer scholarship (2004-2005) and the start of PhD program (
 
 * [WEKA Classification Algorithms](2005/classification/): Weka Plugin, implements a suite of neural network an artificial immune system algorithms such as Learning Vector Quantization, Self-Organizing Map, Feed-Forward Artificial Neural Network, Artificial Immune Recognition System, Clonal Selection Algorithm, Immunos-81, etc.
 	* [jbweka-1.6.zip](2005/classification/jbweka-1.6.zip)
-	* wekaclassalgos1.7.zip
-	* wekaclassalgos1.7.zip
+	* wekaclassalgos1.7.zip ([wekaclassalgos1.7.jar](2005/classification/wekaclassalgos1.7.jar))
 	* wekaclassalgos1.8.zip
 	* [Archived Homepage](https://web.archive.org/web/20081229054012/http://wekaclassalgos.sourceforge.net/)
 	* [Modern Port (2023)](https://github.com/fracpete/wekaclassalgos)
